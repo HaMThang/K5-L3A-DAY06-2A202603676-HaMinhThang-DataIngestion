@@ -1,0 +1,155 @@
+[
+  {
+    "source_id": "python-3.13-tutorial-index",
+    "source_url": "https://docs.python.org/3.13/tutorial/",
+    "local_file": "index.html",
+    "accessed_at": "2026-11-13T09:54:28.3764048+00:00",
+    "bytes": 35651,
+    "sha256": "076540b4a2621cbd5455fcd5b1b81eabf0a4e36c0b42585c3a549b9f6e2c5e17",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-appendix",
+    "source_url": "https://docs.python.org/3.13/tutorial/appendix.html",
+    "local_file": "appendix.html",
+    "accessed_at": "2026-11-13T09:54:28.8483558+00:00",
+    "bytes": 27752,
+    "sha256": "e6b29b70ea1b28638e4ceeeed583fb03cb4fc703cfa919314bd350b7cacf9b48",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-appetite",
+    "source_url": "https://docs.python.org/3.13/tutorial/appetite.html",
+    "local_file": "appetite.html",
+    "accessed_at": "2026-11-13T09:54:29.3422036+00:00",
+    "bytes": 18108,
+    "sha256": "c5a75a8718ffb2cf80f25a57d17d5de766c0a20dd3c5ce82918e2e1088f7841a",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-classes",
+    "source_url": "https://docs.python.org/3.13/tutorial/classes.html",
+    "local_file": "classes.html",
+    "accessed_at": "2026-11-13T09:54:29.8529910+00:00",
+    "bytes": 103842,
+    "sha256": "6adb5bbe14eb9e8ed843d0ba03a33dd392d8ff8e8a70c5e1673dc97497cb2311",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-controlflow",
+    "source_url": "https://docs.python.org/3.13/tutorial/controlflow.html",
+    "local_file": "controlflow.html",
+    "accessed_at": "2026-11-13T09:54:30.3874391+00:00",
+    "bytes": 138437,
+    "sha256": "b985d14cc9c7b109996d54c17e32b3f214c5e4cd0e9020de060f12ed0413bd49",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-datastructures",
+    "source_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "local_file": "datastructures.html",
+    "accessed_at": "2026-11-13T09:54:30.9488718+00:00",
+    "bytes": 99846,
+    "sha256": "14cbb79ca8991c75ff9a17db2057640e528bb43b00925e58dd57de2cde746e5b",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-errors",
+    "source_url": "https://docs.python.org/3.13/tutorial/errors.html",
+    "local_file": "errors.html",
+    "accessed_at": "2026-11-13T09:54:31.4354920+00:00",
+    "bytes": 83267,
+    "sha256": "979a709f665207b9bfaddd3dd8ea2ff9632afa4f3a7986198730cac14e662683",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-floatingpoint",
+    "source_url": "https://docs.python.org/3.13/tutorial/floatingpoint.html",
+    "local_file": "floatingpoint.html",
+    "accessed_at": "2026-11-13T09:54:31.8830881+00:00",
+    "bytes": 43981,
+    "sha256": "626c51d2f8b7f485a59e97166154d13cbcf94767459c163b1bdeb7c648bdf738",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-inputoutput",
+    "source_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "local_file": "inputoutput.html",
+    "accessed_at": "2026-11-13T09:54:32.4276911+00:00",
+    "bytes": 75836,
+    "sha256": "be403cb24a4d23ddcde2f29ac20df4743e8216ac69d1244382c58dc2ae2a44f4",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-interactive",
+    "source_url": "https://docs.python.org/3.13/tutorial/interactive.html",
+    "local_file": "interactive.html",
+    "accessed_at": "2026-11-13T09:54:32.8693606+00:00",
+    "bytes": 18317,
+    "sha256": "8f75a693a348e561681f49888ffb85c33dd77a32105f0fd72de13fcd2f1f3339",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-interpreter",
+    "source_url": "https://docs.python.org/3.13/tutorial/interpreter.html",
+    "local_file": "interpreter.html",
+    "accessed_at": "2026-11-13T09:54:33.3499479+00:00",
+    "bytes": 28277,
+    "sha256": "6db9496a3ecd587591b5d6a7640d0f07036a4834c019f0de527b0ab64f90f0ea",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-introduction",
+    "source_url": "https://docs.python.org/3.13/tutorial/introduction.html",
+    "local_file": "introduction.html",
+    "accessed_at": "2026-11-13T09:54:33.8006363+00:00",
+    "bytes": 70461,
+    "sha256": "e247796cab129020c2362e5171b126cdf19feb69438291d9a13b73f467789500",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-modules",
+    "source_url": "https://docs.python.org/3.13/tutorial/modules.html",
+    "local_file": "modules.html",
+    "accessed_at": "2026-11-13T09:54:34.2728169+00:00",
+    "bytes": 69527,
+    "sha256": "e331102d5eba9f1135e82bbec33defbceb638fe3b6d190694ba93b008e597bdc",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-stdlib",
+    "source_url": "https://docs.python.org/3.13/tutorial/stdlib.html",
+    "local_file": "stdlib.html",
+    "accessed_at": "2026-11-13T09:54:34.6972350+00:00",
+    "bytes": 58399,
+    "sha256": "144e7801f9dcdef19a01f9bbdbe7ad7adf84faac97394c37d4470f24cdd04ff8",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-stdlib2",
+    "source_url": "https://docs.python.org/3.13/tutorial/stdlib2.html",
+    "local_file": "stdlib2.html",
+    "accessed_at": "2026-11-13T09:54:35.1587263+00:00",
+    "bytes": 66399,
+    "sha256": "a578647c64631cb0a09412357bcefd28f75f99c264452108eddbeceeb36fbd9d",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-venv",
+    "source_url": "https://docs.python.org/3.13/tutorial/venv.html",
+    "local_file": "venv.html",
+    "accessed_at": "2026-11-13T09:54:35.5812002+00:00",
+    "bytes": 33547,
+    "sha256": "ac86c63d5eae2c83ab30b1f28267ad52fd21982cddb321c89abf63d563c02f9d",
+    "license": "PSF License Version 2"
+  },
+  {
+    "source_id": "python-3.13-tutorial-whatnow",
+    "source_url": "https://docs.python.org/3.13/tutorial/whatnow.html",
+    "local_file": "whatnow.html",
+    "accessed_at": "2026-11-13T09:54:36.0882855+00:00",
+    "bytes": 18646,
+    "sha256": "b3f3dea26392043824c6d1ff1f015b4dfb0129635b93f159a73fe11c72157b39",
+    "license": "PSF License Version 2"
+  }
+]

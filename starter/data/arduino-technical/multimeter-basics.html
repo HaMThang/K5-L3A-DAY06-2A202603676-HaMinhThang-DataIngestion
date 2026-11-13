@@ -1,0 +1,79 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Multimeter Basics</title><base href='https://docs.arduino.cc/learn/electronics/multimeter-basics/'></head><body><header><p>Source: <a href='https://docs.arduino.cc/learn/electronics/multimeter-basics/'>https://docs.arduino.cc/learn/electronics/multimeter-basics/</a>. Arduino. CC BY-SA 4.0. HTML converted from official Markdown; source commit 55f8bffb087dd96ff87d7b0752672ba0370bfce8. Original Markdown and original website HTML are preserved alongside this file.</p></header><main><h1>Multimeter Basics</h1><p>A multimeter is a test tool, mostly used in electronics, that should always be present in the FabLab of a Maker.</p>
+<p>It is a diagnostic tool that allows us, for instance to:</p>
+<ul>
+<li>debug circuits,</li>
+<li>display the value of resistors,</li>
+<li>measure voltage and current in our circuits,</li>
+<li>identify conductive/non conductive materials, and much more!</li>
+</ul>
+<h2 id="parts-of-the-multimeter">Parts of the Multimeter</h2>
+<p>There are many different types of multimeters, some with more or less features. The following image lists the parts that the majority of multimeters have.</p>
+<p><img src="assets/multimeter_overview.png" alt="Overview of a multimeter" /></p>
+<ul>
+<li>The display will show various numeric values of the different measurements we take with the multimeter.</li>
+<li>By changing the position of the measurement selector switch, we will be able to configure the multimeter to measure different parameters.</li>
+<li>Depending on the parameters we want to measure, the connection of the terminals should be done in an appropriate manner.</li>
+</ul>
+<h2 id="how-to-choose-a-multimeter">How to choose a multimeter</h2>
+<p>It is hard to say exactly which characteristics a multimeter should have, since there are different needs depending on the background of the user and the intended usage, but let's say that independently of the level of the user, a multimeter should have:</p>
+<ul>
+<li>Voltage reading</li>
+<li>Current reading</li>
+<li>Resistance reading, from at least 10 Ohm to 1M Ohm</li>
+<li>Continuity detection (with acoustic feedback)</li>
+</ul>
+<p>Then, depending on the user background, there will be some features that could make the multimeter easier to use, or make it a more complex tool. Some of these features are:</p>
+<ul>
+<li><strong>Autoscale</strong>: This feature will configure the data scale of the multimeter to show the readings in the easiest format possible for the user to understand them. However, this feature may compromise the accuracy of the readings.</li>
+<li><strong>Hold</strong>: This feature &quot;freezes&quot; the reading on the screen, so the user can check it out even after removing the terminal connectors from the measurement points.</li>
+<li><strong>Advanced features</strong> such as: Frequency counter, capacitance testing, inductance testing, duty cycle, etc. These features allow us to measure quite advanced properties of different components and signals in the electronic circuits; but usually a background in electronics is needed, to makes sense of these readings and to know how to execute the measurements correctly in the circuits.</li>
+</ul>
+<h2 id="how-to-use-a-multimeter">How to use a Multimeter</h2>
+<p>Multimeters have different working modes, depending on what are you interested on measuring. Let's start by how to use a multimeter to measure voltage, resistance, conductivity and current.</p>
+<h3 id="reading-voltage">Reading voltage</h3>
+<p>This will require to place the measurement selector in the Volts section the <strong>black</strong> terminal in the COM and the <strong>red</strong> terminal in the V|Ω|mA terminal.</p>
+<p><img src="assets/voltage.png" alt="Configuration to measure voltage" /></p>
+<p>With this configuration, the selected scale should be adjusted based on the  measured voltage.</p>
+<p>If you want to measure the voltage close to a 9V battery, the scale should be 20.</p>
+<ul>
+<li>The scale limits the higher value that can be measured, meaning that if the selector is within the 2000m, the highest value that can be measured with that scale is 2000mV = 2V.</li>
+</ul>
+<p>In order to know what scale to select, you should check what is the approximate value that you will be measuring, and select the scale according to it:</p>
+<ul>
+<li>From 0 to 200mV --&gt; 200m</li>
+<li>From 200mV to 2000mV (2V) --&gt; 2000m</li>
+<li>From 2V to 20V --&gt; 20V</li>
+</ul>
+<p>If you try to measure a higher value than the one specified on the scale, the display will show &quot;over-value&quot;, which is usually shown with the number &quot;1&quot; on the display.</p>
+<h3 id="terminals">Terminals</h3>
+<p>Once you have selected the scale to use, it is time to use the terminals:</p>
+<ul>
+<li>The black terminal (Common) should be placed in the point of the circuit closer to the ground  &quot;-&quot; terminal of the battery.</li>
+<li>The red terminal should be placed in the point you want to know what is the voltage in the circuit.</li>
+</ul>
+<p>The image below shows how to read the voltage falling in an LED. In order to know the voltage falling on a component, you will need to connect the multimeter in parallel with it.</p>
+<p><img src="assets/voltage_reading.png" alt="Reading voltage schematics" /></p>
+<p>You can see how the black terminal checks the negative terminal of the LED, which is connected to the negative pole of the battery and the red terminal on the positive terminal of the LED.</p>
+<p><img src="assets/reading_voltage_schematic.png" alt="Reading voltage on a circuit" /></p>
+<h3 id="reading-resistance">Reading resistance</h3>
+<p>In order to measure resistance, the measurement selector should be in the Ohm section.</p>
+<p><img src="assets/resistance.png" alt="Configuration to measure resistance" /></p>
+<p>The scale to measure resistance works exactly as explained in the &quot;Measuring voltage section&quot;.</p>
+<p>In order to know the value of a resistor, you need to keep in mind that the measurement must be done on a resistor that is not connected to any other component! Then, you can make the reading:</p>
+<p>Place each one of the terminals of the multimeter in each one of the terminals of the resistor.</p>
+<p><img src="assets/resistance_reading.png" alt="Reading resistance" /></p>
+<h3 id="continuity-testing">Continuity Testing</h3>
+<p>This feature allows you to know if a material is or is not conductive.</p>
+<p>To make this test, you will need to &quot;touch&quot; a material with both terminals of the multimeter, once you do so, depending on the multimeter you will see:</p>
+<ul>
+<li>OL / 0 in the display if the material is not conductive</li>
+<li>1 on the display &amp; Beep if the material is conductive</li>
+</ul>
+<h3 id="reading-current">Reading Current</h3>
+<p>Reading current is a little bit more complex than reading voltage or resistance. In order to make current with the multimeter, first you will need to connect the red terminal to the 10A(DCA) connector and place the selector in the A section.</p>
+<p><img src="assets/current.png" alt="Multimeter configured to read current" /></p>
+<p>Once the connections are configured, as shown above, and the selector is properly placed you can measure the current that is flowing on a circuit. Just make sure that the multimeter is connected in series with the rest of the components of that same circuit.</p>
+<p><img src="assets/reading_current_schematic.png" alt="Reading current schematic" /></p>
+<p>The image below shows how to read the current flowing through a circuit with a LED and a resistor. Here, you can see how the multimeter is connected in series with the resistor and the LED, as if it was one more component of the circuit.</p>
+<p><img src="assets/current_reading.png" alt="Reading current" /></p>
+</main></body></html>

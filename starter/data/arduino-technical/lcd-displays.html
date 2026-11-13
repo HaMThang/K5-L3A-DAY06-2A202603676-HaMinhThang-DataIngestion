@@ -1,0 +1,1112 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Liquid Crystal Displays (LCD) with Arduino</title><base href='https://docs.arduino.cc/learn/electronics/lcd-displays/'></head><body><header><p>Source: <a href='https://docs.arduino.cc/learn/electronics/lcd-displays/'>https://docs.arduino.cc/learn/electronics/lcd-displays/</a>. Arduino. CC BY-SA 4.0. HTML converted from official Markdown; source commit 55f8bffb087dd96ff87d7b0752672ba0370bfce8. Original Markdown and original website HTML are preserved alongside this file.</p></header><main><h1>Liquid Crystal Displays (LCD) with Arduino</h1><blockquote>
+<p>This article was revised on 2021/11/18 by Karl Söderby.</p>
+</blockquote>
+<p>The <a href="https://www.arduino.cc/reference/en/libraries/liquidcrystal/">LiquidCrystal library</a> allows you to control LCD displays that are compatible with the Hitachi HD44780 driver. There are many of them out there, and you can usually tell them by the 16-pin interface.</p>
+<p><img src="assets/lcd_photo.png" alt="Output of the sketch on a 16x2 LCD" /></p>
+<p>The LCDs have a parallel interface, meaning that the microcontroller has to manipulate several interface pins at once to control the display. The interface consists of the following pins:</p>
+<ul>
+<li>A <strong>register select (RS) pin</strong> that controls where in the LCD's memory you're writing data to. You can select either the data register, which holds what goes on the screen, or an instruction register, which is where the LCD's controller looks for instructions on what to do next.</li>
+<li>A <strong>Read/Write (R/W) pin</strong> that selects reading mode or writing mode</li>
+<li>An <strong>Enable pin</strong> that enables writing to the registers</li>
+<li>8 <strong>data pins (D0 -D7)</strong>. The states of these pins (high or low) are the bits that you're writing to a register when you write, or the values you're reading when you read.</li>
+</ul>
+<p>There's also a <strong>display contrast pin (Vo)</strong>, <strong>power supply pins (+5V and GND)</strong> and <strong>LED Backlight (Bklt+ and BKlt-)</strong> pins that you can use to power the LCD, control the display contrast, and turn on and off the LED backlight, respectively.</p>
+<p>The process of controlling the display involves putting the data that form the image of what you want to display into the data registers, then putting instructions in the instruction register.  The <a href="https://www.arduino.cc/reference/en/libraries/liquidcrystal/">LiquidCrystal Library</a> simplifies this for you so you don't need to know the low-level instructions.</p>
+<p>The Hitachi-compatible LCDs can be controlled in two modes: 4-bit or 8-bit. The 4-bit mode requires seven I/O pins from the Arduino, while the 8-bit mode requires 11 pins.  For displaying text on the screen, you can do most everything in 4-bit mode, so example shows how to  control a 16x2 LCD in 4-bit mode.</p>
+<h2 id="hardware-required">Hardware Required</h2>
+<ul>
+<li>Arduino Board</li>
+<li>LCD Screen (compatible with Hitachi HD44780 driver)</li>
+<li>pin headers to solder to the LCD display pins</li>
+<li>10k ohm potentiometer</li>
+<li>220 ohm resistor</li>
+<li>hook-up wires</li>
+<li>breadboard</li>
+</ul>
+<h2 id="circuit">Circuit</h2>
+<p><em><strong>Note that this circuit was originally designed for the Arduino UNO. As the Arduino is communicating with the display using <a href="">SPI</a>, pin 11 &amp; 12 will change depending on what board you are using. For example, on a MKR WiFi 1010, the SPI bus is attached to pin 8 &amp; 11.</strong></em></p>
+<p>Before wiring the LCD screen to your Arduino board we suggest to solder a pin header strip to the 14 (or 16) pin count connector of the LCD screen, as you can see in the image further up.</p>
+<p>To wire your LCD screen to your board, connect the following pins:</p>
+<ul>
+<li>LCD RS pin to digital pin 12</li>
+<li>LCD Enable pin to digital pin 11</li>
+<li>LCD D4 pin to digital pin 5</li>
+<li>LCD D5 pin to digital pin 4</li>
+<li>LCD D6 pin to digital pin 3</li>
+<li>LCD D7 pin to digital pin 2</li>
+<li>LCD R/W pin to GND</li>
+<li>LCD VSS pin to GND</li>
+<li>LCD VCC pin to 5V</li>
+<li>LCD LED+ to 5V through a 220 ohm resistor</li>
+<li>LCD LED- to GND</li>
+</ul>
+<p>Additionally, wire a 10k potentiometer to +5V and GND, with it's wiper (output) to LCD screens VO pin (pin3).</p>
+<p><img src="assets/LCD_Base_bb_Fritz.png" alt="The circuit (made using Fritzing)." /></p>
+<h2 id="schematic">Schematic</h2>
+<p><img src="assets/LCD_Base_bb_Schem.png" alt="The schematic (made using Fritzing)." /></p>
+<h3 id="hello-world-example">Hello World Example</h3>
+<p>This example sketch prints <code>Hello World!</code> to the LCD and shows the time in seconds since the Arduino was reset.</p>
+<pre><code class="language-arduino">/*
+  LiquidCrystal Library - Hello World
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+ library works with all LCD displays that are compatible with the
+ Hitachi HD44780 driver. There are many of them out there, and you
+ can usually tell them by the 16-pin interface.
+
+ This sketch prints &quot;Hello World!&quot; to the LCD
+ and shows the time.
+
+  The circuit:
+ * LCD RS pin to digital pin 12
+ * LCD Enable pin to digital pin 11
+ * LCD D4 pin to digital pin 5
+ * LCD D5 pin to digital pin 4
+ * LCD D6 pin to digital pin 3
+ * LCD D7 pin to digital pin 2
+ * LCD R/W pin to ground
+ * LCD VSS pin to ground
+ * LCD VCC pin to 5V
+ * 10K resistor:
+ * ends to +5V and ground
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+ by David A. Mellis
+ library modified 5 Jul 2009
+ by Limor Fried (http://www.ladyada.net)
+ example added 9 Jul 2009
+ by Tom Igoe
+ modified 22 Nov 2010
+ by Tom Igoe
+ modified 7 Nov 2016
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ https://docs.arduino.cc/learn/electronics/lcd-displays
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print(&quot;hello, world!&quot;);
+}
+
+void loop() {
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting begins with 0):
+  lcd.setCursor(0, 1);
+  // print the number of seconds since reset:
+  lcd.print(millis() / 1000);
+}
+
+
+</code></pre>
+<h3 id="autoscroll-example">Autoscroll Example</h3>
+<p>This example sketch shows how to use the <code>autoscroll()</code> and <code>noAutoscroll()</code> methods to move all the text on the display left or right.</p>
+<ul>
+<li><code>autoscroll()</code> moves all the text one space to the left each time a letter is added</li>
+<li><code>noAutoscroll()</code> turns scrolling off</li>
+</ul>
+<p>This sketch prints the characters <code>0</code> to <code>9</code> with autoscroll off, then moves the cursor to the bottom right, turns autoscroll on, and prints them again.</p>
+<pre><code class="language-arduino">
+/*
+
+  LiquidCrystal Library - Autoscroll
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+
+ library works with all LCD displays that are compatible with the
+
+ Hitachi HD44780 driver. There are many of them out there, and you
+
+ can usually tell them by the 16-pin interface.
+
+ This sketch demonstrates the use of the autoscroll()
+
+ and noAutoscroll() functions to make new text scroll or not.
+
+ The circuit:
+
+ * LCD RS pin to digital pin 12
+
+ * LCD Enable pin to digital pin 11
+
+ * LCD D4 pin to digital pin 5
+
+ * LCD D5 pin to digital pin 4
+
+ * LCD D6 pin to digital pin 3
+
+ * LCD D7 pin to digital pin 2
+
+ * LCD R/W pin to ground
+
+ * 10K resistor:
+
+ * ends to +5V and ground
+
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+
+ by David A. Mellis
+
+ library modified 5 Jul 2009
+
+ by Limor Fried (http://www.ladyada.net)
+
+ example added 9 Jul 2009
+
+ by Tom Igoe
+
+ modified 22 Nov 2010
+
+ by Tom Igoe
+
+ modified 7 Nov 2016
+
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalAutoscroll
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+
+  // set up the LCD's number of columns and rows:
+
+  lcd.begin(16, 2);
+}
+
+void loop() {
+
+  // set the cursor to (0,0):
+
+  lcd.setCursor(0, 0);
+
+  // print from 0 to 9:
+
+  for (int thisChar = 0; thisChar &lt; 10; thisChar++) {
+
+    lcd.print(thisChar);
+
+    delay(500);
+
+  }
+
+  // set the cursor to (16,1):
+
+  lcd.setCursor(16, 1);
+
+  // set the display to automatically scroll:
+
+  lcd.autoscroll();
+
+  // print from 0 to 9:
+
+  for (int thisChar = 0; thisChar &lt; 10; thisChar++) {
+
+    lcd.print(thisChar);
+
+    delay(500);
+
+  }
+
+  // turn off automatic scrolling
+
+  lcd.noAutoscroll();
+
+  // clear screen for the next loop:
+
+  lcd.clear();
+}
+</code></pre>
+<h3 id="blink-example">Blink Example</h3>
+<p>This example sketch shows how to use the <code>blink()</code> and <code>noBlink()</code> methods to blink a block-style cursor.</p>
+<pre><code class="language-arduino">/*
+
+  LiquidCrystal Library - Blink
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+
+ library works with all LCD displays that are compatible with the
+
+ Hitachi HD44780 driver. There are many of them out there, and you
+
+ can usually tell them by the 16-pin interface.
+
+ This sketch prints &quot;Hello World!&quot; to the LCD and makes the
+
+ cursor block blink.
+
+ The circuit:
+
+ * LCD RS pin to digital pin 12
+
+ * LCD Enable pin to digital pin 11
+
+ * LCD D4 pin to digital pin 5
+
+ * LCD D5 pin to digital pin 4
+
+ * LCD D6 pin to digital pin 3
+
+ * LCD D7 pin to digital pin 2
+
+ * LCD R/W pin to ground
+
+ * 10K resistor:
+
+   * ends to +5V and ground
+
+   * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+
+ by David A. Mellis
+
+ library modified 5 Jul 2009
+
+ by Limor Fried (http://www.ladyada.net)
+
+ example added 9 Jul 2009
+
+ by Tom Igoe
+
+ modified 22 Nov 2010
+
+ by Tom Igoe
+
+ modified 7 Nov 2016
+
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalBlink
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+
+  // set up the LCD's number of columns and rows:
+
+  lcd.begin(16, 2);
+
+  // Print a message to the LCD.
+
+  lcd.print(&quot;hello, world!&quot;);
+}
+
+void loop() {
+
+  // Turn off the blinking cursor:
+
+  lcd.noBlink();
+
+  delay(3000);
+
+  // Turn on the blinking cursor:
+
+  lcd.blink();
+
+  delay(3000);
+}
+</code></pre>
+<h3 id="cursor">Cursor</h3>
+<p>This example sketch shows how to use the <code>cursor()</code> and <code>noCursor()</code> methods to control an underscore-style cursor.</p>
+<pre><code class="language-arduino">
+/*
+
+  LiquidCrystal Library - Cursor
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+
+ library works with all LCD displays that are compatible with the
+
+ Hitachi HD44780 driver. There are many of them out there, and you
+
+ can usually tell them by the 16-pin interface.
+
+ This sketch prints &quot;Hello World!&quot; to the LCD and
+
+ uses the cursor()  and noCursor() methods to turn
+
+ on and off the cursor.
+
+ The circuit:
+
+ * LCD RS pin to digital pin 12
+
+ * LCD Enable pin to digital pin 11
+
+ * LCD D4 pin to digital pin 5
+
+ * LCD D5 pin to digital pin 4
+
+ * LCD D6 pin to digital pin 3
+
+ * LCD D7 pin to digital pin 2
+
+ * LCD R/W pin to ground
+
+ * 10K resistor:
+
+ * ends to +5V and ground
+
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+
+ by David A. Mellis
+
+ library modified 5 Jul 2009
+
+ by Limor Fried (http://www.ladyada.net)
+
+ example added 9 Jul 2009
+
+ by Tom Igoe
+
+ modified 22 Nov 2010
+
+ by Tom Igoe
+
+ modified 7 Nov 2016
+
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalCursor
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+
+  // set up the LCD's number of columns and rows:
+
+  lcd.begin(16, 2);
+
+  // Print a message to the LCD.
+
+  lcd.print(&quot;hello, world!&quot;);
+}
+
+void loop() {
+
+  // Turn off the cursor:
+
+  lcd.noCursor();
+
+  delay(500);
+
+  // Turn on the cursor:
+
+  lcd.cursor();
+
+  delay(500);
+}
+</code></pre>
+<h3 id="display-example">Display Example</h3>
+<p>This example sketch shows how to use the <code>display()</code> and <code>noDisplay()</code> methods to turn on and off the display. The text to be displayed will still be preserved when you use noDisplay() so it's a quick way to blank the display without losing everything on it.</p>
+<pre><code class="language-arduino">/*
+  LiquidCrystal Library - display() and noDisplay()
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+ library works with all LCD displays that are compatible with the
+ Hitachi HD44780 driver. There are many of them out there, and you
+ can usually tell them by the 16-pin interface.
+
+ This sketch prints &quot;Hello World!&quot; to the LCD and uses the
+ display() and noDisplay() functions to turn on and off
+ the display.
+
+ The circuit:
+ * LCD RS pin to digital pin 12
+ * LCD Enable pin to digital pin 11
+ * LCD D4 pin to digital pin 5
+ * LCD D5 pin to digital pin 4
+ * LCD D6 pin to digital pin 3
+ * LCD D7 pin to digital pin 2
+ * LCD R/W pin to ground
+ * 10K resistor:
+ * ends to +5V and ground
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+ by David A. Mellis
+ library modified 5 Jul 2009
+ by Limor Fried (http://www.ladyada.net)
+ example added 9 Jul 2009
+ by Tom Igoe
+ modified 22 Nov 2010
+ by Tom Igoe
+ modified 7 Nov 2016
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalDisplay
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print(&quot;hello, world!&quot;);
+}
+
+void loop() {
+  // Turn off the display:
+  lcd.noDisplay();
+  delay(500);
+  // Turn on the display:
+  lcd.display();
+  delay(500);
+}
+</code></pre>
+<h3 id="scroll-example">Scroll Example</h3>
+<p>This example sketch shows how to use the <code>scrollDisplayLeft()</code> and <code>scrollDisplayRight()</code> methods to reverse the direction the text is flowing.  It prints &quot;Hello World!&quot;, scrolls it offscreen to the left, then offscreen to the right, then back to home.</p>
+<pre><code class="language-arduino">/*
+  LiquidCrystal Library - scrollDisplayLeft() and scrollDisplayRight()
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+ library works with all LCD displays that are compatible with the
+ Hitachi HD44780 driver. There are many of them out there, and you
+ can usually tell them by the 16-pin interface.
+
+ This sketch prints &quot;Hello World!&quot; to the LCD and uses the
+ scrollDisplayLeft() and scrollDisplayRight() methods to scroll
+ the text.
+
+  The circuit:
+ * LCD RS pin to digital pin 12
+ * LCD Enable pin to digital pin 11
+ * LCD D4 pin to digital pin 5
+ * LCD D5 pin to digital pin 4
+ * LCD D6 pin to digital pin 3
+ * LCD D7 pin to digital pin 2
+ * LCD R/W pin to ground
+ * 10K resistor:
+ * ends to +5V and ground
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+ by David A. Mellis
+ library modified 5 Jul 2009
+ by Limor Fried (http://www.ladyada.net)
+ example added 9 Jul 2009
+ by Tom Igoe
+ modified 22 Nov 2010
+ by Tom Igoe
+ modified 7 Nov 2016
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalScroll
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print(&quot;hello, world!&quot;);
+  delay(1000);
+}
+
+void loop() {
+  // scroll 13 positions (string length) to the left
+  // to move it offscreen left:
+  for (int positionCounter = 0; positionCounter &lt; 13; positionCounter++) {
+    // scroll one position left:
+    lcd.scrollDisplayLeft();
+    // wait a bit:
+    delay(150);
+  }
+
+  // scroll 29 positions (string length + display length) to the right
+  // to move it offscreen right:
+  for (int positionCounter = 0; positionCounter &lt; 29; positionCounter++) {
+    // scroll one position right:
+    lcd.scrollDisplayRight();
+    // wait a bit:
+    delay(150);
+  }
+
+  // scroll 16 positions (display length + string length) to the left
+  // to move it back to center:
+  for (int positionCounter = 0; positionCounter &lt; 16; positionCounter++) {
+    // scroll one position left:
+    lcd.scrollDisplayLeft();
+    // wait a bit:
+    delay(150);
+  }
+
+  // delay at the end of the full loop:
+  delay(1000);
+
+}
+</code></pre>
+<h3 id="serial-to-display-example">Serial to Display Example</h3>
+<p>This example sketch accepts serial input from a host computer and displays it on the LCD. To use it, upload the sketch, then open the Serial Monitor and type some characters and click Send. The text will appear on your LCD.</p>
+<pre><code>/*
+  LiquidCrystal Library - Serial Input
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+ library works with all LCD displays that are compatible with the
+ Hitachi HD44780 driver. There are many of them out there, and you
+ can usually tell them by the 16-pin interface.
+
+ This sketch displays text sent over the serial port
+ (e.g. from the Serial Monitor) on an attached LCD.
+
+ The circuit:
+ * LCD RS pin to digital pin 12
+ * LCD Enable pin to digital pin 11
+ * LCD D4 pin to digital pin 5
+ * LCD D5 pin to digital pin 4
+ * LCD D6 pin to digital pin 3
+ * LCD D7 pin to digital pin 2
+ * LCD R/W pin to ground
+ * 10K resistor:
+ * ends to +5V and ground
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+ by David A. Mellis
+ library modified 5 Jul 2009
+ by Limor Fried (http://www.ladyada.net)
+ example added 9 Jul 2009
+ by Tom Igoe
+ modified 22 Nov 2010
+ by Tom Igoe
+ modified 7 Nov 2016
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalSerialDisplay
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // initialize the serial communications:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // when characters arrive over the serial port...
+  if (Serial.available()) {
+    // wait a bit for the entire message to arrive
+    delay(100);
+    // clear the screen
+    lcd.clear();
+    // read all the available characters
+    while (Serial.available() &gt; 0) {
+      // display each character to the LCD
+      lcd.write(Serial.read());
+    }
+  }
+}
+</code></pre>
+<h3 id="set-cursor-example">Set Cursor Example</h3>
+<p>This example sketch shows how to use the <code>setCursor()</code> method to reposition the cursor.  To move the cursor, just call <code>setCursor()</code> with a row and column position. For example, for a 2x16 display:</p>
+<pre><code class="language-arduino">lcd.setCursor(0, 0); // top left
+lcd.setCursor(15, 0); // top right
+lcd.setCursor(0, 1); // bottom left
+lcd.setCursor(15, 1); // bottom right
+</code></pre>
+<p>Here is the full example:</p>
+<pre><code class="language-arduino">/*
+
+  LiquidCrystal Library - setCursor
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+
+ library works with all LCD displays that are compatible with the
+
+ Hitachi HD44780 driver. There are many of them out there, and you
+
+ can usually tell them by the 16-pin interface.
+
+ This sketch prints to all the positions of the LCD using the
+
+ setCursor() method:
+
+  The circuit:
+
+ * LCD RS pin to digital pin 12
+
+ * LCD Enable pin to digital pin 11
+
+ * LCD D4 pin to digital pin 5
+
+ * LCD D5 pin to digital pin 4
+
+ * LCD D6 pin to digital pin 3
+
+ * LCD D7 pin to digital pin 2
+
+ * LCD R/W pin to ground
+
+ * 10K resistor:
+
+ * ends to +5V and ground
+
+ * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+
+ by David A. Mellis
+
+ library modified 5 Jul 2009
+
+ by Limor Fried (http://www.ladyada.net)
+
+ example added 9 Jul 2009
+
+ by Tom Igoe
+
+ modified 22 Nov 2010
+
+ by Tom Igoe
+
+ modified 7 Nov 2016
+
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalSetCursor
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+// these constants won't change.  But you can change the size of
+// your LCD using them:
+
+const int numRows = 2;
+
+const int numCols = 16;
+
+void setup() {
+
+  // set up the LCD's number of columns and rows:
+
+  lcd.begin(numCols, numRows);
+}
+
+void loop() {
+
+  // loop from ASCII 'a' to ASCII 'z':
+
+  for (int thisLetter = 'a'; thisLetter &lt;= 'z'; thisLetter++) {
+
+    // loop over the columns:
+
+    for (int  thisRow = 0; thisRow &lt; numRows; thisRow++) {
+
+      // loop over the rows:
+
+      for (int thisCol = 0; thisCol &lt; numCols; thisCol++) {
+
+        // set the cursor position:
+
+        lcd.setCursor(thisCol, thisRow);
+
+        // print the letter:
+
+        lcd.write(thisLetter);
+
+        delay(200);
+
+      }
+
+    }
+
+  }
+}
+</code></pre>
+<h3 id="text-direction-example">Text Direction Example</h3>
+<p>This example sketch shows how to use the <code>leftToRight()</code> and <code>rightToLeft()</code> methods. These methods control which way text flows from the cursor.</p>
+<ul>
+<li><code>rightToLeft()</code> causes text to flow to the left from the cursor, as if the display is right-justified.</li>
+<li><code>leftToRight()</code> causes text to flow to the right from the cursor, as if the display is left-justified.</li>
+</ul>
+<p>This sketch prints <code>a</code> through <code>l</code> right to left, then <code>m</code> through <code>r</code> left to right, then <code>s</code> through <code>z</code> right to left again.</p>
+<pre><code class="language-arduino">/*
+
+ LiquidCrystal Library - TextDirection
+
+ Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
+
+ library works with all LCD displays that are compatible with the
+
+ Hitachi HD44780 driver. There are many of them out there, and you
+
+ can usually tell them by the 16-pin interface.
+
+ This sketch demonstrates how to use leftToRight() and rightToLeft()
+
+ to move the cursor.
+
+ The circuit:
+
+  * LCD RS pin to digital pin 12
+
+  * LCD Enable pin to digital pin 11
+
+  * LCD D4 pin to digital pin 5
+
+  * LCD D5 pin to digital pin 4
+
+  * LCD D6 pin to digital pin 3
+
+  * LCD D7 pin to digital pin 2
+
+  * LCD R/W pin to ground
+
+  * 10K resistor:
+
+  * ends to +5V and ground
+
+  * wiper to LCD VO pin (pin 3)
+
+ Library originally added 18 Apr 2008
+
+ by David A. Mellis
+
+ library modified 5 Jul 2009
+
+ by Limor Fried (http://www.ladyada.net)
+
+ example added 9 Jul 2009
+
+ by Tom Igoe
+
+ modified 22 Nov 2010
+
+ by Tom Igoe
+
+ modified 7 Nov 2016
+
+ by Arturo Guadalupi
+
+ This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalTextDirection
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+int thisChar = 'a';
+
+void setup() {
+
+  // set up the LCD's number of columns and rows:
+
+  lcd.begin(16, 2);
+
+  // turn on the cursor:
+
+  lcd.cursor();
+}
+
+void loop() {
+
+  // reverse directions at 'm':
+
+  if (thisChar == 'm') {
+
+    // go right for the next letter
+
+    lcd.rightToLeft();
+
+  }
+
+  // reverse again at 's':
+
+  if (thisChar == 's') {
+
+    // go left for the next letter
+
+    lcd.leftToRight();
+
+  }
+
+  // reset at 'z':
+
+  if (thisChar &gt; 'z') {
+
+    // go to (0,0):
+
+    lcd.home();
+
+    // start again at 0
+
+    thisChar = 'a';
+
+  }
+
+  // print the character
+
+  lcd.write(thisChar);
+
+  // wait a second:
+
+  delay(1000);
+
+  // increment the letter:
+
+  thisChar++;
+}
+</code></pre>
+<h3 id="custom-character">Custom Character</h3>
+<p>This example demonstrates how to add custom characters on an LCD  display.</p>
+<p>Note that this example requires an additional potentiometer:</p>
+<ul>
+<li>Outer pins connected to 5V and GND.</li>
+<li>Inner pin (wiper) connected to A0.</li>
+</ul>
+<p>This potentiometer controls the <code>delayTime</code> variable.</p>
+<pre><code class="language-arduino">/*
+  LiquidCrystal Library - Custom Characters
+
+ Demonstrates how to add custom characters on an LCD  display.
+ The LiquidCrystal library works with all LCD displays that are
+ compatible with the  Hitachi HD44780 driver. There are many of
+ them out there, and you can usually tell them by the 16-pin interface.
+
+ This sketch prints &quot;I &lt;heart&gt; Arduino!&quot; and a little dancing man
+ to the LCD.
+
+  The circuit:
+ * LCD RS pin to digital pin 12
+ * LCD Enable pin to digital pin 11
+ * LCD D4 pin to digital pin 5
+ * LCD D5 pin to digital pin 4
+ * LCD D6 pin to digital pin 3
+ * LCD D7 pin to digital pin 2
+ * LCD R/W pin to ground
+ * 10K potentiometer:
+ * ends to +5V and ground
+ * wiper to LCD VO pin (pin 3)
+ * 10K poterntiometer on pin A0
+
+ created 21 Mar 2011
+ by Tom Igoe
+ modified 11 Nov 2013
+ by Scott Fitzgerald
+ modified 7 Nov 2016
+ by Arturo Guadalupi
+
+ Based on the Adafruit® example at
+ https://github.com/adafruit/SPI_VFD/blob/master/examples/createChar/createChar.pde
+
+ This example code is in the public domain.
+ https://docs.arduino.cc/learn/electronics/lcd-displays#custom-character
+
+ Also useful:
+ http://icontexto.com/charactercreator/
+
+*/
+
+// include the library code:
+#include &lt;LiquidCrystal.h&gt;
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+// make some custom characters:
+byte heart[8] = {
+  0b00000,
+  0b01010,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b01110,
+  0b00100,
+  0b00000
+};
+
+byte smiley[8] = {
+  0b00000,
+  0b00000,
+  0b01010,
+  0b00000,
+  0b00000,
+  0b10001,
+  0b01110,
+  0b00000
+};
+
+byte frownie[8] = {
+  0b00000,
+  0b00000,
+  0b01010,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b01110,
+  0b10001
+};
+
+byte armsDown[8] = {
+  0b00100,
+  0b01010,
+  0b00100,
+  0b00100,
+  0b01110,
+  0b10101,
+  0b00100,
+  0b01010
+};
+
+byte armsUp[8] = {
+  0b00100,
+  0b01010,
+  0b00100,
+  0b10101,
+  0b01110,
+  0b00100,
+  0b00100,
+  0b01010
+};
+
+void setup() {
+  // initialize LCD and set up the number of columns and rows:
+  lcd.begin(16, 2);
+
+  // create a new character
+  lcd.createChar(0, heart);
+  // create a new character
+  lcd.createChar(1, smiley);
+  // create a new character
+  lcd.createChar(2, frownie);
+  // create a new character
+  lcd.createChar(3, armsDown);
+  // create a new character
+  lcd.createChar(4, armsUp);
+
+  // set the cursor to the top left
+  lcd.setCursor(0, 0);
+
+  // Print a message to the lcd.
+  lcd.print(&quot;I &quot;);
+  lcd.write(byte(0)); // when calling lcd.write() '0' must be cast as a byte
+  lcd.print(&quot; Arduino! &quot;);
+  lcd.write((byte)1);
+
+}
+
+void loop() {
+  // read the potentiometer on A0:
+  int sensorReading = analogRead(A0);
+  // map the result to 200 - 1000:
+  int delayTime = map(sensorReading, 0, 1023, 200, 1000);
+  // set the cursor to the bottom row, 5th position:
+  lcd.setCursor(4, 1);
+  // draw the little man, arms down:
+  lcd.write(3);
+  delay(delayTime);
+  lcd.setCursor(4, 1);
+  // draw him arms up:
+  lcd.write(4);
+  delay(delayTime);
+}
+</code></pre>
+</main></body></html>

@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "corpus_sha256": "f8adc686385011b2b24046459a2320c3746c03e3b696540b6e71d10f2ba01d20",
+    "benchmark_sha256": "11e40f0192b98634cf3609ed7b08ca0cadf5cc85571e21c9fd5d482309735e21",
+    "provider": "openai",
+    "model": "text-embedding-3-small",
+    "dimensions": null,
+    "revision": null,
+    "generate_answers": true,
+    "llm_model": "gpt-4o-mini",
+    "llm_reasoning_effort": "none",
+    "llm_max_output_tokens": 700,
+    "cost_reference": {
+      "checked_at": "2026-11-13",
+      "embedding_usd_per_million": {
+        "text-embedding-3-small": 0.02,
+        "text-embedding-3-large": 0.13
+      },
+      "llm_usd_per_million": {
+        "gpt-4o-mini": {
+          "input": 2,
+          "cached_input": 0.2,
+          "output": 12
+        }
+      },
+      "sources": [
+        "https://developers.openai.com/api/docs/models/text-embedding-3-small",
+        "https://developers.openai.com/api/docs/models/text-embedding-3-large",
+        "https://developers.openai.com/api/docs/models/gpt-gpt-4o-mini"
+      ]
+    },
+    "fixed_size": 500,
+    "overlap": 50,
+    "paragraph_size": 1000,
+    "metric": "cosine",
+    "search": "exact",
+    "query_document_processing": "same encoder; L2 normalized",
+    "selection_rule": "dev Evidence Hit@3, then Hit@1, then median query embedding + search latency; no test tuning",
+    "code_sha256": "1a2611e047b41a91a254be77c032d0c106051aa76514b269b5ad87f0fb35f71a"
+  },
+  "statistics": {
+    "A": {
+      "chunk_count": 1053,
+      "characters": 459992,
+      "min_characters": 51,
+      "median_characters": 500,
+      "max_characters": 500
+    },
+    "B": {
+      "chunk_count": 611,
+      "characters": 421244,
+      "min_characters": 3,
+      "median_characters": 780,
+      "max_characters": 1000
+    },
+    "C": {
+      "chunk_count": 611,
+      "characters": 421244,
+      "min_characters": 3,
+      "median_characters": 780,
+      "max_characters": 1000
+    }
+  },
+  "qualifying_units": 105,
+  "evidence_validated": 20
+}

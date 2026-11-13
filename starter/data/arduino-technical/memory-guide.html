@@ -1,0 +1,715 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Arduino Memory Guide</title><base href='https://docs.arduino.cc/learn/programming/memory-guide/'></head><body><header><p>Source: <a href='https://docs.arduino.cc/learn/programming/memory-guide/'>https://docs.arduino.cc/learn/programming/memory-guide/</a>. Arduino. CC BY-SA 4.0. HTML converted from official Markdown; source commit 55f8bffb087dd96ff87d7b0752672ba0370bfce8. Original Markdown and original website HTML are preserved alongside this file.</p></header><main><h1>Arduino Memory Guide</h1><p>A microcontroller unit (also known as an MCU) is an integrated circuit (IC), typically used to perform specific applications or tasks. Usually, this type of IC gathers information or data from its surroundings, processes it, and generates specific outputs according to the gathered data. Microcontrollers today are everywhere; they are an essential part of modern embedded systems that can be found practically everywhere in our world, from smart watches to electric vehicles; they are even on the Martian surface right now.</p>
+<p>One essential part of a microcontroller is its <strong>memory</strong>; memory stores information temporarily or permanently in microcontrollers, and can be used for several purposes. In this article, we will explore memory organization in microcontrollers, focusing on those present in Arduino® boards. We will also explore several ways to manage, measure, and optimize memory usage in Arduino-based systems.</p>
+<h2 id="what-is-memory">What is Memory?</h2>
+<p>Memory blocks are essential parts of modern embedded systems, especially microcontroller-based ones. <strong>Memory blocks are semiconductor devices that store and retrieve information or data</strong>; a microcontroller central processing unit (CPU) uses and processes data stored in memory blocks to perform specific tasks.</p>
+<p>As shown in the image below, memory blocks in microcontrollers are usually described as <strong>arrays</strong>. Memory arrays are divided into <strong>cells</strong> that can store data and be accessed using a unique identifier representing its <strong>address</strong> or position relative to the memory array. Information in memory cells is stored using binary digits (bits), usually organized in bytes (8-bits); it can also be retrieved later by the MCU or other components of a microcontroller-based system.</p>
+<p>Memory in computing systems can be <strong>volatile</strong> or <strong>non-volatile</strong>. Volatile memory is a <strong>temporary memory</strong>, this means that data is stored while the system is running, but it is lost forever when the system is turned off. Non-volatile memory is <strong>permanent memory</strong>; data is not lost even if the system is turned off.</p>
+<h2 id="memory-architectures-101">Memory Architectures 101</h2>
+<p>Computer architecture is a vast topic; we will focus on a general picture that will let us understand how memory is organized in the microcontrollers used in Arduino® boards.</p>
+<p>In the early days of computing, two computer architectures, i.e., the organization of the components inside a computing system, emerged: <strong>von Neumann</strong> and <strong>Harvard</strong>.</p>
+<h3 id="von-neumann-architecture">Von Neumann Architecture</h3>
+<p>The von Neumann architecture, named after the mathematician, physicist, and computer scientist John von Neumann, was first introduced in the mid '40s. It is also known as the Princeton architecture. This architecture stores program data and instructions in the same memory unit.</p>
+<p><img src="assets/memory-guide-004.png" alt="Von Neumann architecture." /></p>
+<p>Both are accessed by the CPU using the same communications bus, as shown below. Von Neumann's architecture is fundamental since nearly all digital computers design have been based on this architecture.</p>
+<h3 id="harvard-architecture">Harvard Architecture</h3>
+<p>The Harvard architecture, named after the Harvard <em>Mark I</em> relay-based computer, was first introduced in the mid '40s. This architecture's main characteristic is that it uses <strong>two separate memory units</strong>, one for storing program instructions and one for storing program data. Both memory units in the Harvard architecture are accessed by the CPU using different communication buses.</p>
+<p><img src="assets/memory-guide-003.png" alt="Harvard architecture." /></p>
+<h3 id="modern-architectures-hybrids">Modern Architectures: Hybrids</h3>
+<p>Modern computing systems use <strong>hybrid architectures</strong> models that maximize performance using the best of both worlds, the von Neumann and the Harvard models.</p>
+<p>Microcontrollers are usually used in embedded applications. They must perform defined tasks reliably and efficiently, with low or constrained resources; this is why the <strong>Harvard architecture model is mainly used in microcontrollers</strong>: microcontrollers have a small program and data memory that needs to be accessed simultaneously. However, Harvard architecture is not always used in microcontrollers; some microcontroller families use hybrid or Von Neumann architecture models.</p>
+<h3 id="arduino-boards-architectures">Arduino® Boards Architectures</h3>
+<p>Arduino® boards are mainly based on two families of microcontrollers: <strong>AVR®</strong> and <strong>ARM®</strong>. While AVR® family microcontrollers are based on the Harvard architecture model, ARM® family microcontrollers can be based on either von Neuman or Harvard architectures models. The following table summarizes Arduino boards microcontrollers architectures:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Board</strong></th>
+<th><strong>Microcontroller</strong></th>
+<th><strong>Family</strong></th>
+<th><strong>Architecture</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNO Mini</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>UNO Rev3</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>UNO WiFi Rev2</td>
+<td>ATmega4809</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>UNO Rev3 SMD</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Leonardo</td>
+<td>ATmega32u4</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Mega 2560 Rev3</td>
+<td>ATmega2560</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Micro</td>
+<td>ATmega32u4</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Zero</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>Portenta H7</td>
+<td>STM32H747</td>
+<td>Arm® Cortex®-M4/M7</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Nicla Sense ME</td>
+<td>nRF52832</td>
+<td>Arm® Cortex®-M4</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Nano RP2040 Connect</td>
+<td>RP2040</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR FOX 1200</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR NB 1500</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR Vidor 4000</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR WiFi 1010</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR Zero</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR1000 WIFI</td>
+<td>ATSAMW25H18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR WAN 1300</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>MKR WAN 1310</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>Nano</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Nano Every</td>
+<td>ATmega4809</td>
+<td>AVR</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Nano 33 IoT</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+</tr>
+<tr>
+<td>Nano 33 BLE</td>
+<td>nRF52840</td>
+<td>Arm® Cortex®-M4</td>
+<td>Harvard</td>
+</tr>
+<tr>
+<td>Nano 33 BLE Sense</td>
+<td>nRF52840</td>
+<td>Arm® Cortex®-M4</td>
+<td>Harvard</td>
+</tr>
+</tbody>
+</table>
+<h2 id="memory-types">Memory Types</h2>
+<p>All the different memory units inside a microcontroller can be divided into two main types: <strong>RAM</strong> and <strong>ROM</strong>. RAM (from Random-Access Memory) in microcontroller-based systems is a volatile memory used to store temporary data such as the system's firmware variables. ROM (from Read-Only Memory) in microcontroller-based systems is non-volatile memory used to store permanent data such as the system's firmware.</p>
+<p>RAM and ROM in microcontroller-based systems are organized into three main categories:</p>
+<ul>
+<li>Flash</li>
+<li>RAM</li>
+<li>EEPROM</li>
+</ul>
+<h3 id="flash">Flash</h3>
+<p><strong>Flash</strong> memory in microcontroller-based systems is part of its ROM. The flash memory is where the system's firmware is stored to be executed. For example, think of the famous <code>Blink.ino</code> sketch: when we compile this sketch, we create a binary file that is later stored in the flash memory of an Arduino board. The sketch is then executed when the board is powered on.</p>
+<h3 id="ram">RAM</h3>
+<p><strong>RAM</strong> in microcontroller-based systems is where the system's <strong>temporary data or run-time data is stored</strong>; for example, the variables created by functions of a program. RAM in microcontrollers usually is <strong>SRAM</strong>; this is a type of RAM that uses a flip-flop to store one bit of data. There is also another type of RAM that can be found in microcontrollers: DRAM.</p>
+<h3 id="eeprom">EEPROM</h3>
+<p>In microcontroller-based systems, Erasable Programmable Read-Only Memory, or EEPROM, is also part of its ROM; actually, Flash memory is a type of EEPROM. The main difference between Flash memory and EEPROM is how they are managed; EEPROM can be managed at the byte level (write or erased) while Flash can be managed at the block level.</p>
+<h2 id="arduino-boards-memory-allocation">Arduino® Boards Memory Allocation</h2>
+<p>As stated before, Arduino® boards are mainly based on two families of microcontrollers, AVR® and ARM®; it is important to know that <strong>memory allocation differs in both architectures</strong>. In Harvard-based AVR architecture, memory is organized as shown in the image below:</p>
+<p><img src="assets/memory-guide-001.png" alt="AVR memory map." /></p>
+<p>Important to mention about AVR-based Arduino boards is how their SRAM is organized into different sections:</p>
+<ul>
+<li><code>Text</code></li>
+<li><code>Data</code></li>
+<li><code>BSS</code></li>
+<li><code>Stack</code></li>
+<li><code>Heap</code></li>
+</ul>
+<p>The <code>text</code> section contains instructions loaded into the flash memory; <code>data</code> section contains variables initialized in the sketch, <code>BSS</code> section contains uninitialized data, <code>stack</code> section stores data of functions and interrupts, and <code>heap</code> section stores variables created during run time.</p>
+<p>In hybrid ARM architectures, a so called <strong>memory map</strong> is implemented, with a different address map configuration of 32-bit, 36-bit, and 40-bit that depends on the requirement of System On a Chip (SoC) address space with extra DRAM. The Memory Map grants interface with SoC design, while having most system control on a high level coding. Memory access instructions can be used on high level code to manage interrupt modules and built-in peripherals. All of this controlled by <strong>Memory Management Unit (MMU)</strong>.</p>
+<p>The memory resource is handled by the MMU. The main role of the MMU is to enable the processor to run multiple tasks independently in its own virtual memory space; the MMU then uses translation tables to establish a bridge between the virtual and the physical memory addresses. Virtual Address is managed via software with memory instructions, and Physical address is the memory system that is controlled depending on the Translation Table input given by the Virtual Address.</p>
+<p>An example of how memory is organized in ARM-based microcontrollers, virtually and physically, is shown in the image below:</p>
+<p><img src="assets/memory-guide-002.png" alt="Memory organization in ARM-based microcontrollers." /></p>
+<p>The ARM-based microcontroller's memory is organized into the following sections within the address type mentioned previously:</p>
+<ul>
+<li><p><strong>Virtual address:</strong></p>
+<ul>
+<li><code>Kernel code and data</code></li>
+<li><code>Application code and data</code></li>
+</ul>
+</li>
+<li><p><strong>Physical address:</strong></p>
+<ul>
+<li><code>ROM</code></li>
+<li><code>RAM</code></li>
+<li><code>Flash</code></li>
+<li><code>Peripherals</code></li>
+</ul>
+</li>
+</ul>
+<p>The following table summarizes a specific Arduino® board's memory allocation:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Board</strong></th>
+<th><strong>Microcontroller</strong></th>
+<th><strong>Family</strong></th>
+<th><strong>Architecture</strong></th>
+<th><strong>Flash</strong></th>
+<th><strong>SRAM</strong></th>
+<th><strong>EEPROM</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNO Mini</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>32kB</td>
+<td>2kB</td>
+<td>1kB</td>
+</tr>
+<tr>
+<td>UNO Rev3</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>32kB</td>
+<td>2kB</td>
+<td>1kB</td>
+</tr>
+<tr>
+<td>UNO WiFi Rev2</td>
+<td>ATmega4809</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>48kB</td>
+<td>6kB</td>
+<td>256B</td>
+</tr>
+<tr>
+<td>UNO Rev3 SMD</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>32kB</td>
+<td>2kB</td>
+<td>1kB</td>
+</tr>
+<tr>
+<td>Leonardo</td>
+<td>ATmega32u4</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>32kB</td>
+<td>2.5kB</td>
+<td>1kB</td>
+</tr>
+<tr>
+<td>Mega 2560 Rev3</td>
+<td>ATmega2560</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>256kB</td>
+<td>8kB</td>
+<td>4kB</td>
+</tr>
+<tr>
+<td>Micro</td>
+<td>ATmega32u4</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>32kB</td>
+<td>2.5kB</td>
+<td>1kB</td>
+</tr>
+<tr>
+<td>Zero</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Portenta H7 (basic configuration)</td>
+<td>STM32H747</td>
+<td>Arm® Cortex®-M4/M7</td>
+<td>Harvard</td>
+<td>16MB</td>
+<td>8MB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Nicla Sense ME</td>
+<td>nRF52832</td>
+<td>Arm® Cortex®-M4</td>
+<td>Harvard</td>
+<td>512kB</td>
+<td>64kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Nano RP2040 Connect</td>
+<td>RP2040</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>-</td>
+<td>264kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR FOX 1200</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR NB 1500</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR Vidor 4000</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR WiFi 1010</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR Zero</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR1000 WIFI</td>
+<td>ATSAMW25H18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR WAN 1300</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MKR WAN 1310</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Nano</td>
+<td>ATmega328P</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>32kB</td>
+<td>2kB</td>
+<td>1kB</td>
+</tr>
+<tr>
+<td>Nano Every</td>
+<td>ATmega4809</td>
+<td>AVR</td>
+<td>Harvard</td>
+<td>48kB</td>
+<td>6kB</td>
+<td>256B</td>
+</tr>
+<tr>
+<td>Nano 33 IoT</td>
+<td>ATSAMD21G18</td>
+<td>Arm® Cortex®-M0+</td>
+<td>Von Neumann</td>
+<td>256kB</td>
+<td>32kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Nano 33 BLE</td>
+<td>nRF52840</td>
+<td>Arm® Cortex®-M4</td>
+<td>Harvard</td>
+<td>1MB</td>
+<td>256kB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Nano 33 BLE Sense</td>
+<td>nRF52840</td>
+<td>Arm® Cortex®-M4</td>
+<td>Harvard</td>
+<td>1MB</td>
+<td>256kB</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Pro hardware SDRAM and Flash memory are highly customizable in volumes. Check out the <a href="https://www.arduino.cc/pro/">Pro site</a> for more information.</strong></em></p>
+<h2 id="measuring-memory-usage-in-arduino-boards">Measuring Memory Usage in Arduino® Boards</h2>
+<p>Memory usage statistics help comprehend the insight of resource management affected by the designed code structure. Memory load demand is one statistic that will give you an insight into how efficient the code is designed. It is a crucial development consideration element because the resources are finite inside a microcontroller-based system; <strong>software should always perform without reaching maximum load capacity to avoid problems or issues</strong>. Memory load could be observed either as <strong>available RAM</strong> at disposal for specific tasks or <strong>flash storage remaining capacity</strong> for required headroom.</p>
+<p><em><strong>To avoid run-time problems, microcontroller-based systems should always run without reaching their maximum memory capacity.</strong></em></p>
+<p>Let us talk more about <strong>memory usage measurement</strong> in Arduino® boards.</p>
+<h3 id="flash-memory-measurement">Flash Memory Measurement</h3>
+<p>Flash memory on Arduino® boards can be measured with the help of the Arduino IDE. As stated before, Flash memory is where the application code is stored; <strong>the Arduino IDE reports Flash memory usage through its compiler output console</strong> to let developers know how much Flash memory resources are being used.</p>
+<p>For example, the IDE's compiler output console an AVR-based Arduino® board, the Nano, is shown in the image below:</p>
+<p><img src="assets/avr_nano.png" alt="Flash memory memory measurement in an AVR-based Arduino® board" /></p>
+<p>The IDE's compiler output console log for an ARM-based Arduino® board, the MKR WAN 1310, is shown in the image below:</p>
+<p><img src="assets/arm_mkrwan1310.png" alt="Flash memory memory measurement in an ARM-based Arduino® board" /></p>
+<p>The IDE's compiler output console log for another ARM-based Arduino®, the Portenta H7, is shown in the image below:</p>
+<p><img src="assets/arm_portentah7.png" alt="Flash memory memory measurement in an ARM-based Arduino® board" /></p>
+<p>Notice that the compiler's output changes depending on if the board is AVR-based or ARM-based.</p>
+<h3 id="sram-memory-measurement">SRAM Memory Measurement</h3>
+<p>Sometimes, there are situations where even when code is compiled and uploaded successfully by the IDE into a board, it suffers from sudden halts. These issues are likely due to memory resource-hogging or insufficient memory to allocate. It is necessary to understand which code sector the memory demand is going beyond the available resources to solve this. The following example code can be used to <strong>measure SRAM usage in AVR-based Arduino® boards</strong>:</p>
+<pre><code class="language-arduino">void display_freeram() {
+  Serial.print(F(&quot;- SRAM left: &quot;));
+  Serial.println(freeRam());
+}
+
+int freeRam() {
+  extern int __heap_start,*__brkval;
+  int v;
+  return (int)&amp;v - (__brkval == 0  
+    ? (int)&amp;__heap_start : (int) __brkval);  
+}
+</code></pre>
+<p>Remember that the <code>heap</code> section is where variables created during the run time are stored. In the code, <code>__heap_start</code> and <code>__brkval</code> are as following:</p>
+<ul>
+<li><strong><code>__heap_start</code></strong>: the beginning of the <code>heap</code> section.</li>
+<li><strong><code>__brkval</code></strong>: the last memory address pointer used by the <code>heap</code>.</li>
+</ul>
+<p>The following example code can be used to <strong>measure SRAM usage in ARM-based Arduino® boards</strong>:</p>
+<pre><code class="language-arduino">extern &quot;C&quot; char* sbrk(int incr);
+
+void display_freeram(){
+  Serial.print(F(&quot;- SRAM left: &quot;));
+  Serial.println(freeRam());
+}
+
+int freeRam() {
+  char top;
+  return &amp;top - reinterpret_cast&lt;char*&gt;(sbrk(0));
+}
+</code></pre>
+<p>The code above is taken from Michael P. Flaga's library <a href="https://github.com/mpflaga/Arduino-MemoryFree">Arduino-MemoryFree</a>.</p>
+<h3 id="eeprom-memory-measurement">EEPROM Memory Measurement</h3>
+<p>EEPROM memory management can be done easily using native libraries already installed into the Arduino IDE. The <code>EEPROM</code> library can be used to read, write and erase the EEPROM memory. The following code shows how a byte of information can be stored in the EEPROM memory and then read using the <code>write</code> and <code>read</code> functions:</p>
+<pre><code class="language-arduino">#include &lt;EEPROM.h&gt;
+
+void setup() {
+}
+
+void loop {
+  // Write data into an specific address of the EEPROM memory 
+  EEPROM.write(address, value);
+
+  // Read data of an specific address of the EEPROM memory 
+  EEPROM.read(address);
+}
+</code></pre>
+<p>Also, it is possible to clear the entire EEPROM memory by setting it to 0, as shown in the code below:</p>
+<pre><code class="language-arduino">#include &lt;EEPROM.h&gt;
+
+void setup() {
+}
+
+void loop {
+  for (int i = 0 ; i &lt; EEPROM.length() ; i++) {
+    // Clear EEPROM memory 
+    EEPROM.write(i, 0);
+
+}
+</code></pre>
+<p><em><strong>For more information on how to manage the EEPROM memory, you can refer to <a href="https://docs.arduino.cc/learn/programming/eeprom-guide">this guide</a>.</strong></em></p>
+<h2 id="optimizing-memory-usage-in-arduino-based-systems">Optimizing Memory Usage in Arduino-based Systems</h2>
+<p>Knowing how code uses memory resources of a system is just the first recommended task in the development process; a whole different task is <strong>optimizing memory usage</strong>. As the term development may infer, the requirements may change or be adjusted depending on external factors such as reduced device capacity due to the unavailability of the components. Thus the code architecture may require optimization to run on the reduced limited memory resources.</p>
+<p>The memory usage optimization process also implies reduced computational complexities, trimming down extra time required to process tasks while using fewer memory resources to do the same tasks. The memory usage optimization process may help the overall code optimization process, as it will handle how the memory is managed more suitably by requiring intelligent algorithms development.</p>
+<p>Let us talk about some memory usage optimization techniques.</p>
+<h3 id="flash-memory-optimization">Flash Memory Optimization</h3>
+<p>Flash memory optimization is the most likely straightforward optimization possible source. Flash memory is where the capacity used by compiled code can be significantly reduced by considering some details.</p>
+<h4 id="detach-unused-sources">Detach Unused Sources</h4>
+<p>Detaching new sources includes <strong>unused libraries</strong> and <strong>code residues</strong>. Code residues can be composed of no-longer-used functions and floating variables that take up the unnecessary space in memory. This will vastly improve the compiled code size and make a more clear compilation process.</p>
+<h4 id="modular-tasks">Modular Tasks</h4>
+<p><strong>Modular tasks</strong> mean <strong>functions that wrap code that will be used repetitively or continuously</strong> by receiving different parameters. It is a great way to maintain clean code structure and performance while reducing the memory space required for additional tasks that might need to be implemented.</p>
+<p>This leads to a compact code structure, which is much easier to understand when debugging is required and demands the developer consider computing complexity when designing the code structure or such a specific algorithm.</p>
+<h3 id="sram-memory-optimization">SRAM Memory Optimization</h3>
+<p>SRAM memory is probably the most important memory unit inside a microcontroller-based system; optimizing the SRAM usage is essential for designing reliable microcontroller-based systems. SRAM shortages are usually the most common memory problems found; SRAM optimization can help in reducing this type of issue.</p>
+<p>The ideal way to use the Print Line command is to use the <code>F()</code> String Wrapper around the literals. See the example below:</p>
+<h4 id="string-wrapper">String Wrapper</h4>
+<p><code>Serial.print()</code> or <code>Serial.println()</code> instructions uses SRAM space, which can be convenient but not desirable. The ideal way to use a <code>Serial.print()</code> or <code>Serial.println()</code> instruction is with the use of the <strong><code>F()</code> String wrapper</strong> around the literals. For example:</p>
+<pre><code class="language-arduino">Serial.println(F(&quot;Something&quot;));
+</code></pre>
+<p>Wrapping the String <code>Something</code> with the <code>F()</code> wrapper will <strong>move the Strings to Flash memory only rather than to use SRAM space</strong> also. Using the <code>F()</code> wrapper can be observed as offloading such data to Flash memory instead of SRAM. Flash memory is much more spacious than SRAM, so it is better to use Flash memory space than SRAM, which will use <code>heap</code> section. This does not mean that memory space will always be available, as Flash memory does have limited space. It is not recommended to clog code with <code>Serial.print()</code> or <code>Serial.println()</code> instructions, but use them where they most matter inside the code.</p>
+<h4 id="progmem">PROGMEM</h4>
+<p>Not only Strings occupy SRAM space, but <strong>global variables</strong> also take up quite a good amount of SRAM space. As global and static variables are streamed into SRAM space and push the <code>heap</code> memory section towards the <code>stack</code>. The space occupied by these variables streamed into SRAM space will be saved at its location and will not be changing, meaning more of these variables are created, they will use more space, and consequently, the system presenting problems and issues due to poor memory management.</p>
+<p><code>PROGMEM</code>, which stands for <strong>Program Memory</strong>, can be used to store variable data into Flash memory space, just as the <code>F()</code> wrapper described before, but the use of <code>PROGMEM</code> presents one disadvantage: data read speed. Using RAM will provide a much faster data read speed, but <code>PROGMEM</code>, as it uses Flash memory, will be slower than RAM, given the same data size. Thus, it is essential to design code knowing which variables are crucial and which do not or have a lower priority.</p>
+<p>The use of <code>PROGMEM</code> in an <strong>AVR-based Arduino® board</strong> is shown in the example code below:</p>
+<pre><code class="language-arduino">#include &lt;avr/pgmspace.h&gt;
+
+// Basic PROGMEM structure 
+const PROGMEM DataType Variable_Name[] = {var0, var1, var2 ...};
+
+// Storing an unsigned, 16-bit, integer
+const PROGMEM uint16_t NumSet[] = {0, 1, 1, 2, 3, 5, 8 ...};
+
+// Storing a char in PROGMEM
+const char greetMessage[] PROGMEM = {&quot;Something&quot;};
+</code></pre>
+<p><em><strong>You can read more about PROGMEM in the <a href="https://www.arduino.cc/reference/en/language/variables/utilities/progmem/">Arduino Language Reference</a>.</strong></em></p>
+<p>For <strong>ARM-based Arduino® board</strong>, to implement similar solution, we will need to use <code>static const</code> over the variables.</p>
+<pre><code class="language-arduino">static const int Variable = Data;
+</code></pre>
+<p>The usage differs in different levels summarized as following:</p>
+<ul>
+<li><p><em>Namespace Level</em></p>
+<ul>
+<li>At Namespace level, we are pointing at the variables and it is differed whether <code>static</code> is declared or not. If declared, it infers that the variable is explicit static; on the other hand, it is implicit static declaration.</li>
+</ul>
+</li>
+<li><p><em>Function Level</em></p>
+<ul>
+<li>If it is declared within <code>static</code>, any type of applicable data that is to be managed will be between function calls.</li>
+</ul>
+</li>
+<li><p><em>Class Level</em></p>
+<ul>
+<li>On a Class level, <code>static</code> declaration will mean any type of applicable data that is handled will be shared in between the instances.</li>
+</ul>
+</li>
+</ul>
+<h4 id="non-dynamic-memory-allocation">Non-Dynamic Memory Allocation</h4>
+<p>Dynamic memory allocation is usually a suitable method if the RAM size of the system is big enough to get around with; however, for microcontroller-based systems, such as embedded systems, counting every Byte of RAM is not recommended.</p>
+<p>Dynamic memory allocations cause <strong>heap fragmentation</strong>. With heap fragmentation, many areas of RAM affected by it cannot be reused again, leaving dead Bytes that can be taken as an advantage for other tasks. On top of it, when dynamic memory allocation proceeds to de-allocate to free up the space, it does not necessarily reduce the heap size. So to avoid heap or RAM fragmentation as much as possible, the following rules can be followed:</p>
+<ul>
+<li><p><strong>Prioritize using the stack rather than the heap</strong>:</p>
+<ul>
+<li><strong>Stack</strong> memory is fragmentation-free and can be freed up thoroughly when the function returns. Heap, in contrast, may not free up the space even though it was instructed to do so. Using local variables will help to do this and try not to use dynamic memory allocation, composed of different calls: <code>malloc, calloc, realloc</code>.</li>
+</ul>
+</li>
+<li><p><strong>Reduced global and static data (if possible)</strong>:</p>
+<ul>
+<li>Meantime the code is running, memory area occupied by these data will not be freed up. The data will not be modified as constant data takes up precious space.</li>
+</ul>
+</li>
+<li><p><strong>Use short Strings/literals</strong>:</p>
+<ul>
+<li><p>It is good to keep Strings/literals as short as possible. A single char takes <strong>one</strong> Byte of RAM, so the shorter, the better memory space usage. This does not mean keeping it short and using it in several different code areas is possible. Use it when required and keep it as short as possible to spare RAM space for other tasks.</p>
+</li>
+<li><p><strong>Arrays</strong> are also recommended to be at a minimum size. If it requires resizing the array, you can always re-set the array size in code. It may be a tedious, also non-efficient method to hard-code the array sizes. However, if the code utilizes small array sizes and less than three arrays, it may suffice via manual resizing, knowing the requirements. An intelligent way to do this is a resizable array with limited size. The tasks will use the array without going over the size boundary. Thus it is suitable for extensive code. Although, the limit of the array size must be analyzed and kept as small as possible.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="reserve-function">Reserve Function</h4>
+<p>In tasks in code work with Strings that change in size depending on the operation outcome, <code>reserve()</code> is the way to go. This function will help <strong>reserve buffer space and pre-allocate for a String variable</strong>, changing its size and avoiding memory fragmentation. A String variable that changes in its size could result from an int type variable wrapped to be used as a String, for example.</p>
+<p>The following code shows how to use the <code>reserve()</code> instruction:</p>
+<pre><code class="language-arduino">// String_Variable is an String type variable
+// Alloc_Size is the memory to be pre-allocated in number of Bytes with unsigned int type
+String_Variable.reserve(Alloc_Size);
+</code></pre>
+<p><em><strong>For more information about the <code>reserve()</code> function, visit <a href="https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/reserve/">Arduino Language Reference</a>.</strong></em></p>
+<h4 id="buffer-size-control">Buffer Size Control</h4>
+<p>Backend processes also require a memory pool for their processing purpose. It is something on which the system will work according to the size of the memory pool defined. This <strong>buffer size can be user-defined</strong>, which can be reduced to allocate a lower memory size. Think about defining an array variable size, in which it is important not to allocate excessive size when it uses only a third portion of the defined size.</p>
+<p>Let us discuss an example: serial communications in Arduino. Serial communications is a regularly used service in Arduino-based systems; Serial communications in Arduino work using the preinstalled Serial library (external libraries can also emulate serial communications using software). In between backend services, serial communications define the needed memory pool as a buffer with a defined size. If high-speed serial communication is not part of the requirements, the serial buffer size can be redefined to save some memory consumption. This can be made easily by modifying the following code line in the  <code>HardwareSerial.h</code> file that can be found in the installation folder of the Arduino IDE:</p>
+<pre><code class="language-arduino">#define SERIAL_TX_BUFFER_SIZE 64
+
+#define SERIAL_RX_BUFFER_SIZE 64
+</code></pre>
+<p><em><strong>External libraries can usually be modified to optimize buffer sizes used for performing specific tasks of the libraries.</strong></em></p>
+<h4 id="corrective-data-type-usage">Corrective Data Type Usage</h4>
+<p>Implementation of adequate <strong>data type</strong> leads to a good overall code architecture. It may be desirable for developers to use easiest or the most accessible data type to handle the data in code. However, it is important to consider the amount of memory space that it takes up when using certain data types.</p>
+<p>Data types exist to ease data stream format and to be handled without making illegal access. The illegal access in terms of data types are meant when the data is handled in the code with incompatible format. So it is a good practice to not to abuse the the data type and use only convenient types for every data bits. Rather, design and allocate memory carefully according to the requirements, which will help to reserve some memory space if further designed tasks needs extra space.</p>
+<p>The following table shows basic value data types in Arduino:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Type</strong></th>
+<th style="text-align: center;"><strong>Byte Length</strong></th>
+<th style="text-align: center;"><strong>Range of Values</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Limited to logic true and false</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>char</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-128 to 127</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>unsigned char</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0 to 255</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>byte</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0 to 255</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-32,768 to 32,767</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>unsigned int</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0 to 65,535</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>word</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0 to 65,535</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>long</code></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>unsigned long</code></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0 to 4,294,967,295</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>float</code></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-3.4028235E+38 to 3.4028235E+38</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>double</code></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-3.4028235E+38 to 3.4028235E+38</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eeprom-memory-optimization">EEPROM Memory Optimization</h3>
+<p>EEPROM memory optimization is usually not required; data that are to be used by EEPROM space do not need Flash memory as a storage source. On top of it, <strong>it is not a good practice to offload SRAM data on EEPROM</strong>. SRAM data are placed within volatility in mind, so offloading to EEPROM space, which is non-volatile memory, will mean the offloaded data will be engraved into EEPROM space.</p>
+<p>With EEPROM, it is crucial to know that <code>write</code> operation is limited. The <code>read</code> operation is unlimited for EEPROM; however, the <code>write</code> operation is finite and usually capped at 100,000 cycles. Thus, it is essential to save only essential parameters for sensors or modules to work with primarily unchanging data. Additionally, avoid implementing <code>write</code> operations into loops to avoid constant <code>write</code> operations, these operations should be minimized while the system is working.</p>
+<h4 id="eeprom-emulation-with-flash-memory">EEPROM Emulation with Flash Memory</h4>
+<p>As EEPROM is limited with the write operation cycle, it also applies to Flash memory. Both of them are subjected to data retention loss after the manufacturer's defined life cycle. EEPROM is based on NOR-type memory, while the Flash memory is NAND type, making the EEPROM more costly than Flash memory. EEPROM works by accessing the data byte-wise, whereas Flash memory accesses block by block.</p>
+<p>Sometimes the developer would have to use the EEPROM as alternative storage for task operations, but we know it will be impractical coding due to its size and behavior properties. It is possible to use Flash memory to emulate the EEPROM to solve this. Thanks to the <a href="https://github.com/cmaglie/FlashStorage">FlashStorage</a> library created by Chrisitan Maglie, it is possible to emulate the EEPROM by using Flash memory.</p>
+<p><em><strong>The FlashStorage library will help you to use the Flash memory to emulate the EEPROM, but of course, please remember the EEPROM's properties when using the library. As for EEPROM, the Flash memory is also limited in the <code>write</code> cycles. With two new additional functions stated in the library, <code>EEPROM.commit()</code> should not be called inside a loop function; otherwise, it will wipe out the Flash memory's <code>write</code> operation cycles, thus losing data retention ability.</strong></em></p>
+<h3 id="further-reading-and-resources">Further Reading and Resources</h3>
+<p>Memory architectures in microcontroller-based systems is a pretty vast topic; if you want to learn more about this topic, check out the following links:</p>
+<ul>
+<li>8-bit AVR® Core documentation in the <a href="https://microchipdeveloper.com/8avr:avrcore">Microchip® Developer help site</a>. Here you can find detailed information of the 8-bit AVR® Central Processing Unit (CPU).</li>
+<li>ARM architecture <a href="https://developer.arm.com/documentation/">documentation site</a>. Here you can find detailed information of the different ARM processors. Check out the Cortex-M0+ and Cortex-M4 Technical Reference Manuals.</li>
+</ul>
+<h3 id="references">References</h3>
+<p>[1] S. F. Barrett and D. J. Pack, Microchip AVR® Microcontroller Primer: Programming and Interfacing, Third Edition (Synthesis Lectures on Digital Circuits and Systems), Morgan &amp; Claypool, 2019. <br />
+[2] J. Y. Yiu, The Definitive Guide to Arm® Cortex®-M0 and Cortex-M0+ Processors, Second ed., Newnes, 2015.<br /></p>
+<p>[3] J. Yiu, The Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors, Third ed., Newnes, 2014.<br /></p>
+</main></body></html>

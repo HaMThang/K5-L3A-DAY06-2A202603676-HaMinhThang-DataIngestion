@@ -1,0 +1,74 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Guide to 3V3 and 5V Power Supplies Differences</title><base href='https://docs.arduino.cc/learn/microcontrollers/5v-3v3/'></head><body><header><p>Source: <a href='https://docs.arduino.cc/learn/microcontrollers/5v-3v3/'>https://docs.arduino.cc/learn/microcontrollers/5v-3v3/</a>. Arduino. CC BY-SA 4.0. HTML converted from official Markdown; source commit 55f8bffb087dd96ff87d7b0752672ba0370bfce8. Original Markdown and original website HTML are preserved alongside this file.</p></header><main><h1>Guide to 3V3 and 5V Power Supplies Differences</h1><h2 id="v3-vs.5v">3V3 vs. 5V</h2>
+<p>When designed, most electronic circuits and devices must choose a <strong>power supply</strong>. The <strong>voltage</strong> of the power supply is usually determined either by convenience or the need for power efficiency that the electronic circuit or device itself has as a requirement.</p>
+<p><strong>3V3</strong> and <strong>5V</strong> are standard voltage levels nowadays in power supplies. Although there is only a 1V7 difference between both voltages, it is enough to provide a significant difference in power efficiency. This guide will show you why 3V3 is the current standard voltage level for power supplies in electronic circuits and devices and some general tips when designing and handling these voltage levels in your circuits or devices powered by Arduino.</p>
+<h2 id="v3-the-standard-voltage-level">3V3, the Standard Voltage Level</h2>
+<p>So, why is the <strong>3.3V</strong> a standard power supply voltage level? Because power consumption has always been a concern for designers, lower power supply voltage levels were introduced to make more power-efficient circuits and devices. For over 30 years, powering electronic circuits and devices using a 5V level was common practice; today, most electronic circuits and devices use a 3V3 power supply voltage level, some are even migrating to a 2V5 level (or even to lower voltages!).</p>
+<p><em><strong>Reducing the power supply voltage yields an exponential decrease in power consumption.</strong></em></p>
+<p>A standard exists for defining the voltage levels of input and output voltages for every power supply voltage level; this standard was developed by The Joint Electron Device Engineering Council (JEDEC); it is the JEDEC Standard 8-A for LV interface levels. The JEDEC Standard 8-A for LV interface levels is described in the image shown below for 3V3 and 5V logic families:</p>
+<p><img src="assets/3v3-5v_img01.png" alt="The JEDEC Standard 8-A for LV interface levels." /></p>
+<p>In the image shown above:</p>
+<ul>
+<li>V<sub>OL</sub>: maximum output voltage level an electronic device will provide for a LOW signal</li>
+<li>V<sub>IL</sub>: maximum input voltage level an electronic device will still considered as a LOW signal</li>
+<li>V<sub>t</sub>: threshold voltage at which an electronic device switches its interpretation of a signal from low to high or vice versa</li>
+<li>V<sub>IH</sub>: minimum input voltage level an electronic device will still considered as a HIGH signal.</li>
+<li>V<sub>OH</sub>: minimum output voltage level an electronic device will still considered as a HIGH signal</li>
+</ul>
+<p><em><strong>For more in-depth information about current microelectronic standards, please look at the <a href="https://www.jedec.org/">JEDEC</a> website.</strong></em></p>
+<h2 id="how-to-avoid-burning-circuits-101">How to Avoid Burning Circuits 101</h2>
+<p>Every electronic designer driving the power lines of electronic circuits and devices can cause, accidentally or on purpose, a short circuit and, therefore, damage the electronic circuits or devices. Accidents and mistakes always happen, but we can follow some tips and tricks to avoid them. Let's check it out!</p>
+<h3 id="color-coded-power-lines">Color Coded Power Lines</h3>
+<p><strong>Color coding</strong> the power lines is the easiest yet most effective visual method to avoid an incorrect connection in the power lines of electronic circuits or devices. When prototyping an electronic circuit or device, some developers make the common mistake of using the same color on every cable while being jumbled all over the place, making it impossible to identify which.</p>
+<p>Color coding power lines makes it much easier to identify the voltage and Ground (GND) lines. According to industry regulations and standards, red is typically used to indicate a voltage line, while black is used to indicate a GND line; colors vary depending on the regulation or standard.</p>
+<p><em><strong>For more information on electrical regulations and standards, please check out the <a href="https://standards.ieee.org/products-programs/nesc/">National Electrical Safety Code®</a> from the Institute of Electrical and Electronics Engineers (IEEE).</strong></em></p>
+<h3 id="fuse-integration">Fuse Integration</h3>
+<p>One easy way to protect electronic devices is to integrate an onboard power protection circuit into the device. Several circuit designs can be implemented to achieve this; one of the easiest circuits to implement is using a fuse.</p>
+<p>Fuse integration to electronic devices is not a complicated design process. The following schematic shows a <strong>simple reverse polarity protection</strong> circuit that can be used in low-power DC circuits:</p>
+<p><img src="assets/SimpleRPP.png" alt="Simple reverse polarity protection circuit." /></p>
+<p>This simple reverse polarity protection circuit uses a fuse and a diode that later connects to the electronic circuit, which can be referred to as the <strong>load</strong>.</p>
+<h3 id="a-better-reverse-polarity-protection-circuit">A Better Reverse Polarity Protection Circuit</h3>
+<p>Implementing complicated power protection circuit does not mean the load is absolutely protected. Depending on the component selection and cost for implementation, the solution can become much more elegant, and the same applies for reverse polarity protection. The following reverse polarity protection is designed by Mehdi Sadaghdar.</p>
+<p><img src="assets/ElegantRPP.png" alt="Complete Reverse Polarity Protection" /></p>
+<p>The key points of the circuit presented above are the Transient Voltage Suppressor diode and the MOSFET of P-Channel type. This protection circuit will help you save the Protected Load and to have it as a good reference for protection design. Although due to its electric components, it becomes a little more advanced to cover in the scope of this guide.</p>
+<p><em><strong>If you are interested in reading more, visit <a href="https://www.electroboom.com/?p=914">this article</a> by Mehdi Sadaghdar.</strong></em></p>
+<h3 id="over-voltage-and-over-current-protection">Over-Voltage and Over-Current Protection</h3>
+<p>Sometimes the electronic device, that should receive 3.3V level of input from the supply may receive a &quot;dirty&quot; tension. This causes the electronic device to suffer abnormal electronic behaviour. As it could destabilise the system completely or change the logic forcefully due to changed logic range to be unrecognised. There are more of this undesired behaviour, if over-voltage or over-current is introduced to the system.</p>
+<p>So for this matter, how do we protect the system? The solution can be based of the proper Reverse Polarity Protection showed previously. The proper Polarity Reverse Polarith Protection implements a bidirectional Transient Voltage Suppressor while adding the P-Channel MOSFET with a zenerdiode and two resistors to get all its flavours.</p>
+<p><em><strong>To give quick explanation on Transient Voltage Suppressor - It is a type of a diode that helps to protect high-spike voltages generated at the output of Power Supply.</strong></em></p>
+<p>But a simple Reverse Polarity Protection, with a Transient Voltage Suppressor diode can be used to protect the over-voltage and over-current issues. If you want to go further into protecting the Load from over-voltage and over-current, it is possible to integrate <strong>Surge Stopper</strong> to provide active protection. May increase the cost, however it is a good measure to protect the Load.</p>
+<h2 id="stepping-the-voltage-level-shifters">Stepping the Voltage - Level Shifters</h2>
+<p>Arduino boards relies on 3.3V and 5V levels. But sometimes there may not be available pins that matches the voltage requirement to adequately drive the sensor or any such line. In this section, we will take a look at how we can <strong>step up and down voltages.</strong></p>
+<p>We will use a bidirectional Logic Level Converter to step the voltage level, to be able to use sensors or logics at higher or lower voltage levels. This is an option to use if tight electric specification is implemented on the board.</p>
+<p><em><strong>The bidirectional Logic Level Converter used can be found <a href="https://www.sparkfun.com/products/12009">here</a> (SparkFun).</strong></em></p>
+<h3 id="stepping-down-voltage">Stepping Down Voltage</h3>
+<p>We will begin by learning how to step down the voltage. Usually, voltage is driven down to lower level needed by the external module or sensors. It can also be due to need of lower voltage line to handle a separate circuit. It is crucial that you know the electric requirement that will demand if the electronic design is more complex than usual design. Such as tight electric specification and multiple signal lines to handle with operating at high speeds.</p>
+<p>A <strong>voltage divider</strong> is the simplest yet easy to implement solution. It uses 2 resistors to create a lower voltage output. So, knowing the <strong>input voltage</strong> and targeted <strong>output voltage</strong> and a <strong>reference resistor</strong>, it is simple enough to calculate the other required resistor to implement to produce desired voltage. Below is a voltage dividing circuit.</p>
+<p><img src="assets/StepDown.png" alt="Voltage/Resistive Divider" /></p>
+<p>When using this circuit, you will still need to be cautious of the residing capacitance that is connected at the output of this circuit and with the quick rise times, as for certain applications with cautious timing requirements or modules non-response to quick rise times will be affected.</p>
+<h3 id="stepping-up">Stepping Up</h3>
+<p>To <strong>step up</strong> voltage, you will need to use a little bit more constructive electric circuit by using diodes. The following circuit shows how to use diodes to step up voltage.</p>
+<p><img src="assets/StepUpDiode.png" alt="Step Up Circuit - Diode Implementation" /></p>
+<p>You will need to biase the diodes with precaution and the resistor that is much lower than the input impedance of the 5V gate. One of the know-hows shared by Microchip is to use <strong>Schottky</strong> diodes to gain slight high-level voltage and reduce low-level voltage from incrementing. Following circuit uses a different setup.</p>
+<p><img src="assets/StepUpMOSFET.png" alt="Step Up Circuit - MOSFET" /></p>
+<p>This circuit uses the MOSFET as a switch and takes the 5V logic from the drain. It is useful if the logic inversion can be treated, as 3.3V logic becomes inverted. To begin with MOSFET, a 2N7000 or a BSS138 MOSFET can be used for this circuit.</p>
+<h3 id="bi-directional-logic-level-converter">Bi-Directional Logic Level Converter</h3>
+<p>Previous electric circuits are <strong>uni-directional</strong> logic level shifters. Meaning that to use different stepping configuration, you will need to change the entire electric circuit to go from stepping up to down, and vice-versa. On top of it, if the electronic size is factor to take it into account, then you can use a off-the-shelf logic level converter.</p>
+<p>You can use the <a href="https://www.sparkfun.com/products/12009">Bi-Directional Logic Level Shifter</a> from SparkFun to test and also for deployment if the requirements enables its integration. The advantage of this particular shifter is that it provides 4 channels to shift within the voltage references given. High Voltage level and Low Voltage level references are injected with desired voltage level and channels are used to transmit the data in between.</p>
+<p><img src="assets/BD_LC.png" alt="Voltage Stepping- Logic Shifter" /></p>
+<p>The circuit above uses the bi-directional logic shifter to establish I2C interface with any sensor capable of the protocol. The SCL and SDA lines go through a High Voltage channel and establishes communication with the sensor that is connected at its respective Low Voltage Channel.</p>
+<p>The configuration of the Logic Shifter usually does not change, as the the purpose is to transmit the signal from a High to a Low Level or vice-versa, depending on the architecture operation. Thus, the previous schematic illustrates usual global connection configuration. As it can be to interface the Arduino board with another computing module working on a different voltage level. Below schematic shows the specific of each channel and focus the scope inside the schematic symbol box of the Logic Shifter.</p>
+<p><img src="assets/BDLC_Insight.png" alt="Logic Shifter Insight" /></p>
+<p>Each channel is composed by two resistors and a MOSFET that will use the reference High and Low voltages to transfer the signal from the respective module.</p>
+<h2 id="further-reading-and-resources">Further Reading and Resources</h2>
+<p>Handling different voltage levels covers vast electronic department, and without exception for 3.3V and 5V levels which are the most used voltage levels. To get deeper into the topic handling voltage levels, you can follow some of the links that might get our attention.</p>
+<ul>
+<li>If you want to know about some know-hows from Microchip, you can read <a href="https://www.newark.com/pdfs/techarticles/microchip/3_3vto5vAnalogTipsnTricksBrchr.pdf">Microchip: 3V Tips 'n Tricks</a> to learn about wide variety of techniques used with 3.3V and 5V levels.</li>
+<li>Level Shifting the voltage has its own science dedicated to it and Philips Semiconductor welcomes you if you are ready learn deeper about <a href="http://cdn.sparkfun.com/tutorialimages/BD-LogicLevelConverter/an97055.pdf">Bi-Directional Level Shifter for I2C Bus and Other Systems</a> with their Application Note AN97055.</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li>[1] Larsson, E. (2006). Introduction to Advanced System-on-Chip Test Design and Optimization. Springer Publishing.</li>
+<li>[2] Kularatna, N. (2018). DC Power Supplies Power Management and Surge Protection for Power Electronic Systems. Amsterdam University Press.</li>
+<li>[3] Ballan, H., &amp; Declercq, M. (2010). High Voltage Devices and Circuits in Standard CMOS Technologies. Springer Publishing.</li>
+</ul>
+</main></body></html>

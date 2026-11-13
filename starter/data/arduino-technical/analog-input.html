@@ -1,0 +1,18 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Analog Input Pins</title><base href='https://docs.arduino.cc/learn/microcontrollers/analog-input/'></head><body><header><p>Source: <a href='https://docs.arduino.cc/learn/microcontrollers/analog-input/'>https://docs.arduino.cc/learn/microcontrollers/analog-input/</a>. Arduino. CC BY-SA 4.0. HTML converted from official Markdown; source commit 55f8bffb087dd96ff87d7b0752672ba0370bfce8. Original Markdown and original website HTML are preserved alongside this file.</p></header><main><h1>Analog Input Pins</h1><p>A description of the analog input pins on an Arduino chip (ATmega8, ATmega168, ATmega328P, or ATmega1280).</p>
+<h2 id="ad-converter">A/D Converter</h2>
+<p>The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).</p>
+<p>Consequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.</p>
+<h2 id="pin-mapping">Pin Mapping</h2>
+<p>The analog pins can be used identically to the digital pins, using the aliases <code>A0</code> (for analog input 0), <code>A1</code>, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it <code>HIGH</code>:</p>
+<pre><code class="language-arduino">pinMode(A0, OUTPUT);
+digitalWrite(A0, HIGH);
+</code></pre>
+<h2 id="pull-up-resistors">Pull-up Resistors</h2>
+<p>The analog pins also have pull-up resistors, which work identically to pull-up resistors on the digital pins. They are enabled by issuing a command such as:</p>
+<pre><code class="language-arduino">pinMode(A0, INPUT_PULLUP);  // Set pull-up on analog pin 0
+</code></pre>
+<p>Be aware however that turning on a pull-up will affect the values reported by <code>analogRead()</code>.</p>
+<h2 id="details-and-caveats">Details and Caveats</h2>
+<p>The <code>analogRead()</code> function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using <code>analogRead()</code>. Note that calling <code>pinMode(pin, INPUT)</code> will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use <code>pinMode(pin, INPUT_PULLUP)</code> instead.</p>
+<p>The ATmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (<code>analogRead()</code>) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using <code>analogRead()</code> to read other analog pins.</p>
+</main></body></html>

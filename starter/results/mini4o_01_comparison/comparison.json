@@ -1,0 +1,528 @@
+{
+  "mini4o_01_small": {
+    "config": {
+      "settings": {
+        "corpus_sha256": "f8adc686385011b2b24046459a2320c3746c03e3b696540b6e71d10f2ba01d20",
+        "benchmark_sha256": "11e40f0192b98634cf3609ed7b08ca0cadf5cc85571e21c9fd5d482309735e21",
+        "provider": "openai",
+        "model": "text-embedding-3-small",
+        "dimensions": null,
+        "revision": null,
+        "generate_answers": true,
+        "llm_model": "gpt-4o-mini",
+        "llm_reasoning_effort": "none",
+        "llm_max_output_tokens": 700,
+        "cost_reference": {
+          "checked_at": "2026-11-13",
+          "embedding_usd_per_million": {
+            "text-embedding-3-small": 0.02,
+            "text-embedding-3-large": 0.13
+          },
+          "llm_usd_per_million": {
+            "gpt-4o-mini": {
+              "input": 2,
+              "cached_input": 0.2,
+              "output": 12
+            }
+          },
+          "sources": [
+            "https://developers.openai.com/api/docs/models/text-embedding-3-small",
+            "https://developers.openai.com/api/docs/models/text-embedding-3-large",
+            "https://developers.openai.com/api/docs/models/gpt-gpt-4o-mini"
+          ]
+        },
+        "fixed_size": 500,
+        "overlap": 50,
+        "paragraph_size": 1000,
+        "metric": "cosine",
+        "search": "exact",
+        "query_document_processing": "same encoder; L2 normalized",
+        "selection_rule": "dev Evidence Hit@3, then Hit@1, then median query embedding + search latency; no test tuning",
+        "code_sha256": "1a2611e047b41a91a254be77c032d0c106051aa76514b269b5ad87f0fb35f71a"
+      },
+      "dimensions": 1536,
+      "versions": {
+        "psycopg": "3.3.8",
+        "beautifulsoup4": "4.15.0",
+        "pypdf": "6.21.4",
+        "openai": "2.54.0",
+        "tiktoken": "0.14.0"
+      },
+      "resolved_model_commit": null,
+      "table": "ingestion_chunks_1536",
+      "embedding_api_requests": 53,
+      "created_at": "2026-11-13T12:28:50.748563+00:00",
+      "statistics": {
+        "A": {
+          "chunk_count": 1053,
+          "characters": 459992,
+          "min_characters": 51,
+          "median_characters": 500,
+          "max_characters": 500
+        },
+        "B": {
+          "chunk_count": 611,
+          "characters": 421244,
+          "min_characters": 3,
+          "median_characters": 780,
+          "max_characters": 1000
+        },
+        "C": {
+          "chunk_count": 611,
+          "characters": 421244,
+          "min_characters": 3,
+          "median_characters": 780,
+          "max_characters": 1000
+        }
+      },
+      "timings": {
+        "A": {
+          "seconds_including_repeat_check": 28.961051700000098,
+          "embedding_seconds": 26.6902398000002,
+          "embedding_input_tokens": 115355,
+          "embedding_reused_from_B": false,
+          "stored_count": 1053,
+          "estimated_provider_cost_usd": 0.0023071,
+          "cost_note": "API token estimate at documented rate; local hardware/electricity excluded"
+        },
+        "B": {
+          "seconds_including_repeat_check": 16.424879899999723,
+          "embedding_seconds": 15.211155500000132,
+          "embedding_input_tokens": 104785,
+          "embedding_reused_from_B": false,
+          "stored_count": 611,
+          "estimated_provider_cost_usd": 0.0020957,
+          "cost_note": "API token estimate at documented rate; local hardware/electricity excluded"
+        },
+        "C": {
+          "seconds_including_repeat_check": 1.2496402999995553,
+          "embedding_seconds": 6.000000212225132e-07,
+          "embedding_input_tokens": 0,
+          "embedding_reused_from_B": true,
+          "stored_count": 611,
+          "estimated_provider_cost_usd": 0.0,
+          "cost_note": "API token estimate at documented rate; local hardware/electricity excluded"
+        }
+      }
+    },
+    "selection": {
+      "selected_strategy": "C",
+      "reason": "dev Evidence Hit@3, then Hit@1, then median query embedding + search latency; no test tuning",
+      "dev_only": true,
+      "created_at": "2026-11-13T12:32:07.629825+00:00"
+    },
+    "splits": {
+      "dev": {
+        "retrieval": {
+          "A/dev": {
+            "count": 15,
+            "hit_at_1_count": 3,
+            "evidence_hit_at_3_count": 5,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.2,
+            "evidence_hit_at_3": 0.3333333333333333,
+            "filter_compliance": null
+          },
+          "B/dev": {
+            "count": 15,
+            "hit_at_1_count": 9,
+            "evidence_hit_at_3_count": 12,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.6,
+            "evidence_hit_at_3": 0.8,
+            "filter_compliance": null
+          },
+          "C/dev": {
+            "count": 15,
+            "hit_at_1_count": 10,
+            "evidence_hit_at_3_count": 13,
+            "filtered_count": 2,
+            "filter_compliant_count": 2,
+            "hit_at_1": 0.6666666666666666,
+            "evidence_hit_at_3": 0.8666666666666667,
+            "filter_compliance": 1.0
+          }
+        },
+        "performance": {
+          "A": {
+            "count": 15,
+            "median_query_embedding_ms": 595.3784000012092,
+            "median_search_ms": 22.59560000129568,
+            "median_llm_ms": 4045.326400000704,
+            "valid_citations_count": 11,
+            "llm_completed_count": 15,
+            "llm_input_tokens": 10837,
+            "llm_output_tokens": 2466,
+            "estimated_llm_cost_usd": 0.051266
+          },
+          "B": {
+            "count": 15,
+            "median_query_embedding_ms": 595.3784000012092,
+            "median_search_ms": 16.10560000062833,
+            "median_llm_ms": 4537.453599999935,
+            "valid_citations_count": 11,
+            "llm_completed_count": 15,
+            "llm_input_tokens": 12361,
+            "llm_output_tokens": 2364,
+            "estimated_llm_cost_usd": 0.05309
+          },
+          "C": {
+            "count": 15,
+            "median_query_embedding_ms": 595.3784000012092,
+            "median_search_ms": 15.810799999599112,
+            "median_llm_ms": 3861.4173000005394,
+            "valid_citations_count": 8,
+            "llm_completed_count": 15,
+            "llm_input_tokens": 12343,
+            "llm_output_tokens": 2579,
+            "estimated_llm_cost_usd": 0.055633999999999996
+          }
+        },
+        "query_embedding_tokens_deduplicated": 369,
+        "estimated_query_embedding_cost_usd": 7.38e-06,
+        "cost_note": "Token-based estimate; query embeddings shared by A/B/C. API retries/probes, hardware/electricity excluded.",
+        "human_answer_accuracy": null,
+        "human_grounding": null
+      },
+      "test": {
+        "retrieval": {
+          "A/test": {
+            "count": 5,
+            "hit_at_1_count": 1,
+            "evidence_hit_at_3_count": 3,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.2,
+            "evidence_hit_at_3": 0.6,
+            "filter_compliance": null
+          },
+          "B/test": {
+            "count": 5,
+            "hit_at_1_count": 1,
+            "evidence_hit_at_3_count": 4,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.2,
+            "evidence_hit_at_3": 0.8,
+            "filter_compliance": null
+          },
+          "C/test": {
+            "count": 5,
+            "hit_at_1_count": 1,
+            "evidence_hit_at_3_count": 4,
+            "filtered_count": 1,
+            "filter_compliant_count": 1,
+            "hit_at_1": 0.2,
+            "evidence_hit_at_3": 0.8,
+            "filter_compliance": 1.0
+          }
+        },
+        "performance": {
+          "A": {
+            "count": 5,
+            "median_query_embedding_ms": 761.9814000008773,
+            "median_search_ms": 23.969100000613253,
+            "median_llm_ms": 3749.330499998905,
+            "valid_citations_count": 1,
+            "llm_completed_count": 5,
+            "llm_input_tokens": 3461,
+            "llm_output_tokens": 688,
+            "estimated_llm_cost_usd": 0.015177999999999999
+          },
+          "B": {
+            "count": 5,
+            "median_query_embedding_ms": 761.9814000008773,
+            "median_search_ms": 14.215799999874434,
+            "median_llm_ms": 2595.377200001167,
+            "valid_citations_count": 2,
+            "llm_completed_count": 5,
+            "llm_input_tokens": 4431,
+            "llm_output_tokens": 842,
+            "estimated_llm_cost_usd": 0.018966
+          },
+          "C": {
+            "count": 5,
+            "median_query_embedding_ms": 761.9814000008773,
+            "median_search_ms": 15.381499999421067,
+            "median_llm_ms": 4060.046799999327,
+            "valid_citations_count": 2,
+            "llm_completed_count": 5,
+            "llm_input_tokens": 4431,
+            "llm_output_tokens": 814,
+            "estimated_llm_cost_usd": 0.01863
+          }
+        },
+        "query_embedding_tokens_deduplicated": 113,
+        "estimated_query_embedding_cost_usd": 2.2600000000000004e-06,
+        "cost_note": "Token-based estimate; query embeddings shared by A/B/C. API retries/probes, hardware/electricity excluded.",
+        "human_answer_accuracy": null,
+        "human_grounding": null
+      }
+    }
+  },
+  "mini4o_01_large": {
+    "config": {
+      "settings": {
+        "corpus_sha256": "f8adc686385011b2b24046459a2320c3746c03e3b696540b6e71d10f2ba01d20",
+        "benchmark_sha256": "11e40f0192b98634cf3609ed7b08ca0cadf5cc85571e21c9fd5d482309735e21",
+        "provider": "openai",
+        "model": "text-embedding-3-large",
+        "dimensions": null,
+        "revision": null,
+        "generate_answers": true,
+        "llm_model": "gpt-4o-mini",
+        "llm_reasoning_effort": "none",
+        "llm_max_output_tokens": 700,
+        "cost_reference": {
+          "checked_at": "2026-11-13",
+          "embedding_usd_per_million": {
+            "text-embedding-3-small": 0.02,
+            "text-embedding-3-large": 0.13
+          },
+          "llm_usd_per_million": {
+            "gpt-4o-mini": {
+              "input": 2,
+              "cached_input": 0.2,
+              "output": 12
+            }
+          },
+          "sources": [
+            "https://developers.openai.com/api/docs/models/text-embedding-3-small",
+            "https://developers.openai.com/api/docs/models/text-embedding-3-large",
+            "https://developers.openai.com/api/docs/models/gpt-gpt-4o-mini"
+          ]
+        },
+        "fixed_size": 500,
+        "overlap": 50,
+        "paragraph_size": 1000,
+        "metric": "cosine",
+        "search": "exact",
+        "query_document_processing": "same encoder; L2 normalized",
+        "selection_rule": "dev Evidence Hit@3, then Hit@1, then median query embedding + search latency; no test tuning",
+        "code_sha256": "1a2611e047b41a91a254be77c032d0c106051aa76514b269b5ad87f0fb35f71a"
+      },
+      "dimensions": 3072,
+      "versions": {
+        "psycopg": "3.3.8",
+        "beautifulsoup4": "4.15.0",
+        "pypdf": "6.21.4",
+        "openai": "2.54.0",
+        "tiktoken": "0.14.0"
+      },
+      "resolved_model_commit": null,
+      "table": "ingestion_chunks_3072",
+      "embedding_api_requests": 53,
+      "created_at": "2026-11-13T12:34:11.221899+00:00",
+      "statistics": {
+        "A": {
+          "chunk_count": 1053,
+          "characters": 459992,
+          "min_characters": 51,
+          "median_characters": 500,
+          "max_characters": 500
+        },
+        "B": {
+          "chunk_count": 611,
+          "characters": 421244,
+          "min_characters": 3,
+          "median_characters": 780,
+          "max_characters": 1000
+        },
+        "C": {
+          "chunk_count": 611,
+          "characters": 421244,
+          "min_characters": 3,
+          "median_characters": 780,
+          "max_characters": 1000
+        }
+      },
+      "timings": {
+        "A": {
+          "seconds_including_repeat_check": 33.23038219999944,
+          "embedding_seconds": 29.045747899999697,
+          "embedding_input_tokens": 115355,
+          "embedding_reused_from_B": false,
+          "stored_count": 1053,
+          "estimated_provider_cost_usd": 0.01499615,
+          "cost_note": "API token estimate at documented rate; local hardware/electricity excluded"
+        },
+        "B": {
+          "seconds_including_repeat_check": 19.465970000001107,
+          "embedding_seconds": 17.223209200001293,
+          "embedding_input_tokens": 104785,
+          "embedding_reused_from_B": false,
+          "stored_count": 611,
+          "estimated_provider_cost_usd": 0.013622050000000002,
+          "cost_note": "API token estimate at documented rate; local hardware/electricity excluded"
+        },
+        "C": {
+          "seconds_including_repeat_check": 2.254336300000432,
+          "embedding_seconds": 6.000009307172149e-07,
+          "embedding_input_tokens": 0,
+          "embedding_reused_from_B": true,
+          "stored_count": 611,
+          "estimated_provider_cost_usd": 0.0,
+          "cost_note": "API token estimate at documented rate; local hardware/electricity excluded"
+        }
+      }
+    },
+    "selection": {
+      "selected_strategy": "C",
+      "reason": "dev Evidence Hit@3, then Hit@1, then median query embedding + search latency; no test tuning",
+      "dev_only": true,
+      "created_at": "2026-11-13T12:37:33.504917+00:00"
+    },
+    "splits": {
+      "dev": {
+        "retrieval": {
+          "A/dev": {
+            "count": 15,
+            "hit_at_1_count": 6,
+            "evidence_hit_at_3_count": 7,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.4,
+            "evidence_hit_at_3": 0.4666666666666667,
+            "filter_compliance": null
+          },
+          "B/dev": {
+            "count": 15,
+            "hit_at_1_count": 13,
+            "evidence_hit_at_3_count": 15,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.8666666666666667,
+            "evidence_hit_at_3": 1.0,
+            "filter_compliance": null
+          },
+          "C/dev": {
+            "count": 15,
+            "hit_at_1_count": 13,
+            "evidence_hit_at_3_count": 15,
+            "filtered_count": 2,
+            "filter_compliant_count": 2,
+            "hit_at_1": 0.8666666666666667,
+            "evidence_hit_at_3": 1.0,
+            "filter_compliance": 1.0
+          }
+        },
+        "performance": {
+          "A": {
+            "count": 15,
+            "median_query_embedding_ms": 493.0399999993824,
+            "median_search_ms": 25.72669999972277,
+            "median_llm_ms": 3705.0107999984903,
+            "valid_citations_count": 11,
+            "llm_completed_count": 15,
+            "llm_input_tokens": 10742,
+            "llm_output_tokens": 2570,
+            "estimated_llm_cost_usd": 0.052323999999999996
+          },
+          "B": {
+            "count": 15,
+            "median_query_embedding_ms": 493.0399999993824,
+            "median_search_ms": 19.144800000503892,
+            "median_llm_ms": 3479.5391999996355,
+            "valid_citations_count": 8,
+            "llm_completed_count": 15,
+            "llm_input_tokens": 12780,
+            "llm_output_tokens": 2644,
+            "estimated_llm_cost_usd": 0.057288
+          },
+          "C": {
+            "count": 15,
+            "median_query_embedding_ms": 493.0399999993824,
+            "median_search_ms": 15.91999999982363,
+            "median_llm_ms": 4183.688400000392,
+            "valid_citations_count": 9,
+            "llm_completed_count": 15,
+            "llm_input_tokens": 12521,
+            "llm_output_tokens": 2562,
+            "estimated_llm_cost_usd": 0.055786
+          }
+        },
+        "query_embedding_tokens_deduplicated": 369,
+        "estimated_query_embedding_cost_usd": 4.7969999999999996e-05,
+        "cost_note": "Token-based estimate; query embeddings shared by A/B/C. API retries/probes, hardware/electricity excluded.",
+        "human_answer_accuracy": null,
+        "human_grounding": null
+      },
+      "test": {
+        "retrieval": {
+          "A/test": {
+            "count": 5,
+            "hit_at_1_count": 2,
+            "evidence_hit_at_3_count": 4,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.4,
+            "evidence_hit_at_3": 0.8,
+            "filter_compliance": null
+          },
+          "B/test": {
+            "count": 5,
+            "hit_at_1_count": 3,
+            "evidence_hit_at_3_count": 5,
+            "filtered_count": 0,
+            "filter_compliant_count": 0,
+            "hit_at_1": 0.6,
+            "evidence_hit_at_3": 1.0,
+            "filter_compliance": null
+          },
+          "C/test": {
+            "count": 5,
+            "hit_at_1_count": 3,
+            "evidence_hit_at_3_count": 5,
+            "filtered_count": 1,
+            "filter_compliant_count": 1,
+            "hit_at_1": 0.6,
+            "evidence_hit_at_3": 1.0,
+            "filter_compliance": 1.0
+          }
+        },
+        "performance": {
+          "A": {
+            "count": 5,
+            "median_query_embedding_ms": 411.2356000005093,
+            "median_search_ms": 26.24149999974179,
+            "median_llm_ms": 3134.1200999995635,
+            "valid_citations_count": 3,
+            "llm_completed_count": 5,
+            "llm_input_tokens": 3579,
+            "llm_output_tokens": 846,
+            "estimated_llm_cost_usd": 0.01731
+          },
+          "B": {
+            "count": 5,
+            "median_query_embedding_ms": 411.2356000005093,
+            "median_search_ms": 17.513900000267313,
+            "median_llm_ms": 4189.529600000242,
+            "valid_citations_count": 5,
+            "llm_completed_count": 5,
+            "llm_input_tokens": 4269,
+            "llm_output_tokens": 765,
+            "estimated_llm_cost_usd": 0.017718
+          },
+          "C": {
+            "count": 5,
+            "median_query_embedding_ms": 411.2356000005093,
+            "median_search_ms": 15.408599998409045,
+            "median_llm_ms": 2954.5171999998274,
+            "valid_citations_count": 4,
+            "llm_completed_count": 5,
+            "llm_input_tokens": 4269,
+            "llm_output_tokens": 808,
+            "estimated_llm_cost_usd": 0.018234
+          }
+        },
+        "query_embedding_tokens_deduplicated": 113,
+        "estimated_query_embedding_cost_usd": 1.4690000000000002e-05,
+        "cost_note": "Token-based estimate; query embeddings shared by A/B/C. API retries/probes, hardware/electricity excluded.",
+        "human_answer_accuracy": null,
+        "human_grounding": null
+      }
+    }
+  }
+}

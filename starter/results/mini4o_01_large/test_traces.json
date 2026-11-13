@@ -1,0 +1,1754 @@
+[
+  {
+    "question": {
+      "id": "q16",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Trong nhóm electronics của Arduino: Servo có ba dây chức năng gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#circuit",
+      "evidence_quote": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.",
+      "expected_answer": "Nguồn, đất và tín hiệu.",
+      "filter": {
+        "category": "electronics"
+      }
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "db6d8eb164eeaee04c6b13d8664c0dee7ced967335696ddd057c98deda5f23ac",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#circuit",
+        "text": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.\n\nThe signal pin is typically yellow or orange and should be connected to PWM pin on the board. In these examples, it is pin number 9.",
+        "metadata": {
+          "end": 406,
+          "start": 0,
+          "section": "Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.5293881454881475
+      },
+      {
+        "chunk_id": "a267463c6e7bef761ce77ac2f46ed46e9e980c16d61e2da5f0deac23d9d4a0b1",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#body",
+        "text": "The [Servo Library](https://www.arduino.cc/reference/en/libraries/servo/) is a great library for controlling servo motors. In this article, you will find two easy examples that can be used by any Arduino board.\n\nThe first example controls the position of an RC (hobby) [servo motor](<https://en.wikipedia.org/wiki/Servo_(radio_control)>) with your Arduino and a potentiometer. The second example sweeps the shaft of an RC servo motor back and forth across 180 degrees.\n\nYou can also visit the [Servo ",
+        "metadata": {
+          "end": 500,
+          "start": 0,
+          "section": "body",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4366448559376691
+      },
+      {
+        "chunk_id": "fd1afe41b2b20c41efc5c5fb1ba6a5f5fe059753a2ffae79bfec0d48433fb43d",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#knob-circuit",
+        "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)",
+        "metadata": {
+          "end": 290,
+          "start": 0,
+          "section": "Knob Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4173646320483315
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "A",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 903.7367000000813,
+    "search_ms": 26.24149999974179,
+    "query_embedding_tokens": 22,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 4045.8598999994138,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_006fb25a75fa28cd016af704909c6087d299f7888d7c8ef406",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Servo có ba dây: dây nguồn, dây đất và dây tín hiệu. Dây nguồn thường có màu đỏ, dây đất màu đen hoặc nâu, và dây tín hiệu màu vàng hoặc cam. Dây nguồn kết nối với cực dương (+) của nguồn điện, dây đất kết nối với cực âm (-), và dây tín hiệu được kết nối với chân PWM trên bảng Arduino.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "db6d8eb164eeaee04c6b13d8664c0dee7ced967335696ddd057c98deda5f23ac",
+          "quote": "Servo motors have three wires: power, ground, and signal."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 708,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 150,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 858
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.003216
+  },
+  {
+    "question": {
+      "id": "q16",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Trong nhóm electronics của Arduino: Servo có ba dây chức năng gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#circuit",
+      "evidence_quote": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.",
+      "expected_answer": "Nguồn, đất và tín hiệu.",
+      "filter": {
+        "category": "electronics"
+      }
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "601b1d0a6d227ff578c0937ffec1f174faae43cad412da50bffdac689ff7de31",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#circuit",
+        "text": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.\n\nThe signal pin is typically yellow or orange and should be connected to PWM pin on the board. In these examples, it is pin number 9.",
+        "metadata": {
+          "end": 406,
+          "start": 0,
+          "section": "Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.5294761061668396
+      },
+      {
+        "chunk_id": "0814f1bf1a63a0f72d6bfa5dcc2f0e00f7c523386befa0ca90bb17f43384ab2b",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#body",
+        "text": "The [Servo Library](https://www.arduino.cc/reference/en/libraries/servo/) is a great library for controlling servo motors. In this article, you will find two easy examples that can be used by any Arduino board.\n\nThe first example controls the position of an RC (hobby) [servo motor](<https://en.wikipedia.org/wiki/Servo_(radio_control)>) with your Arduino and a potentiometer. The second example sweeps the shaft of an RC servo motor back and forth across 180 degrees.\n\nYou can also visit the [Servo GitHub repository](https://github.com/arduino-libraries/Servo) to learn more about this library.",
+        "metadata": {
+          "end": 596,
+          "start": 0,
+          "section": "body",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43877464532852173
+      },
+      {
+        "chunk_id": "04c272c0388eb689e74ce082e87105cafd58dd83808daf0cd195a8210c0db130",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#knob-circuit",
+        "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)",
+        "metadata": {
+          "end": 290,
+          "start": 0,
+          "section": "Knob Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4174572229385376
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "B",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 903.7367000000813,
+    "search_ms": 17.513900000267313,
+    "query_embedding_tokens": 22,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 4207.956000000195,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_03afee906f831e53016af7049481ac87d29e5056a2f881b210",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Servo có ba dây chức năng: dây nguồn (thường là màu đỏ), dây đất (thường là màu đen hoặc nâu), và dây tín hiệu (thường là màu vàng hoặc cam). Dây nguồn được kết nối với cực dương (+) của nguồn, dây đất với cực âm (-), và dây tín hiệu kết nối với chân PWM trên bo mạch.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "601b1d0a6d227ff578c0937ffec1f174faae43cad412da50bffdac689ff7de31",
+          "quote": "Servo motors have three wires: power, ground, and signal."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 720,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 148,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 868
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.003216
+  },
+  {
+    "question": {
+      "id": "q16",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Trong nhóm electronics của Arduino: Servo có ba dây chức năng gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#circuit",
+      "evidence_quote": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.",
+      "expected_answer": "Nguồn, đất và tín hiệu.",
+      "filter": {
+        "category": "electronics"
+      }
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "601b1d0a6d227ff578c0937ffec1f174faae43cad412da50bffdac689ff7de31",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#circuit",
+        "text": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.\n\nThe signal pin is typically yellow or orange and should be connected to PWM pin on the board. In these examples, it is pin number 9.",
+        "metadata": {
+          "end": 406,
+          "start": 0,
+          "section": "Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.5294761061668396
+      },
+      {
+        "chunk_id": "0814f1bf1a63a0f72d6bfa5dcc2f0e00f7c523386befa0ca90bb17f43384ab2b",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#body",
+        "text": "The [Servo Library](https://www.arduino.cc/reference/en/libraries/servo/) is a great library for controlling servo motors. In this article, you will find two easy examples that can be used by any Arduino board.\n\nThe first example controls the position of an RC (hobby) [servo motor](<https://en.wikipedia.org/wiki/Servo_(radio_control)>) with your Arduino and a potentiometer. The second example sweeps the shaft of an RC servo motor back and forth across 180 degrees.\n\nYou can also visit the [Servo GitHub repository](https://github.com/arduino-libraries/Servo) to learn more about this library.",
+        "metadata": {
+          "end": 596,
+          "start": 0,
+          "section": "body",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43877464532852173
+      },
+      {
+        "chunk_id": "04c272c0388eb689e74ce082e87105cafd58dd83808daf0cd195a8210c0db130",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#knob-circuit",
+        "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)",
+        "metadata": {
+          "end": 290,
+          "start": 0,
+          "section": "Knob Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4174572229385376
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "C",
+    "applied_filter": {
+      "category": "electronics"
+    },
+    "human_metadata_labels": null,
+    "query_embedding_ms": 903.7367000000813,
+    "search_ms": 11.080700000093202,
+    "query_embedding_tokens": 22,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 2531.9600999991962,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_09ae8675f0abd2a8016af70498c23087d29e9ab08b65c09c9a",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Trong nhóm electronics của Arduino, servo có ba dây chức năng: dây nguồn, dây đất, và dây tín hiệu. Dây nguồn thường màu đỏ, dây đất thường màu đen hoặc nâu và dây tín hiệu thường màu vàng hoặc cam. Dây tín hiệu được kết nối với chân PWM trên bảng điều khiển.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "601b1d0a6d227ff578c0937ffec1f174faae43cad412da50bffdac689ff7de31",
+          "quote": "Servo motors have three wires: power, ground, and signal."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 720,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 136,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 856
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.003072
+  },
+  {
+    "question": {
+      "id": "q17",
+      "type": "dien_dat_lai",
+      "split": "test",
+      "question": "Tụ điện giúp ích gì khi cấp nguồn servo?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.",
+      "expected_answer": "Ổn định nguồn, giảm sụt áp và nhiễu điện."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "2396e504059c303225eaa49787de4429db2a250e944f455ae140f528f7136b9e",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "otor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires t",
+        "metadata": {
+          "end": 1400,
+          "start": 900,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.44085172171284503
+      },
+      {
+        "chunk_id": "e94cb031258ef51767228ec867e4ac97c665e4da4515ed0be48fa4d274c4d31d",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source.\n\nIf it experie",
+        "metadata": {
+          "end": 500,
+          "start": 0,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43266725540161133
+      },
+      {
+        "chunk_id": "873a0846d70aeadd2c54ea877c652602d5b08c23a151956ad95d33f233385283",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "e 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the serv",
+        "metadata": {
+          "end": 2300,
+          "start": 1800,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43132609538280464
+      }
+    ],
+    "evidence_matches": [
+      false,
+      false,
+      false
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": false,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "A",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 407.459199999721,
+    "search_ms": 27.294800000163377,
+    "query_embedding_tokens": 21,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 2610.678500001086,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0c4f64c1cf283549016af7049bcd5887d280a9e1f4edd2bd07",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Tụ điện giúp ổn định nguồn cung cấp cho servo, giảm thiểu sự suy giảm điện áp và tiếng ồn điện. Điều này rất quan trọng khi servo cần nhiều dòng điện, nhất là khi khởi động hoặc di chuyển.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "873a0846d70aeadd2c54ea877c652602d5b08c23a151956ad95d33f233385283",
+          "quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 774,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 133,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 907
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.003144
+  },
+  {
+    "question": {
+      "id": "q17",
+      "type": "dien_dat_lai",
+      "split": "test",
+      "question": "Tụ điện giúp ích gì khi cấp nguồn servo?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.",
+      "expected_answer": "Ổn định nguồn, giảm sụt áp và nhiễu điện."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "A step-down converter is needed because 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.\n\nWhen using a [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) we recommend using a **100 µF** capacitor.\n\n![Capacitor](./assets/capacitor.png)",
+        "metadata": {
+          "end": 2596,
+          "start": 1762,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4594879585351934
+      },
+      {
+        "chunk_id": "9f3ee5a224e263f736064e94a012866504dd36a538fcdc1f8cbaaaf460350e05",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "This high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires to the servo using e.g. a breadboard.\n\n**_Note that USB wall chargers are limited to 500 mA (USB 2.0) or 900 mA (USB 3.0)._**\n\nIf your project needs to move around freely without being attached to a power outlet you can also choose batteries to power the servo. If you need 5 V exactly you can use two 18650 Li-Ion batteries together with a step-down converter.",
+        "metadata": {
+          "end": 1760,
+          "start": 768,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.44203329777320965
+      },
+      {
+        "chunk_id": "60fd62c3d3d6248eea66b54b96a8167fa9443c44ef57b7450dca1a5011ccf1ed",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source.\n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.",
+        "metadata": {
+          "end": 766,
+          "start": 0,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.42074733500166817
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "B",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 407.459199999721,
+    "search_ms": 14.703599999847938,
+    "query_embedding_tokens": 21,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 4189.529600000242,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0d5ac7c07f5fe1dd016af7049e56e887d2a84afb06d1c85862",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Tụ điện giúp ổn định nguồn cung cấp cho động cơ servo, giảm sự giảm điện áp và giảm tiếng ồn điện. Việc sử dụng tụ điện là thực hành tốt để cải thiện hiệu suất và độ tin cậy của động cơ servo. \"**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise.\" (chunk_id: dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4)",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+          "quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 1042,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1244
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.004508
+  },
+  {
+    "question": {
+      "id": "q17",
+      "type": "dien_dat_lai",
+      "split": "test",
+      "question": "Tụ điện giúp ích gì khi cấp nguồn servo?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.",
+      "expected_answer": "Ổn định nguồn, giảm sụt áp và nhiễu điện."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "A step-down converter is needed because 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.\n\nWhen using a [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) we recommend using a **100 µF** capacitor.\n\n![Capacitor](./assets/capacitor.png)",
+        "metadata": {
+          "end": 2596,
+          "start": 1762,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4594879585351934
+      },
+      {
+        "chunk_id": "9f3ee5a224e263f736064e94a012866504dd36a538fcdc1f8cbaaaf460350e05",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "This high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires to the servo using e.g. a breadboard.\n\n**_Note that USB wall chargers are limited to 500 mA (USB 2.0) or 900 mA (USB 3.0)._**\n\nIf your project needs to move around freely without being attached to a power outlet you can also choose batteries to power the servo. If you need 5 V exactly you can use two 18650 Li-Ion batteries together with a step-down converter.",
+        "metadata": {
+          "end": 1760,
+          "start": 768,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.44203329777320965
+      },
+      {
+        "chunk_id": "60fd62c3d3d6248eea66b54b96a8167fa9443c44ef57b7450dca1a5011ccf1ed",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source.\n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.",
+        "metadata": {
+          "end": 766,
+          "start": 0,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.42074733500166817
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "C",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 407.459199999721,
+    "search_ms": 15.334000001530512,
+    "query_embedding_tokens": 21,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 2954.5171999998274,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_01dfdb0471fdabc1016af704a2928087d2bd22f0fe1ecbfe75",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Tụ điện giúp ổn định nguồn cung cấp cho động cơ servo, giảm sự suy giảm điện áp và giảm tiếng ồn điện. Việc sử dụng tụ điện, chẳng hạn như 100 µF cho động cơ servo nhỏ, là một thực hành tốt để cải thiện hiệu suất và độ tin cậy của hệ thống.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+          "quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 1042,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 150,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1192
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.003884
+  },
+  {
+    "question": {
+      "id": "q18",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Chân giữa biến trở trong ví dụ Knob nối đâu?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#knob-circuit",
+      "evidence_quote": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.",
+      "expected_answer": "A0."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "fd1afe41b2b20c41efc5c5fb1ba6a5f5fe059753a2ffae79bfec0d48433fb43d",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#knob-circuit",
+        "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)",
+        "metadata": {
+          "end": 290,
+          "start": 0,
+          "section": "Knob Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43516538320000375
+      },
+      {
+        "chunk_id": "b3cb1131a5057c56f74b6abd575c100151dfb1115911bed47286f302200fd19f",
+        "document_id": "arduino-stepper-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/stepper-motors/",
+        "page": "stepper-motors#bipolar-stepper-circuit-and-schematic",
+        "text": "![Bipolar Motor Knob Circuit. Image made using Fritzing.](assets/bipolarKnob_bbsm.png)\n\n![Bipolar Motor Knob Schematic. Image made using Fritzing.](assets/bipolarKnob_schms.png)",
+        "metadata": {
+          "end": 177,
+          "start": 0,
+          "section": "Bipolar Stepper Circuit and Schematic",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.3652114948504279
+      },
+      {
+        "chunk_id": "51da64bb16a8f11a7a2e5d5e32fe32374e348a065e8870942b0c53aaef339d5f",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep-circuit",
+        "text": "For the **Sweep** example, connect the servo motor as shown in the circuit below.\n\n![The Sweep Circuit.](./assets/servo_circuit_knob.png)",
+        "metadata": {
+          "end": 137,
+          "start": 0,
+          "section": "Sweep Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.3636723648407365
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "A",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 751.6231000008702,
+    "search_ms": 25.088099999265978,
+    "query_embedding_tokens": 21,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 3134.1200999995635,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0ff8b41330f17e40016af704a6583c87d294fd8d2d14b1cb8c",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Chân giữa của biến trở trong ví dụ Knob được nối với chân `A0` trên board mạch.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "fd1afe41b2b20c41efc5c5fb1ba6a5f5fe059753a2ffae79bfec0d48433fb43d",
+          "quote": "...its middle pin is connected to `A0` on the board."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 603,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 102,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 705
+    },
+    "citations_valid": false,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.00243
+  },
+  {
+    "question": {
+      "id": "q18",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Chân giữa biến trở trong ví dụ Knob nối đâu?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#knob-circuit",
+      "evidence_quote": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.",
+      "expected_answer": "A0."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "04c272c0388eb689e74ce082e87105cafd58dd83808daf0cd195a8210c0db130",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#knob-circuit",
+        "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)",
+        "metadata": {
+          "end": 290,
+          "start": 0,
+          "section": "Knob Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43491283447069995
+      },
+      {
+        "chunk_id": "638fd071c585b9de3da6eddec6335bb6bdb7715b50ad67afff44a7f6319f48e0",
+        "document_id": "arduino-stepper-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/stepper-motors/",
+        "page": "stepper-motors#bipolar-stepper-circuit-and-schematic",
+        "text": "![Bipolar Motor Knob Circuit. Image made using Fritzing.](assets/bipolarKnob_bbsm.png)\n\n![Bipolar Motor Knob Schematic. Image made using Fritzing.](assets/bipolarKnob_schms.png)",
+        "metadata": {
+          "end": 177,
+          "start": 0,
+          "section": "Bipolar Stepper Circuit and Schematic",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.36490696104044484
+      },
+      {
+        "chunk_id": "35cbe0f4136befca7c5092a45effd62d6a3887c73c6a2ec60257b66d43e958f7",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep-circuit",
+        "text": "For the **Sweep** example, connect the servo motor as shown in the circuit below.\n\n![The Sweep Circuit.](./assets/servo_circuit_knob.png)",
+        "metadata": {
+          "end": 137,
+          "start": 0,
+          "section": "Sweep Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.3636799237918906
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "B",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 751.6231000008702,
+    "search_ms": 32.61249999923166,
+    "query_embedding_tokens": 21,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 2901.5107000013813,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0f98eff6f2b9d190016af704a9723c87d28afe584ada5577a6",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Chân giữa của biến trở trong ví dụ Knob được nối với chân `A0` trên bảng mạch.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "04c272c0388eb689e74ce082e87105cafd58dd83808daf0cd195a8210c0db130",
+          "quote": "its middle pin is connected to `A0` on the board."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 599,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 93,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 692
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.002314
+  },
+  {
+    "question": {
+      "id": "q18",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Chân giữa biến trở trong ví dụ Knob nối đâu?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#knob-circuit",
+      "evidence_quote": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.",
+      "expected_answer": "A0."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "04c272c0388eb689e74ce082e87105cafd58dd83808daf0cd195a8210c0db130",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#knob-circuit",
+        "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)",
+        "metadata": {
+          "end": 290,
+          "start": 0,
+          "section": "Knob Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.43491283447069995
+      },
+      {
+        "chunk_id": "638fd071c585b9de3da6eddec6335bb6bdb7715b50ad67afff44a7f6319f48e0",
+        "document_id": "arduino-stepper-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/stepper-motors/",
+        "page": "stepper-motors#bipolar-stepper-circuit-and-schematic",
+        "text": "![Bipolar Motor Knob Circuit. Image made using Fritzing.](assets/bipolarKnob_bbsm.png)\n\n![Bipolar Motor Knob Schematic. Image made using Fritzing.](assets/bipolarKnob_schms.png)",
+        "metadata": {
+          "end": 177,
+          "start": 0,
+          "section": "Bipolar Stepper Circuit and Schematic",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.36490696104044484
+      },
+      {
+        "chunk_id": "35cbe0f4136befca7c5092a45effd62d6a3887c73c6a2ec60257b66d43e958f7",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep-circuit",
+        "text": "For the **Sweep** example, connect the servo motor as shown in the circuit below.\n\n![The Sweep Circuit.](./assets/servo_circuit_knob.png)",
+        "metadata": {
+          "end": 137,
+          "start": 0,
+          "section": "Sweep Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.3636799237918906
+      }
+    ],
+    "evidence_matches": [
+      true,
+      false,
+      false
+    ],
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "C",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 751.6231000008702,
+    "search_ms": 16.204499999730615,
+    "query_embedding_tokens": 21,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 3955.125300000873,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_06298630db1a240d016af704ac64d887d2b4b17b9a1a8e17e6",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Chân giữa của biến trở trong ví dụ Knob được nối với chân `A0` trên bo mạch. Hai chân bên ngoài của biến trở được nối với nguồn điện (+5V) và mặt đất.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "04c272c0388eb689e74ce082e87105cafd58dd83808daf0cd195a8210c0db130",
+          "quote": "...its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 599,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 127,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 726
+    },
+    "citations_valid": false,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.002722
+  },
+  {
+    "question": {
+      "id": "q19",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Ví dụ Sweep quét trục servo trong khoảng bao nhiêu độ?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#sweep",
+      "evidence_quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.",
+      "expected_answer": "180 độ qua lại."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "51da64bb16a8f11a7a2e5d5e32fe32374e348a065e8870942b0c53aaef339d5f",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep-circuit",
+        "text": "For the **Sweep** example, connect the servo motor as shown in the circuit below.\n\n![The Sweep Circuit.](./assets/servo_circuit_knob.png)",
+        "metadata": {
+          "end": 137,
+          "start": 0,
+          "section": "Sweep Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.5058089645448021
+      },
+      {
+        "chunk_id": "96430fd2ddaaa3c2fc6dfadf82caf911f78c37833205872f71c77ff63fbaac73",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep",
+        "text": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.\n\n```arduino\n#include <Servo.h>\n\nServo myservo;  // create servo object to control a servo\n// twelve servo objects can be created on most boards\n\nint pos = 0;    // variable to store the servo position\n\nvoid setup() {\n  myservo.attach(9);  // attaches the servo on pin 9 to the servo object\n}\n\nvoid loop() {\n  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees\n    // in steps of 1 degree\n    myservo.wri",
+        "metadata": {
+          "end": 500,
+          "start": 0,
+          "section": "Sweep",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4625824965585774
+      },
+      {
+        "chunk_id": "323aded4bb507304b8014a0459514011e8c3945bbf71e94df93179dbe2c49307",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep",
+        "text": "egrees\n    // in steps of 1 degree\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n}\n```",
+        "metadata": {
+          "end": 924,
+          "start": 450,
+          "section": "Sweep",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4270574450492859
+      }
+    ],
+    "evidence_matches": [
+      false,
+      true,
+      false
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "A",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 411.2356000005093,
+    "search_ms": 27.74920000047132,
+    "query_embedding_tokens": 23,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 2673.4214999996766,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0e298c3a0201cbdc016af704b0c7f887d2aa6994d6faab1fa5",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Ví dụ Sweep quét trục servo trong khoảng 0 đến 180 độ.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "96430fd2ddaaa3c2fc6dfadf82caf911f78c37833205872f71c77ff63fbaac73",
+          "quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 731,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 91,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 822
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.002554
+  },
+  {
+    "question": {
+      "id": "q19",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Ví dụ Sweep quét trục servo trong khoảng bao nhiêu độ?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#sweep",
+      "evidence_quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.",
+      "expected_answer": "180 độ qua lại."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "35cbe0f4136befca7c5092a45effd62d6a3887c73c6a2ec60257b66d43e958f7",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep-circuit",
+        "text": "For the **Sweep** example, connect the servo motor as shown in the circuit below.\n\n![The Sweep Circuit.](./assets/servo_circuit_knob.png)",
+        "metadata": {
+          "end": 137,
+          "start": 0,
+          "section": "Sweep Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.5058193802833557
+      },
+      {
+        "chunk_id": "8a2a803e33e623a22b0fafaaf5afedd916bd68b13158409e34a9d016bc45da11",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep",
+        "text": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.\n\n```arduino\n#include <Servo.h>\n\nServo myservo;  // create servo object to control a servo\n// twelve servo objects can be created on most boards\n\nint pos = 0;    // variable to store the servo position\n\nvoid setup() {\n  myservo.attach(9);  // attaches the servo on pin 9 to the servo object\n}\n\nvoid loop() {\n  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees\n    // in steps of 1 degree\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n}\n```",
+        "metadata": {
+          "end": 924,
+          "start": 0,
+          "section": "Sweep",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4840409755706787
+      },
+      {
+        "chunk_id": "0814f1bf1a63a0f72d6bfa5dcc2f0e00f7c523386befa0ca90bb17f43384ab2b",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#body",
+        "text": "The [Servo Library](https://www.arduino.cc/reference/en/libraries/servo/) is a great library for controlling servo motors. In this article, you will find two easy examples that can be used by any Arduino board.\n\nThe first example controls the position of an RC (hobby) [servo motor](<https://en.wikipedia.org/wiki/Servo_(radio_control)>) with your Arduino and a potentiometer. The second example sweeps the shaft of an RC servo motor back and forth across 180 degrees.\n\nYou can also visit the [Servo GitHub repository](https://github.com/arduino-libraries/Servo) to learn more about this library.",
+        "metadata": {
+          "end": 596,
+          "start": 0,
+          "section": "body",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4048881530761719
+      }
+    ],
+    "evidence_matches": [
+      false,
+      true,
+      false
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "B",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 411.2356000005093,
+    "search_ms": 14.884299998811912,
+    "query_embedding_tokens": 23,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 1904.0924000000814,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0c096523700a6562016af704b3866887d28871ad1ef1170589",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Ví dụ Sweep quét trục servo trong khoảng **180 độ**.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "8a2a803e33e623a22b0fafaaf5afedd916bd68b13158409e34a9d016bc45da11",
+          "quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 863,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 91,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 954
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.002818
+  },
+  {
+    "question": {
+      "id": "q19",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Ví dụ Sweep quét trục servo trong khoảng bao nhiêu độ?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#sweep",
+      "evidence_quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.",
+      "expected_answer": "180 độ qua lại."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "35cbe0f4136befca7c5092a45effd62d6a3887c73c6a2ec60257b66d43e958f7",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep-circuit",
+        "text": "For the **Sweep** example, connect the servo motor as shown in the circuit below.\n\n![The Sweep Circuit.](./assets/servo_circuit_knob.png)",
+        "metadata": {
+          "end": 137,
+          "start": 0,
+          "section": "Sweep Circuit",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.5058193802833557
+      },
+      {
+        "chunk_id": "8a2a803e33e623a22b0fafaaf5afedd916bd68b13158409e34a9d016bc45da11",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#sweep",
+        "text": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.\n\n```arduino\n#include <Servo.h>\n\nServo myservo;  // create servo object to control a servo\n// twelve servo objects can be created on most boards\n\nint pos = 0;    // variable to store the servo position\n\nvoid setup() {\n  myservo.attach(9);  // attaches the servo on pin 9 to the servo object\n}\n\nvoid loop() {\n  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees\n    // in steps of 1 degree\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n}\n```",
+        "metadata": {
+          "end": 924,
+          "start": 0,
+          "section": "Sweep",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4840409755706787
+      },
+      {
+        "chunk_id": "0814f1bf1a63a0f72d6bfa5dcc2f0e00f7c523386befa0ca90bb17f43384ab2b",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#body",
+        "text": "The [Servo Library](https://www.arduino.cc/reference/en/libraries/servo/) is a great library for controlling servo motors. In this article, you will find two easy examples that can be used by any Arduino board.\n\nThe first example controls the position of an RC (hobby) [servo motor](<https://en.wikipedia.org/wiki/Servo_(radio_control)>) with your Arduino and a potentiometer. The second example sweeps the shaft of an RC servo motor back and forth across 180 degrees.\n\nYou can also visit the [Servo GitHub repository](https://github.com/arduino-libraries/Servo) to learn more about this library.",
+        "metadata": {
+          "end": 596,
+          "start": 0,
+          "section": "body",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4048881530761719
+      }
+    ],
+    "evidence_matches": [
+      false,
+      true,
+      false
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "C",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 411.2356000005093,
+    "search_ms": 15.408599998409045,
+    "query_embedding_tokens": 23,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 2906.064199998582,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_0160e56fbddfaaf0016af704b56e2087d2bd365c64a1cfdd50",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Ví dụ Sweep quét trục servo trong khoảng 180 độ.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "8a2a803e33e623a22b0fafaaf5afedd916bd68b13158409e34a9d016bc45da11",
+          "quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 863,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 90,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 953
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.002806
+  },
+  {
+    "question": {
+      "id": "q20",
+      "type": "dieu_kien",
+      "split": "test",
+      "question": "Khi dùng servo lớn hơn hoặc nhiều servo cần kiểm tra gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**_If you are using bigger or more servos make sure to check your power requirements accordingly._**",
+      "expected_answer": "Kiểm tra lại yêu cầu nguồn tương ứng."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "e94cb031258ef51767228ec867e4ac97c665e4da4515ed0be48fa4d274c4d31d",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source.\n\nIf it experie",
+        "metadata": {
+          "end": 500,
+          "start": 0,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.4089811444282532
+      },
+      {
+        "chunk_id": "821e49930fb8413af1f7e969a23f730e125496c0b808f9c5336ee48b31306ab5",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "more current from the power source.\n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.\n\nThis high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing th",
+        "metadata": {
+          "end": 950,
+          "start": 450,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.38706561249885696
+      },
+      {
+        "chunk_id": "873a0846d70aeadd2c54ea877c652602d5b08c23a151956ad95d33f233385283",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "e 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the serv",
+        "metadata": {
+          "end": 2300,
+          "start": 1800,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.38047037241039505
+      }
+    ],
+    "evidence_matches": [
+      false,
+      false,
+      true
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "A",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 402.1978000000672,
+    "search_ms": 21.44389999921259,
+    "query_embedding_tokens": 26,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 8121.926599998915,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_03fba080267e7aea016af704b8d0d887d2b93f908372c4b211",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Khi sử dụng servo lớn hơn hoặc nhiều servo, cần kiểm tra yêu cầu điện năng để đảm bảo chúng được cung cấp đủ nguồn điện. Các servo lớn có thể tiêu thụ dòng điện lên tới 800 mA, không an toàn khi lấy từ bảng Arduino. Do đó, cần dùng nguồn điện bên ngoài. Ngoài ra, khuyến nghị sử dụng tụ điện để ổn định nguồn cấp và giảm nhiễu điện. Cụ thể, \"If you are using bigger or more servos make sure to check your power requirements accordingly.\" (chunk_id: \"873a0846d70aeadd2c54ea877c652602d5b08c23a151956ad95d33f233385283\").",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "873a0846d70aeadd2c54ea877c652602d5b08c23a151956ad95d33f233385283",
+          "quote": "If you are using bigger or more servos make sure to check your power requirements accordingly."
+        },
+        {
+          "chunk_id": "821e49930fb8413af1f7e969a23f730e125496c0b808f9c5336ee48b31306ab5",
+          "quote": "This high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply."
+        },
+        {
+          "chunk_id": "873a0846d70aeadd2c54ea877c652602d5b08c23a151956ad95d33f233385283",
+          "quote": "Capacitors are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 763,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 370,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1133
+    },
+    "citations_valid": false,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.005966
+  },
+  {
+    "question": {
+      "id": "q20",
+      "type": "dieu_kien",
+      "split": "test",
+      "question": "Khi dùng servo lớn hơn hoặc nhiều servo cần kiểm tra gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**_If you are using bigger or more servos make sure to check your power requirements accordingly._**",
+      "expected_answer": "Kiểm tra lại yêu cầu nguồn tương ứng."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "60fd62c3d3d6248eea66b54b96a8167fa9443c44ef57b7450dca1a5011ccf1ed",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source.\n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.",
+        "metadata": {
+          "end": 766,
+          "start": 0,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.3996124803788955
+      },
+      {
+        "chunk_id": "9f3ee5a224e263f736064e94a012866504dd36a538fcdc1f8cbaaaf460350e05",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "This high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires to the servo using e.g. a breadboard.\n\n**_Note that USB wall chargers are limited to 500 mA (USB 2.0) or 900 mA (USB 3.0)._**\n\nIf your project needs to move around freely without being attached to a power outlet you can also choose batteries to power the servo. If you need 5 V exactly you can use two 18650 Li-Ion batteries together with a step-down converter.",
+        "metadata": {
+          "end": 1760,
+          "start": 768,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.37858863132135756
+      },
+      {
+        "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "A step-down converter is needed because 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.\n\nWhen using a [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) we recommend using a **100 µF** capacitor.\n\n![Capacitor](./assets/capacitor.png)",
+        "metadata": {
+          "end": 2596,
+          "start": 1762,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.35755659215320934
+      }
+    ],
+    "evidence_matches": [
+      false,
+      false,
+      true
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "B",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 402.1978000000672,
+    "search_ms": 18.22619999984454,
+    "query_embedding_tokens": 26,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 23198.022000000492,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_04c8caad6140c939016af704c0e1bc87d28ef8a1e019fccb54",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Khi sử dụng servo lớn hơn hoặc nhiều servo, bạn cần kiểm tra yêu cầu điện năng của chúng. Điều này bao gồm nhiên liệu tiêu thụ khi không di chuyển, khi di chuyển tự do, và khi chịu tải tối đa. Nếu sử dụng nhiều servo, cần đảm bảo rằng nguồn điện cung cấp đủ dòng điện cần thiết để tránh làm hỏng bảng mạch Arduino. Ngoài ra, việc sử dụng tụ điện để ổn định nguồn cấp cũng được khuyến nghị.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "9f3ee5a224e263f736064e94a012866504dd36a538fcdc1f8cbaaaf460350e05",
+          "quote": "To avoid damaging our board we need to power the servo motor through an external power supply."
+        },
+        {
+          "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+          "quote": "If you are using bigger or more servos make sure to check your power requirements accordingly."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 1045,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1276
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.004862
+  },
+  {
+    "question": {
+      "id": "q20",
+      "type": "dieu_kien",
+      "split": "test",
+      "question": "Khi dùng servo lớn hơn hoặc nhiều servo cần kiểm tra gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**_If you are using bigger or more servos make sure to check your power requirements accordingly._**",
+      "expected_answer": "Kiểm tra lại yêu cầu nguồn tương ứng."
+    },
+    "split": "test",
+    "hits": [
+      {
+        "chunk_id": "60fd62c3d3d6248eea66b54b96a8167fa9443c44ef57b7450dca1a5011ccf1ed",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source.\n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.",
+        "metadata": {
+          "end": 766,
+          "start": 0,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.3996124803788955
+      },
+      {
+        "chunk_id": "9f3ee5a224e263f736064e94a012866504dd36a538fcdc1f8cbaaaf460350e05",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "This high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires to the servo using e.g. a breadboard.\n\n**_Note that USB wall chargers are limited to 500 mA (USB 2.0) or 900 mA (USB 3.0)._**\n\nIf your project needs to move around freely without being attached to a power outlet you can also choose batteries to power the servo. If you need 5 V exactly you can use two 18650 Li-Ion batteries together with a step-down converter.",
+        "metadata": {
+          "end": 1760,
+          "start": 768,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.37858863132135756
+      },
+      {
+        "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+        "document_id": "arduino-servo-motors",
+        "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+        "page": "servo-motors#powering-servo-motors",
+        "text": "A step-down converter is needed because 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.\n\nWhen using a [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) we recommend using a **100 µF** capacitor.\n\n![Capacitor](./assets/capacitor.png)",
+        "metadata": {
+          "end": 2596,
+          "start": 1762,
+          "section": "Powering Servo Motors",
+          "category": "electronics",
+          "language": "en",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "document_type": "technical_documentation",
+          "embedding_model": "text-embedding-3-large"
+        },
+        "score": 0.35755659215320934
+      }
+    ],
+    "evidence_matches": [
+      false,
+      false,
+      true
+    ],
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "human_grounding": null,
+    "automatic_check": "normalized exact match; review semantic alternatives manually",
+    "strategy": "C",
+    "applied_filter": null,
+    "human_metadata_labels": null,
+    "query_embedding_ms": 402.1978000000672,
+    "search_ms": 24.79719999973895,
+    "query_embedding_tokens": 26,
+    "query_embedding_shared_across_strategies": true,
+    "llm_ms": 7023.164499998529,
+    "human_answer_correctness": null,
+    "llm_model": "gpt-4o-mini-2024-07-18",
+    "response_id": "resp_02e66a91f161408f016af704d8309887d2bb16a3fd9a0afafd",
+    "response_status": "completed",
+    "generated_answer": {
+      "answer": "Khi sử dụng servo lớn hơn hoặc nhiều servo, cần kiểm tra các yêu cầu về nguồn điện của chúng. Cụ thể, bạn nên chú ý đến:\n- **Dải điện áp hoạt động**\n- **Dòng điện khi không hoạt động** (idle current)\n- **Dòng điện khi chạy tự do** (running current)\n- **Dòng điện khi bị tải tối đa** (stall current) để đảm bảo an toàn cho mạch. Cũng cần sử dụng nguồn ngoài để cấp nguồn cho servo nhằm tránh hư hại cho board Arduino, và có thể cần thêm tụ điện để ổn định nguồn cung cấp.",
+      "insufficient_evidence": false,
+      "citations": [
+        {
+          "chunk_id": "9f3ee5a224e263f736064e94a012866504dd36a538fcdc1f8cbaaaf460350e05",
+          "quote": "Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked"
+        },
+        {
+          "chunk_id": "dbefbc439715e4698010465049ac4a5a38705fee343d3554514810c09bff90d4",
+          "quote": "If you are using bigger or more servos make sure to check your power requirements accordingly."
+        }
+      ]
+    },
+    "llm_usage": {
+      "input_tokens": 1045,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1350
+    },
+    "citations_valid": true,
+    "citation_check_note": "Only exact quote/ID existence; not entailment or answer accuracy",
+    "estimated_llm_cost_usd": 0.00575
+  }
+]

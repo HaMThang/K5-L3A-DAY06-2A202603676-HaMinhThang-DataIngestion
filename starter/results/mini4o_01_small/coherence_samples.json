@@ -1,0 +1,782 @@
+[
+  {
+    "strategy": "A",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#a-d-converter",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "a71f6697c92bcc32232327227db68d25b2edb9a8348798b79b7b200b203f8772",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#a-d-converter",
+        "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\n\nConsequently, if a user needs more general purpose ",
+        "metadata": {
+          "section": "A/D Converter",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 500
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#a-d-converter",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "ebdef6e89b32c15d5b7e82d25c08aa4e7325ce94361559ae6ddb6fac03f67a2c",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#a-d-converter",
+        "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\n\nConsequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.",
+        "metadata": {
+          "section": "A/D Converter",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 596
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#a-d-converter",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "ebdef6e89b32c15d5b7e82d25c08aa4e7325ce94361559ae6ddb6fac03f67a2c",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#a-d-converter",
+        "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\n\nConsequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.",
+        "metadata": {
+          "section": "A/D Converter",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 596
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#a-d-converter",
+    "offset": 449,
+    "chunks": [
+      {
+        "chunk_id": "a71f6697c92bcc32232327227db68d25b2edb9a8348798b79b7b200b203f8772",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#a-d-converter",
+        "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\n\nConsequently, if a user needs more general purpose ",
+        "metadata": {
+          "section": "A/D Converter",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 500
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#a-d-converter",
+    "offset": 449,
+    "chunks": [
+      {
+        "chunk_id": "ebdef6e89b32c15d5b7e82d25c08aa4e7325ce94361559ae6ddb6fac03f67a2c",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#a-d-converter",
+        "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\n\nConsequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.",
+        "metadata": {
+          "section": "A/D Converter",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 596
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#a-d-converter",
+    "offset": 449,
+    "chunks": [
+      {
+        "chunk_id": "ebdef6e89b32c15d5b7e82d25c08aa4e7325ce94361559ae6ddb6fac03f67a2c",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#a-d-converter",
+        "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\n\nConsequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.",
+        "metadata": {
+          "section": "A/D Converter",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 596
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#pin-mapping",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "9e0f30a0e10131ab980167cfc4eb7e2dc7023c7b0411725ba459cb6deb405a93",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#pin-mapping",
+        "text": "The analog pins can be used identically to the digital pins, using the aliases `A0` (for analog input 0), `A1`, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it `HIGH`:\n\n```arduino\npinMode(A0, OUTPUT);\ndigitalWrite(A0, HIGH);\n```",
+        "metadata": {
+          "section": "Pin Mapping",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 276
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#pin-mapping",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "b2b2b74603a228958338d013d6a0e5136a277035cb4049ecf70969a33cab604e",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#pin-mapping",
+        "text": "The analog pins can be used identically to the digital pins, using the aliases `A0` (for analog input 0), `A1`, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it `HIGH`:\n\n```arduino\npinMode(A0, OUTPUT);\ndigitalWrite(A0, HIGH);\n```",
+        "metadata": {
+          "section": "Pin Mapping",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 276
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#pin-mapping",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "b2b2b74603a228958338d013d6a0e5136a277035cb4049ecf70969a33cab604e",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#pin-mapping",
+        "text": "The analog pins can be used identically to the digital pins, using the aliases `A0` (for analog input 0), `A1`, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it `HIGH`:\n\n```arduino\npinMode(A0, OUTPUT);\ndigitalWrite(A0, HIGH);\n```",
+        "metadata": {
+          "section": "Pin Mapping",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 276
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#pull-up-resistors",
+    "offset": 233,
+    "chunks": [
+      {
+        "chunk_id": "cf61855e805d5036089add165d663a0520ee766562a4d4221520580e99af02f4",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#pull-up-resistors",
+        "text": "The analog pins also have pull-up resistors, which work identically to pull-up resistors on the digital pins. They are enabled by issuing a command such as:\n\n```arduino\npinMode(A0, INPUT_PULLUP);  // Set pull-up on analog pin 0\n```\n\nBe aware however that turning on a pull-up will affect the values reported by `analogRead()`.",
+        "metadata": {
+          "section": "Pull-up Resistors",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 326
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#pull-up-resistors",
+    "offset": 233,
+    "chunks": [
+      {
+        "chunk_id": "c0887c41717465c9f1bddacc340b027493ff1e6a4cec56ef52665f8e53f251b6",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#pull-up-resistors",
+        "text": "The analog pins also have pull-up resistors, which work identically to pull-up resistors on the digital pins. They are enabled by issuing a command such as:\n\n```arduino\npinMode(A0, INPUT_PULLUP);  // Set pull-up on analog pin 0\n```\n\nBe aware however that turning on a pull-up will affect the values reported by `analogRead()`.",
+        "metadata": {
+          "section": "Pull-up Resistors",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 326
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#pull-up-resistors",
+    "offset": 233,
+    "chunks": [
+      {
+        "chunk_id": "c0887c41717465c9f1bddacc340b027493ff1e6a4cec56ef52665f8e53f251b6",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#pull-up-resistors",
+        "text": "The analog pins also have pull-up resistors, which work identically to pull-up resistors on the digital pins. They are enabled by issuing a command such as:\n\n```arduino\npinMode(A0, INPUT_PULLUP);  // Set pull-up on analog pin 0\n```\n\nBe aware however that turning on a pull-up will affect the values reported by `analogRead()`.",
+        "metadata": {
+          "section": "Pull-up Resistors",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 326
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#details-and-caveats",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "d7fea2879bd7cb79bf73ba2bf1b1e3855de96ca3c48f89923854986cc0fea29a",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#details-and-caveats",
+        "text": "The `analogRead()` function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using `analogRead()`. Note that calling `pinMode(pin, INPUT)` will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use `pinMode(pin, INPUT_PULLUP)` instead.\n\nThe ATmega datasheet also cautions against switching analog pins in close temporal prox",
+        "metadata": {
+          "section": "Details and Caveats",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 500
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#details-and-caveats",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "04b04ae326326ee5873c51d8a5bce31d03b190adaffc55fb7e11c545039c7f87",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#details-and-caveats",
+        "text": "The `analogRead()` function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using `analogRead()`. Note that calling `pinMode(pin, INPUT)` will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use `pinMode(pin, INPUT_PULLUP)` instead.\n\nThe ATmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (`analogRead()`) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using `analogRead()` to read other analog pins.",
+        "metadata": {
+          "section": "Details and Caveats",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 789
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-analog-input",
+    "page": "analog-input#details-and-caveats",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "04b04ae326326ee5873c51d8a5bce31d03b190adaffc55fb7e11c545039c7f87",
+        "document_id": "arduino-analog-input",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+        "page": "analog-input#details-and-caveats",
+        "text": "The `analogRead()` function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using `analogRead()`. Note that calling `pinMode(pin, INPUT)` will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use `pinMode(pin, INPUT_PULLUP)` instead.\n\nThe ATmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (`analogRead()`) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using `analogRead()` to read other analog pins.",
+        "metadata": {
+          "section": "Details and Caveats",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 789
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "364a7840b1f28a85958b3e80613d6e546c554194d8f7a8bbe7a02bb6ef47d4fc",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input",
+        "text": "Arduino (ATmega) pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()` when you're using them as inputs. Pins configured this way are said to be in a **high-impedance state**. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 MΩ in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 500
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "53b05696e30182cc7ed4460592f99b7f2f7e38e70c24b68fad044b9aa961d3be",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input",
+        "text": "Arduino (ATmega) pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()` when you're using them as inputs. Pins configured this way are said to be in a **high-impedance state**. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 MΩ in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing [a capacitive touch sensor](https://playground.arduino.cc/Code/CapacitiveSensor), reading an LED as a [photodiode](https://playground.arduino.cc/Learning/LEDSensor), or reading an analog sensor with a scheme such as [RCTime](/tutorials/generic/capacitance-meter).",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 777
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "53b05696e30182cc7ed4460592f99b7f2f7e38e70c24b68fad044b9aa961d3be",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input",
+        "text": "Arduino (ATmega) pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()` when you're using them as inputs. Pins configured this way are said to be in a **high-impedance state**. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 MΩ in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing [a capacitive touch sensor](https://playground.arduino.cc/Code/CapacitiveSensor), reading an LED as a [photodiode](https://playground.arduino.cc/Learning/LEDSensor), or reading an analog sensor with a scheme such as [RCTime](/tutorials/generic/capacitance-meter).",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 777
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input",
+    "offset": 779,
+    "chunks": [
+      {
+        "chunk_id": "5de206ac62478618b164cbe0e1c93fadf8804bc37adf0cafde4c63e5b1a915ad",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input",
+        "text": "er, and can make the pins useful for such tasks as implementing [a capacitive touch sensor](https://playground.arduino.cc/Code/CapacitiveSensor), reading an LED as a [photodiode](https://playground.arduino.cc/Learning/LEDSensor), or reading an analog sensor with a scheme such as [RCTime](/tutorials/generic/capacitance-meter).\n\nThis also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circ",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 450,
+          "end": 950
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input",
+    "offset": 779,
+    "chunks": [
+      {
+        "chunk_id": "09d5c522fd2b54bb07c2ff245000ea3dbdd3cd6fb203e0eddc48b7f770604244",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input",
+        "text": "This also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 779,
+          "end": 1108
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input",
+    "offset": 779,
+    "chunks": [
+      {
+        "chunk_id": "09d5c522fd2b54bb07c2ff245000ea3dbdd3cd6fb203e0eddc48b7f770604244",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input",
+        "text": "This also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 779,
+          "end": 1108
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "e59feed2b8067ec0efad5613ba7b8f20402d8ef43773e9286200dd5b2849e2ba",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+        "text": "Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pull-up resistor (to +5 VDC), or a pull-down resistor (resistor to GND) on the input. A 10 kΩ resistor is a good value for a pull-up or pull-down resistor.",
+        "metadata": {
+          "section": "Pull-up Resistors with Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 266
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "5fd3af7aa9a604fe4a27b29c4f88ed7ab3b866b074e1dd65353cb7a2aa24c5a6",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+        "text": "Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pull-up resistor (to +5 VDC), or a pull-down resistor (resistor to GND) on the input. A 10 kΩ resistor is a good value for a pull-up or pull-down resistor.",
+        "metadata": {
+          "section": "Pull-up Resistors with Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 266
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+    "offset": 0,
+    "chunks": [
+      {
+        "chunk_id": "5fd3af7aa9a604fe4a27b29c4f88ed7ab3b866b074e1dd65353cb7a2aa24c5a6",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+        "text": "Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pull-up resistor (to +5 VDC), or a pull-down resistor (resistor to GND) on the input. A 10 kΩ resistor is a good value for a pull-up or pull-down resistor.",
+        "metadata": {
+          "section": "Pull-up Resistors with Pins Configured as INPUT",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 266
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+    "offset": 595,
+    "chunks": [
+      {
+        "chunk_id": "031e631f9f6cb057d074e82f9d9f03cf08a913a3e5762f05f1d9095cc228ab3b",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+        "text": "and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\n\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.\n\nThe pull-up resistors provide enough current to dimly light an LED connected to a pin that has been configured as",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT_PULLUP",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 450,
+          "end": 950
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+    "offset": 595,
+    "chunks": [
+      {
+        "chunk_id": "c81265c987ffa5d406d6196b827027aadb8eb136774f07507b53b1f80872d615",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+        "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\n\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\n\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT_PULLUP",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 835
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+    "offset": 595,
+    "chunks": [
+      {
+        "chunk_id": "c81265c987ffa5d406d6196b827027aadb8eb136774f07507b53b1f80872d615",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+        "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\n\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\n\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT_PULLUP",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 835
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "A",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+    "offset": 317,
+    "chunks": [
+      {
+        "chunk_id": "00f5ffe7b0684f3a7d23013fddf6521b7535a871daa59b44db8f38d1fcc0465f",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+        "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\n\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT_PULLUP",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 500
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "B",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+    "offset": 317,
+    "chunks": [
+      {
+        "chunk_id": "c81265c987ffa5d406d6196b827027aadb8eb136774f07507b53b1f80872d615",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+        "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\n\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\n\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT_PULLUP",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 835
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  },
+  {
+    "strategy": "C",
+    "document_id": "arduino-digital-pins",
+    "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+    "offset": 317,
+    "chunks": [
+      {
+        "chunk_id": "c81265c987ffa5d406d6196b827027aadb8eb136774f07507b53b1f80872d615",
+        "document_id": "arduino-digital-pins",
+        "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+        "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+        "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\n\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\n\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.",
+        "metadata": {
+          "section": "Properties of Pins Configured as INPUT_PULLUP",
+          "category": "microcontrollers",
+          "language": "en",
+          "document_type": "technical_documentation",
+          "snapshot": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+          "start": 0,
+          "end": 835
+        }
+      }
+    ],
+    "human_coherence": null,
+    "reason": null
+  }
+]

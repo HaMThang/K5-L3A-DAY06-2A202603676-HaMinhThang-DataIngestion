@@ -1,0 +1,2296 @@
+{
+  "sources": [
+    {
+      "source_id": "arduino-digital-pins",
+      "title": "Digital Pins",
+      "source_url": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/02.microcontrollers/01.digital-pins/digital-pins.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "digital-pins.html",
+      "original_html": "original-html/digital-pins.html",
+      "markdown_file": "markdown/digital-pins.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:25.3251415+00:00",
+      "language": "en",
+      "category": "microcontrollers",
+      "body_markdown_characters": 6115,
+      "sha256": "1d059859bd2319881e50e0bc737d74b52af126ca175adfb92d7a3f9e80f6c225",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/digital-pins.md",
+      "actual_sha256": "89d41f20d88c9895d44ad6b4b3f327e8a00406b36b0d698401dd63d83219cc31",
+      "units": [
+        {
+          "page": "digital-pins#body",
+          "characters": 346,
+          "sha256": "403c1996d97479b8236623f01eb1b21e6ffd131cd94af801dd831e41f0739bbe",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "digital-pins#properties-of-pins-configured-as-input",
+          "characters": 1108,
+          "sha256": "9d4808ed1d20393b88ce5b00156b8aecfef5e142016fcb930133a1fbbdfefdef",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+          "characters": 266,
+          "sha256": "f15d029069d89def209e668d3e3562234b95b32cea996c17d577f9a815fd0c2e",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+          "characters": 1050,
+          "sha256": "9eb5069e14ed0d2487178ae0c06f03717a8a1542430fed800fa883a61262235b",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "digital-pins#pull-up-resistors-and-pin-mode-switching",
+          "characters": 1822,
+          "sha256": "abf5e42cd4d1a704c7264db975893590fbab911e7f1c0540f7e45069db8d00bd",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "digital-pins#properties-of-pins-configured-as-output",
+          "characters": 990,
+          "sha256": "7f84ce8784d18aeccee3ddfb4def470e14d4816d30fb7a2a4f34c32974c15c02",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "digital-pins#see-also",
+          "characters": 221,
+          "sha256": "5894e5f52048aa6b1549b1fae5263f3f54232ee3d5976381f349abb9f8b62497",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-analog-input",
+      "title": "Analog Input Pins",
+      "source_url": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/02.microcontrollers/02.analog-input/analog-input.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "analog-input.html",
+      "original_html": "original-html/analog-input.html",
+      "markdown_file": "markdown/analog-input.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:27.8451521+00:00",
+      "language": "en",
+      "category": "microcontrollers",
+      "body_markdown_characters": 2212,
+      "sha256": "0104b407ef4b3329fd6ef6cb09b5cde565632582c34b2628fd03ef4bf3f55ff7",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/analog-input.md",
+      "actual_sha256": "cd078fc2db05e60fdeeae67a572f263a79aebbe9ce4c1f32b32b89a62bdf92b8",
+      "units": [
+        {
+          "page": "analog-input#body",
+          "characters": 106,
+          "sha256": "97b0afb94ada37cbc8f4bbf328b8e6b19d3bb29a72b7c882540f928e1fa13929",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "analog-input#a-d-converter",
+          "characters": 596,
+          "sha256": "aaf631e79ebb20b4cd9d663b2dd008a00e0bd73eae550f2bcb401fcd870bd3ea",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "analog-input#pin-mapping",
+          "characters": 276,
+          "sha256": "db9a3e968d5436fff3c2c8670eeebf26f49cc368b58c88c1a33bcdf815114c49",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "analog-input#pull-up-resistors",
+          "characters": 326,
+          "sha256": "54fe152c66ca6f70c9eed2fb9cff29899df897dfe223a793a056aa23e2550b6e",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "analog-input#details-and-caveats",
+          "characters": 789,
+          "sha256": "761415b2d0ab68f68a0382a30986a39c463719a632621571aa9217051d15a6b5",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-analog-output",
+      "title": "Basics of PWM (Pulse Width Modulation)",
+      "source_url": "https://docs.arduino.cc/learn/microcontrollers/analog-output/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/02.microcontrollers/03.analog-output/analog-output.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "analog-output.html",
+      "original_html": "original-html/analog-output.html",
+      "markdown_file": "markdown/analog-output.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:33.0711772+00:00",
+      "language": "en",
+      "category": "microcontrollers",
+      "body_markdown_characters": 1952,
+      "sha256": "e448ec09de8cf1627ddef8eb3fff15dd2fc09e1baaa029ad5c356d2f309c0174",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/analog-output.md",
+      "actual_sha256": "216490acd2c80ff94b3519584c5df17c4d6c64329177d6c44b485f23244a8041",
+      "units": [
+        {
+          "page": "analog-output#body",
+          "characters": 1951,
+          "sha256": "f46cefb4e75940e9a9f64273922248310ad44c10f764b096d70fc0739ac2bc07",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-5v-3v3",
+      "title": "Guide to 3V3 and 5V Power Supplies Differences",
+      "source_url": "https://docs.arduino.cc/learn/microcontrollers/5v-3v3/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/02.microcontrollers/05.5v-3v3/5v-3v3-guide.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "5v-3v3.html",
+      "original_html": "original-html/5v-3v3.html",
+      "markdown_file": "markdown/5v-3v3.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:39.1857573+00:00",
+      "language": "en",
+      "category": "microcontrollers",
+      "body_markdown_characters": 12726,
+      "sha256": "0c4a4536c8f02d9f9ac8dec445c66e8018274525fb140567ec860e711b60732e",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/5v-3v3.md",
+      "actual_sha256": "7ad644d89cf803b1ab96fddb15802a0985e79292e3507a437ac072a8c08ef023",
+      "units": [
+        {
+          "page": "5v-3v3#3v3-vs-5v",
+          "characters": 716,
+          "sha256": "abe79e7a1adad86300da5df183ecc0fb1fe2be7e48449cb3e9551d58c2deebb2",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#3v3-the-standard-voltage-level",
+          "characters": 1743,
+          "sha256": "6cb73afc17fe51f6fae20656df8884f45ec299d392d3c7063d2a4122a081bcbc",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "5v-3v3#how-to-avoid-burning-circuits-101",
+          "characters": 310,
+          "sha256": "e7e1f5b365f4489040e682641a41247329fe730fe55531e256b1cd1625b4c0fc",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#color-coded-power-lines",
+          "characters": 911,
+          "sha256": "4c6d6344098b6f3d95755892f49df27d11e253a2417dbd8a4cc2b5cfdc91c917",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#fuse-integration",
+          "characters": 660,
+          "sha256": "64f978c242d74ccacf6309938b3ca65b7b20826b604b8b37bdc279e4bcaf6941",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#a-better-reverse-polarity-protection-circuit",
+          "characters": 877,
+          "sha256": "06e9f3a45fc585e31e592fe4c8cc0d7b7b390674b4892e8ecbe9cd8b3c3abb92",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#over-voltage-and-over-current-protection",
+          "characters": 1320,
+          "sha256": "551b6822f0232459911f8a2c4bffeac84db0c091489f58612e79bb192eaa108c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#stepping-the-voltage-level-shifters",
+          "characters": 618,
+          "sha256": "cdb9153b82fd92885ee9d8e6d3d5f181a4202d7cde3f6b70b9dc543327cfd565",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#stepping-down-voltage",
+          "characters": 1160,
+          "sha256": "4ac8ceb634ae50474bdd1f15a6fa651eb6791214b3465a0a0ee98391bc49cbaf",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#stepping-up",
+          "characters": 864,
+          "sha256": "f91823254754a3b8a7feb15645238c541e02ce562f5301dbfd2357d3f5d6fc26",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#bi-directional-logic-level-converter",
+          "characters": 1861,
+          "sha256": "223db0a2eb2379dea091918103e842c0a94752ee52bb8b5b27ed4af9f5fbe700",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "5v-3v3#further-reading-and-resources",
+          "characters": 846,
+          "sha256": "f622f3ab7d4d8ef880de5d477b236fcc2af61d9d82f9e862b8767cd32ecd9fb0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "5v-3v3#references",
+          "characters": 385,
+          "sha256": "a8824cfedd7ac9d8d70a74f9a490948bbf8d080b270b7958b12b9c1439064526",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-memory-guide",
+      "title": "Arduino Memory Guide",
+      "source_url": "https://docs.arduino.cc/learn/programming/memory-guide/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/03.programming/06.memory-guide/memory-guide.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "memory-guide.html",
+      "original_html": "original-html/memory-guide.html",
+      "markdown_file": "markdown/memory-guide.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:41.4711411+00:00",
+      "language": "en",
+      "category": "programming",
+      "body_markdown_characters": 34798,
+      "sha256": "4375677746350ddd32efd237b76e7bf58094143b8ea0c91ad67924c474bc9a41",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/memory-guide.md",
+      "actual_sha256": "496163ace87f896b17788769f1e4a589ddf2b9b3f81768cfa5d960750c79156f",
+      "units": [
+        {
+          "page": "memory-guide#body",
+          "characters": 922,
+          "sha256": "e6b627a7af09f97af6b1044fc9f1035a98f296bfa999ea26e8c4316faaaddc6d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#what-is-memory",
+          "characters": 1110,
+          "sha256": "084196671a676f461c62a6869451e8f0113d9ec808a92cc2b3b4d59e6199b11d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#memory-architectures-101",
+          "characters": 345,
+          "sha256": "4851caaf0cccd726771340ca9e65867267440556bf25e241ea222add365ca70d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#von-neumann-architecture",
+          "characters": 540,
+          "sha256": "2dc59796005ac5a41d41dc36372d9805dcaede5791585d75d7d29a0398a4257b",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#harvard-architecture",
+          "characters": 438,
+          "sha256": "20166e84cedfc76da705d5c08794885b9f4acbbc53ae148bdefc916948f8e3a6",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#modern-architectures-hybrids",
+          "characters": 637,
+          "sha256": "6ded07eb8877868b99fede1e1586aebe6a15df4bc3e88a1ec93bd32677628f7f",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#arduino-boards-architectures",
+          "characters": 2561,
+          "sha256": "b636abb51a4abea30532fd5798a1c126fd8aeb981b3f913be9290ac184aed699",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "memory-guide#memory-types",
+          "characters": 524,
+          "sha256": "4ea6153f02055e1781112c0b552074bb2ebe073e06c82ae3015ed07ddf94c9d7",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#flash",
+          "characters": 369,
+          "sha256": "9ec1948816efa74d456ac13b58e816dc45b3c1d6336765a6ce59f4bc99af53d3",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#ram",
+          "characters": 365,
+          "sha256": "21cbfb3a4ee95fb2916cab2ade6a93d523c30fda6cc170838a5526eaf2aaa163",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#eeprom",
+          "characters": 335,
+          "sha256": "be0c983525d4684c05920458f3229e42160a5ec0c840a86aee66edb41e27972c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#arduino-boards-memory-allocation",
+          "characters": 5999,
+          "sha256": "145a6cf206ec94db8244b9233a25ab97fa9abeaec30f19c8a96ded63c473b8d2",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "memory-guide#measuring-memory-usage-in-arduino-boards",
+          "characters": 803,
+          "sha256": "bca0bd4fc6172e2a2c35c71fcf81f2f2cc02fb892719c4122d87277c7c38c854",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#flash-memory-measurement",
+          "characters": 1031,
+          "sha256": "c3dd6c6f5c19c6135475a1c35ee32b3d909e4db2356a076dd78ec1c0de74e0b5",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#sram-memory-measurement",
+          "characters": 1431,
+          "sha256": "428cd8bb7c45a8be647f1b9553c1d4182647d0d4776df2b55284e83fb10c0501",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#eeprom-memory-measurement",
+          "characters": 994,
+          "sha256": "b1eceabc6cc4b9c39dd64deab7852530286c6e5d797140ce306aa9b6413e9506",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#optimizing-memory-usage-in-arduino-based-systems",
+          "characters": 904,
+          "sha256": "296aea9789bfd7b8722d24d9ed4aaa494ad257f41c1216f2a92129231a970130",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#flash-memory-optimization",
+          "characters": 205,
+          "sha256": "41bff828cbf424c709f187433e97a323b80a3e01ba2624eaec2bd339b43826d9",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#detach-unused-sources",
+          "characters": 292,
+          "sha256": "154322258fac29a6807987615e869e7c510853a6d19cdcfbe1e2d12a52918f36",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#modular-tasks",
+          "characters": 520,
+          "sha256": "def4a57b88166393dee669144b21937ca48cb69dfbeb3bd6f120ace8d90f52dc",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#sram-memory-optimization",
+          "characters": 435,
+          "sha256": "af66a113974e57ed79a52cdca9857f2f1b4cfb0dbc83e699a339fa4be1815284",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#string-wrapper",
+          "characters": 931,
+          "sha256": "04902bb5bfa9623d0a7d341e9cc15acd7b3275b2d0413497bbfa6742124fc9cd",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#progmem",
+          "characters": 2329,
+          "sha256": "c9ad7ab5e286fa79e139e5a68e9cc5228f1486148ce8e755316d7c208215e411",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "memory-guide#non-dynamic-memory-allocation",
+          "characters": 2274,
+          "sha256": "e2230ac4668fe12e04237c3d5d8b86c81500b118c7149403bffc853b8128d7a4",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "memory-guide#reserve-function",
+          "characters": 833,
+          "sha256": "2e73da969732a3e0dd14d5c01da6552b2b915997e0e404910c662d19e400db0c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#buffer-size-control",
+          "characters": 1336,
+          "sha256": "61f68118123fe7b6659cb1a59072a3981f8a8750ebbdd86e327604e47045d203",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#corrective-data-type-usage",
+          "characters": 1790,
+          "sha256": "ca293376996c1a9d681ae8aca8cfdaf93ebab34e60a9d8e63c24aeac2f28f6c9",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "memory-guide#eeprom-memory-optimization",
+          "characters": 870,
+          "sha256": "ce163265d5122ead8912e79a00e125eef5024e1460ac6611f3e0a3cde1a9d775",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#eeprom-emulation-with-flash-memory",
+          "characters": 1286,
+          "sha256": "91ecff42ac8b02a87f36180dbb2d8e2b92edb75df821c5709db6c65aca397c96",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#further-reading-and-resources",
+          "characters": 582,
+          "sha256": "b15a9b3fd33482f293437691832460ed52864667c5987fd105b51d23f2155cc9",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "memory-guide#references",
+          "characters": 426,
+          "sha256": "d6c4a8d0b09c009b1d8f0d62b45804279ea746130f4e78a84f4eca97ada8bad0",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-eeprom-guide",
+      "title": "A guide to EEPROM",
+      "source_url": "https://docs.arduino.cc/learn/programming/eeprom-guide/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/03.programming/07.eeprom-guide/eeprom-guide.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "eeprom-guide.html",
+      "original_html": "original-html/eeprom-guide.html",
+      "markdown_file": "markdown/eeprom-guide.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:44.0650434+00:00",
+      "language": "en",
+      "category": "programming",
+      "body_markdown_characters": 14913,
+      "sha256": "bfccbcc8129fa8b95e18da9d385e44b96010db95ba8ee6a0bafe8b05a56817f5",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/eeprom-guide.md",
+      "actual_sha256": "072f64e02dbfc6b7064b8ec1eacf542c80328cbb070468487b97628d2369d183",
+      "units": [
+        {
+          "page": "eeprom-guide#body",
+          "characters": 345,
+          "sha256": "93cf5fcdf4a388fca2670ad26b07e8e3a05757ea2bd2522eca1f6497e60d00f5",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "eeprom-guide#hardware-required",
+          "characters": 721,
+          "sha256": "98efbd95964f958ff7efe0d58eb62f37a2e07b37b389e6f099e8337a08043847",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "eeprom-guide#eeprom-clear",
+          "characters": 1071,
+          "sha256": "7b9372367cb80e407d067d55cb950ee349e14c48ce24bdeb45e0fbf2979436df",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "eeprom-guide#eeprom-crc",
+          "characters": 1885,
+          "sha256": "2ed0fd2ea19ea47447f65885577fd14dfc4ebdd997a3e2ab7b1331613370ccd0",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "eeprom-guide#eeprom-get",
+          "characters": 2093,
+          "sha256": "725ca5d4b66ebddd268f4a1025198ffda3aba1c5af297cbf3d176f386d8d9bd5",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "eeprom-guide#eeprom-iteration",
+          "characters": 1294,
+          "sha256": "bea8a67fe1aa4c77db6f67cfcbeb9ca47f7377833c81cb307d2fce1ba702d313",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "eeprom-guide#eeprom-put",
+          "characters": 1725,
+          "sha256": "cf649fe848255e6f1f869a4a99cc81e408ad3f7662334dd909d32227a9ffdd54",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "eeprom-guide#eeprom-read",
+          "characters": 1599,
+          "sha256": "c7fe8011bcbbc057cb29170d75a6872686ff5586c478648eef1816515b66c6c8",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "eeprom-guide#eeprom-update",
+          "characters": 2255,
+          "sha256": "a295377ed701e07bce8da464909ab3a485f8c378cd970ad36c144747f674a8a6",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "eeprom-guide#eeprom-write",
+          "characters": 1747,
+          "sha256": "d69fa52ebb93788300617f3ddb46b75f15877885b2b16e9ed0ca7b872eb6e12e",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-multimeter-basics",
+      "title": "Multimeter Basics",
+      "source_url": "https://docs.arduino.cc/learn/electronics/multimeter-basics/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/04.electronics/01.multimeter-basics/multimeter-basics.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "multimeter-basics.html",
+      "original_html": "original-html/multimeter-basics.html",
+      "markdown_file": "markdown/multimeter-basics.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:46.9578437+00:00",
+      "language": "en",
+      "category": "electronics",
+      "body_markdown_characters": 6316,
+      "sha256": "b38556e483abc183811a0e351235036b7351c6328181a81261c33f1f8f779c9b",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/multimeter-basics.md",
+      "actual_sha256": "3defff2e8fd5a94f7d11d1cf0ea5fe6b6cf2ab71903618da66debe068c1af33d",
+      "units": [
+        {
+          "page": "multimeter-basics#body",
+          "characters": 333,
+          "sha256": "1936d213ef7697fd821b4680441d2d3ee1c667334a6b5b19563e3c098a15c459",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#parts-of-the-multimeter",
+          "characters": 585,
+          "sha256": "125fa1597e9c6da93897508168c98e2fbc79661d8dbf8a828d630ce6474a513c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#how-to-choose-a-multimeter",
+          "characters": 1351,
+          "sha256": "a092e434926d25f30e1a6986289b0faad53cc03f4fdad0a7876821a7f2919de0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#how-to-use-a-multimeter",
+          "characters": 189,
+          "sha256": "d7b6702e9a9d9d72b095f919ae6a0a6bfbba2f6a0c7adde71ae48280ee313852",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#reading-voltage",
+          "characters": 984,
+          "sha256": "c573d72c519cc59f689483b57ee1760832282a24d8926cc5cb5716d61f9680dd",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#terminals",
+          "characters": 802,
+          "sha256": "dea56742f80dbb0bae6ad03d9475cb5b5c305c42b19c5ced46d37df00c7351be",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#reading-resistance",
+          "characters": 590,
+          "sha256": "e3cb2fb7d67cf6beeeebf292034b4543ad604834c57f4e61e0a593832520f0d7",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#continuity-testing",
+          "characters": 338,
+          "sha256": "f8666203227f79603e71c3c00f66a0825efd569c5b340ee7e3450e8de01ff54d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "multimeter-basics#reading-current",
+          "characters": 918,
+          "sha256": "4d1f0b91b9302ca6f7643d44560369846f2665a9e8a158ad771b90d96c494c53",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-lcd-displays",
+      "title": "Liquid Crystal Displays (LCD) with Arduino",
+      "source_url": "https://docs.arduino.cc/learn/electronics/lcd-displays/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/04.electronics/03.lcd-displays/lcd-displays.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "lcd-displays.html",
+      "original_html": "original-html/lcd-displays.html",
+      "markdown_file": "markdown/lcd-displays.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:49.6499466+00:00",
+      "language": "en",
+      "category": "electronics",
+      "body_markdown_characters": 26575,
+      "sha256": "db37fb6bfcc31dbe0db7053c69ef4d39c249bffdb641f8f6298f0ef33973f41f",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/lcd-displays.md",
+      "actual_sha256": "a1141c098c7278f54a50659a9f82366e5098173606bbdc62dfcd3203d993c74c",
+      "units": [
+        {
+          "page": "lcd-displays#body",
+          "characters": 2079,
+          "sha256": "cc85061d92715451d8dde754934b633482bc0651a65030aeb9fa15851a68a7e8",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#hardware-required",
+          "characters": 189,
+          "sha256": "53ae9b445982a78815b5ab5f00c5ed95da412e259c1a8661c1aee7a3fbf32d9a",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "lcd-displays#circuit",
+          "characters": 1020,
+          "sha256": "a03b88bec6671ef5b1a3a5a8ac758854de63fcb0511857d4c89a0542dc65f0d4",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "lcd-displays#schematic",
+          "characters": 69,
+          "sha256": "60ade2c8fa8b3f1cc8ed0960bb90d8f621517588eae669d52cac56b7bd842d87",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "lcd-displays#hello-world-example",
+          "characters": 1841,
+          "sha256": "fb8a27616b2d0b9e2d3e9b245b663745f1b4a78e206b39fbbb00dc37e0f07a10",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#autoscroll-example",
+          "characters": 2454,
+          "sha256": "4abb575447da64bdbc2451b47c8aedcb17914cbbc4f5de599564d844786cf2ad",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#blink-example",
+          "characters": 1756,
+          "sha256": "80d60b2c52c1380b870e5fdeea98abc271741037ffe63248d7cb9741d251e981",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#cursor",
+          "characters": 1792,
+          "sha256": "b2f247fefd7afedde199a050787e7eb3dfd909e25c8845268e1b04ddfd2ef25a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#display-example",
+          "characters": 1925,
+          "sha256": "7269b5e6df25d3245db7751f2bf5c6f4d4a08de027e872440065b51bdf069f37",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#scroll-example",
+          "characters": 2721,
+          "sha256": "426941f4efb00df23cfaa6aec064b8ce3fa1338ed83f5cd2218821545f2da27e",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#serial-to-display-example",
+          "characters": 2088,
+          "sha256": "24cc6837d620a5d7345224c3dc1af3159e131dfc5f8e22d19524369be1f23a9a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#set-cursor-example",
+          "characters": 2458,
+          "sha256": "229c5e38b904186497f68445ed5f373a04eb626e93657b7bf3f78f2ca99ec13a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#text-direction-example",
+          "characters": 2536,
+          "sha256": "16375d88272c942f61c348d844676e40f53001d0a72b05f19c3888a1afd77f5b",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "lcd-displays#custom-character",
+          "characters": 3342,
+          "sha256": "1230a60c7b16d18aca368ebdda0f51a66612b92f3e285c954f819bee7a7fd735",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-stepper-motors",
+      "title": "Arduino and Stepper Motor Configurations",
+      "source_url": "https://docs.arduino.cc/learn/electronics/stepper-motors/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/04.electronics/04.stepper-motors/stepper-library-examples.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "stepper-motors.html",
+      "original_html": "original-html/stepper-motors.html",
+      "markdown_file": "markdown/stepper-motors.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:53.6711431+00:00",
+      "language": "en",
+      "category": "electronics",
+      "body_markdown_characters": 5592,
+      "sha256": "d7b327e3bb607e578ca4f30d673c6e50d98050fa32c8f726e174d219cc25b53d",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/stepper-motors.md",
+      "actual_sha256": "d756dcb180f94339698e1a92c6d849efe22f37367f448ed46c8eaf9712aa0590",
+      "units": [
+        {
+          "page": "stepper-motors#body",
+          "characters": 1168,
+          "sha256": "077447123d28e890084b9a46ab766353a37509cd4288ed18fd60d3a668e70539",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#hardware-required",
+          "characters": 221,
+          "sha256": "597bf676f664f51ddc36a86678da3cde1066a3337164eac1fd19ca1d8c0f6f50",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#circuit",
+          "characters": 342,
+          "sha256": "ea970edad453628d285b768c6621c56f9731ab2aa9fa22259e0f0a510c456704",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#unipolar-stepper-circuit-and-schematic",
+          "characters": 181,
+          "sha256": "4306a4c93e3363e1b76da9956710d6f6348bacda9b188bd519972f9074e91ee9",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#bipolar-stepper-circuit-and-schematic",
+          "characters": 177,
+          "sha256": "243b6f01a082305f8b2c1ae9313531f54b7ca2e6c2475fa94092baa0d525eeec",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#motorknob",
+          "characters": 754,
+          "sha256": "524e9f32ae01d4d5882cb0c55a505a57e87f9b7ecd9cfccabd67edf0231e4187",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#stepperonerevolution",
+          "characters": 775,
+          "sha256": "f2e8da25ad0c413fb9f0cafe335cf2087be90183d0299f602d11cde2d7c5cfe7",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#stepperonestepatatime",
+          "characters": 756,
+          "sha256": "2045b4b0fd099d14a9513f0e60c7309451cb5955a94fc109c027314210fd50a4",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stepper-motors#stepperspeedcontrol",
+          "characters": 972,
+          "sha256": "a278d0fe1b78cc14f7ca9769b6e9a25d57881bc814365d6e6c5b9e4422c501b6",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-servo-motors",
+      "title": "Servo Motor Basics with Arduino",
+      "source_url": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/04.electronics/05.servo-motors/servo-motors.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "servo-motors.html",
+      "original_html": "original-html/servo-motors.html",
+      "markdown_file": "markdown/servo-motors.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:55.6064029+00:00",
+      "language": "en",
+      "category": "electronics",
+      "body_markdown_characters": 6600,
+      "sha256": "894b2fcc9d3d30027fa27dbd5b41ece3b520d2b1a004af2da79fda45f643cd06",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/servo-motors.md",
+      "actual_sha256": "6250866871df201fd70cbacaa4ad4ee6a8d292820905088d9b57b5b9e4fe62ab",
+      "units": [
+        {
+          "page": "servo-motors#body",
+          "characters": 596,
+          "sha256": "6ded8de600b508b827598a65b65945e5d500e0c19decfd4e8c939ca04ed98486",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "servo-motors#hardware-required",
+          "characters": 97,
+          "sha256": "8d226aac50b4eb3dc49ff8ed1da789a4dc792c102941e8f9c850d137263b9488",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "servo-motors#powering-servo-motors",
+          "characters": 3223,
+          "sha256": "009a9acb59f68f39560e61a52aeca9256e10067f4fbb79d1ccf48209db4c55d1",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "servo-motors#circuit",
+          "characters": 406,
+          "sha256": "25f2126c5804ed0ed0f1515762ace3728f35948d4db93e2186a6433a5e1323da",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "servo-motors#knob-circuit",
+          "characters": 290,
+          "sha256": "5680349756b9dcb1614de87282883a250335009b7ace344f0c458ad4df3ce357",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "servo-motors#sweep-circuit",
+          "characters": 137,
+          "sha256": "9ebe6eb184528ce09fe5f448bf1881df2f51c138a48731e0c8dc051bbe1a3938",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "servo-motors#knob",
+          "characters": 780,
+          "sha256": "b2447779fad9d3d4dc0cb7cee7be9aaf34348b44fac9203b4d8184a6d4c682f8",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "servo-motors#sweep",
+          "characters": 924,
+          "sha256": "01902c91d39bdee2cd5ef94fc93fca9ca014733b39cb5452ede7b1429ff9619f",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-wire",
+      "title": "Inter-Integrated Circuit (I2C) Protocol",
+      "source_url": "https://docs.arduino.cc/learn/communication/wire/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/05.communication/01.wire/wire.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "wire.html",
+      "original_html": "original-html/wire.html",
+      "markdown_file": "markdown/wire.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:04:58.2619519+00:00",
+      "language": "en",
+      "category": "communication",
+      "body_markdown_characters": 23289,
+      "sha256": "719933302e85bc81db76fd3eac7cffc0762efedc8f27aac8781a7f6529806182",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/wire.md",
+      "actual_sha256": "ec78c0e757e4131dd0eef094627432b303dfbf2e89876a34692bb6f517d61ca3",
+      "units": [
+        {
+          "page": "wire#introduction",
+          "characters": 615,
+          "sha256": "7db69972d41eb77f7e90e41deecb844fb0991bd9de893126d0662dc3f361daad",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#what-is-i2c",
+          "characters": 2580,
+          "sha256": "41faddcc326145ae1713d6b62655087f1c846ed8d81f25542804871e91db3fd3",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "wire#arduino-i2c-pins",
+          "characters": 515,
+          "sha256": "8b7a0f99dd983f3911832abf45213907b0ca72cb76fa0a5fe922df357f2aec96",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#i2c-wiring",
+          "characters": 119,
+          "sha256": "1c14dec651fef1a5642d265b3a5b85ceec057aacebac877b17ef4abf60f418c5",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#breakout-boards",
+          "characters": 489,
+          "sha256": "aa3b264141ea7d9966532f930226ca1b359e297b27e3bbe1a679da20add72d3c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#qwiic-stemma-qt",
+          "characters": 1904,
+          "sha256": "645fd5d64efe32c979faeb0e9e7cbbc7b94575e8cb448a08e3c833d69db0a5ea",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "wire#grove",
+          "characters": 622,
+          "sha256": "80c2c4c4d685cb4f42d86de0315a045e3181b31f10afccc2e9f053887ed681ff",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#wire-library",
+          "characters": 1274,
+          "sha256": "62708cacfda2d7b1bc80ef91a0064db4f0917a38286c6126fb441db58428dbee",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#derived-libraries",
+          "characters": 860,
+          "sha256": "153ddeb9dc4e49c590642ab68539dbd04e855d7c38e6efaa5235bcab579e575c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#examples",
+          "characters": 99,
+          "sha256": "2b6d47101bbbb01383b2b710877ef6bb1026001a4abf26d2dbabb130332463e2",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#controller-reader",
+          "characters": 2348,
+          "sha256": "7f2cf175d67d72fda188fe016ecf6048a857452c6b5c8255891987f6599e4deb",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "wire#controller-writer",
+          "characters": 2578,
+          "sha256": "29959bca905cbafe034d17fa963c1c49b39fa6a29ac20516cc0245a2fa58920a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "wire#accelerometer",
+          "characters": 1395,
+          "sha256": "1315bd1ab793eb1535f778b118516bee055f815cc1a4e414ed2332d4af582b16",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#i2c-bmp280",
+          "characters": 695,
+          "sha256": "0394e9df83dd2ee465c4174ac787633d22d75b3e3c97562cd817d0a06aebbd3c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "wire#i2c-oled",
+          "characters": 6900,
+          "sha256": "01dd0523060223003363d50ba4326772eee0290d38199c29aa1f79aba008e60b",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-spi",
+      "title": "Arduino & Serial Peripheral Interface (SPI)",
+      "source_url": "https://docs.arduino.cc/learn/communication/spi/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/05.communication/02.spi/spi.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "spi.html",
+      "original_html": "original-html/spi.html",
+      "markdown_file": "markdown/spi.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:05:00.8332636+00:00",
+      "language": "en",
+      "category": "communication",
+      "body_markdown_characters": 5200,
+      "sha256": "f5b2d88d18f53c9c23ef681d550b31d3570fc2ab7218e957f5a0f81b8cf164ea",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/spi.md",
+      "actual_sha256": "f0c455771caa75020b12f38b510022cce5fdb5f0dee395f074bc69a22f155ee7",
+      "units": [
+        {
+          "page": "spi#body",
+          "characters": 587,
+          "sha256": "9478f83c2a0043fdc91f594d099aba2322292b2c82382b819317625ff9536694",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "spi#spi-library",
+          "characters": 319,
+          "sha256": "703a55ddcdcaee7ef7d9e8667f10d06806ddf302c0f1db49b54d520d0c2700d5",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "spi#serial-peripheral-interface-spi",
+          "characters": 3843,
+          "sha256": "1e43ac0f570c2affecd4484a239e3dac8d4bc40da490f28deb6bec6972b6e7e3",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "spi#tutorials",
+          "characters": 376,
+          "sha256": "bbe31b6d8bbcf3b4570d0e2b304e9ef99984ccec5da89dcd282a16864d44768b",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-modbus",
+      "title": "Arduino® & Modbus Protocol",
+      "source_url": "https://docs.arduino.cc/learn/communication/modbus/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/05.communication/07.modbus/modbus.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "modbus.html",
+      "original_html": "original-html/modbus.html",
+      "markdown_file": "markdown/modbus.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:05:03.4020589+00:00",
+      "language": "en",
+      "category": "communication",
+      "body_markdown_characters": 12302,
+      "sha256": "3de63d814598dd90a37af2bcb3c9ed49e59cd658cd484e86ebb13ef324f55aea",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/modbus.md",
+      "actual_sha256": "554af63525a6ed663a8b9310d033b8028202d0e6a977fd9545e3bf6b1ccfd96b",
+      "units": [
+        {
+          "page": "modbus#introduction",
+          "characters": 506,
+          "sha256": "cf55894f728a42f85299779b75c56f86a1f69413b88d3b1939da37e6bdfd640d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#modbus-compatible-hardware",
+          "characters": 500,
+          "sha256": "6ddc68afb4cc513275f7564babe6da6e758e695a21c2feb5fa3824541fd39843",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#libraries",
+          "characters": 408,
+          "sha256": "3dfe1646ea13dc63586dcc0eb7c45388fc49eb33d319ecb42c139d65afaa7261",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#what-is-modbus",
+          "characters": 1941,
+          "sha256": "504647d63559afead586d5d4eacf458fc02b42bc2190cc91f752cc590a9896ec",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modbus#how-does-modbus-work",
+          "characters": 872,
+          "sha256": "15a78372e4fb77c6c2d2336880f440db02af8dc4d0124777b8774b23e78f5620",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#device-address",
+          "characters": 375,
+          "sha256": "690f301f6321b4ee0f35f284e73c95e7625cb2c79fc6ecbfd7b3f612c06b5a18",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#function-code",
+          "characters": 572,
+          "sha256": "773210553562673745deaeccc49e82d66e23141ff225b9a9200b4dbe00c5fe91",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#data",
+          "characters": 187,
+          "sha256": "6efc92a64aa6ef4d5ce3280d352202be92e6d967190e6cb4b7ab4ec8ba704952",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#crc-error-check",
+          "characters": 984,
+          "sha256": "d9faff2ccb447541cf0e7b0a5b21f140f25b9560492c39b4bf7e22a55e993221",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#byte-and-word-ordering",
+          "characters": 751,
+          "sha256": "709b468c5ee1c664c0ee19a07b2f3d3613a6e57f45eac35ef631ab05904671fa",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modbus#use-modbus-with-arduino",
+          "characters": 2261,
+          "sha256": "3ec8d5bd0c0f722f39dfcb920b0b628089cc220518ad02a833c025675e64426f",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modbus#example",
+          "characters": 2315,
+          "sha256": "aab58596e176855d70e846f0a4a3888ae292a7d67ad88c7d42e1302394043e14",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modbus#read-more",
+          "characters": 224,
+          "sha256": "76823e2deafea433ae10a01dedbae9be09957526170e4411cdc406b1a49b767e",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-uart",
+      "title": "Universal Asynchronous Receiver-Transmitter (UART)",
+      "source_url": "https://docs.arduino.cc/learn/communication/uart/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/05.communication/09.uart/uart.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "uart.html",
+      "original_html": "original-html/uart.html",
+      "markdown_file": "markdown/uart.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:05:05.7983925+00:00",
+      "language": "en",
+      "category": "communication",
+      "body_markdown_characters": 19749,
+      "sha256": "db399fd119e2e639c7882aee43647023aabff2591d438a8368d287373d05e337",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/uart.md",
+      "actual_sha256": "30c2fe959324e7b9296ece0a707b6f99f83a022c85194a9bcd2c699af310a484",
+      "units": [
+        {
+          "page": "uart#body",
+          "characters": 1212,
+          "sha256": "067aa352dcfd7702b826a5e83175b996a654b097031c07422aab8e8290c0a782",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#serial-class",
+          "characters": 1573,
+          "sha256": "598f55238884e4c2a15b22cbae327304202d93ccfd45d51a65b0305956ef3266",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "uart#arduino-uart-pins",
+          "characters": 518,
+          "sha256": "73ac217e4b625e74964819da977a1391af8d540d124bd1f0a000463b127f2dd0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#how-uart-works",
+          "characters": 1340,
+          "sha256": "93496cc81d51093905e60bcd264fda9fc41af11cf306be7e053cbe53e85cd7a2",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#timing-and-synchronization",
+          "characters": 2411,
+          "sha256": "60eee28f4885e718f348ab56c21af05122ed9dde2c3cda7c1e0c2b83503ad488",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "uart#uart-messages",
+          "characters": 4149,
+          "sha256": "36aeb5077b2aa5eb5b38fb3bf568ceb0009fe111daff4a637684c1ce0fbdbdcd",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "uart#serial-usb-examples",
+          "characters": 118,
+          "sha256": "c164210fb3d07bd2d75c9c04d0d24dfedd10e06be014df3f664def23aa1a9523",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#basic-print-example",
+          "characters": 522,
+          "sha256": "ec5ad73ddc667caf154d9dce5ba52202d1dec43191fefd849a9c63a6abababc3",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#read",
+          "characters": 801,
+          "sha256": "9d8f09299e49ae3d6edad631149e0c61ecbea5dbe454096a21837b1e6dfa5ba6",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#rx-tx-pin-examples",
+          "characters": 248,
+          "sha256": "36bb9658088fac7125849578468cbf85a597509057fd321277ac3cf0ec212e94",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "uart#transmit-receive-messages",
+          "characters": 3180,
+          "sha256": "463fe99f9e24aed9c9df692e58acc8632b69624827b7719f18bb5f617265b5e3",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "uart#control-built-in-led",
+          "characters": 3353,
+          "sha256": "b6e1258dfef9f6bf2f5680a6f9f24aa08f913db3372a6f1e2340aefdd03c3078",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "arduino-can",
+      "title": "Controller Area Network (CAN) Bus",
+      "source_url": "https://docs.arduino.cc/learn/communication/can/",
+      "markdown_source_url": "https://raw.githubusercontent.com/arduino/docs-content/55f8bffb087dd96ff87d7b0752672ba0370bfce8/content/learn/05.communication/10.can/can.md",
+      "snapshot_commit": "55f8bffb087dd96ff87d7b0752672ba0370bfce8",
+      "local_file": "can.html",
+      "original_html": "original-html/can.html",
+      "markdown_file": "markdown/can.md",
+      "license_or_permission": "CC-BY-SA-4.0",
+      "license_file": "LICENSE.md",
+      "accessed_at": "2026-11-13T10:05:08.1339905+00:00",
+      "language": "en",
+      "category": "communication",
+      "body_markdown_characters": 13846,
+      "sha256": "b830e7ed06545a878a6f7907768a09f9ddf3b505f7ecd45002d09ffdfd3087c3",
+      "transformation": "Official Markdown converted to HTML with PowerShell ConvertFrom-Markdown; YAML front matter omitted from rendered body; source attribution added. No technical content intentionally rewritten.",
+      "selected_path": "data/arduino-technical/markdown/can.md",
+      "actual_sha256": "35457bf66294648516ee5a109089c7bdd3b902edfa57e5b33e618000b9126670",
+      "units": [
+        {
+          "page": "can#introduction",
+          "characters": 723,
+          "sha256": "53b4865a3a5dcb9d5fae828d8220c250e37339e436e80d4fabd6cb72c9318f06",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "can#can-class",
+          "characters": 1243,
+          "sha256": "90128bc10ff92b7bcf66761eadd15d26385f0ece149d1984d62fd390d1da61fd",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "can#arduino-can-pins",
+          "characters": 219,
+          "sha256": "073327f2add77611c01662dd4ab69f73ef5381c3567a4bbbf0c85dbf9e4c6811",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "can#history-of-can",
+          "characters": 1285,
+          "sha256": "52878351983124a70039d682066b6d5680d5b141e774df059bb19617b9fae568",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "can#timeline-of-standards",
+          "characters": 1907,
+          "sha256": "28fc5d283dd299bf5983739fbe485e4fd0d6ca2e5f9504815dd1ab52c552aa44",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "can#how-can-works",
+          "characters": 4036,
+          "sha256": "a7fb07dcd41df7f305ba59f2d95519fe75ef927869bc311106ed32eba0a2bedb",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "can#can-frame-structure",
+          "characters": 2163,
+          "sha256": "7d91ad6d880a25f0e44b2d407d16901a11ed80a9799176a614dc2b84c9a60350",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "can#timing-and-synchronization",
+          "characters": 1181,
+          "sha256": "96db479ba46f87b1b10e2266c7e3ca4f829971ab057230cdd133d479b04a1b52",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "can#termination-resistors",
+          "characters": 534,
+          "sha256": "8ea6405f143822ba829761c22291994cd975a4a5b178b216df4859d3dec9f3b6",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "can#examples",
+          "characters": 291,
+          "sha256": "b50ff1c9dda09af64fc13bcfee6a30b749fd7974028c7ef152d41d2c03562bdf",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-appendix",
+      "source_url": "https://docs.python.org/3.13/tutorial/appendix.html",
+      "local_file": "appendix.html",
+      "accessed_at": "2026-11-13T09:54:28.8483558+00:00",
+      "bytes": 27752,
+      "sha256": "e6b29b70ea1b28638e4ceeeed583fb03cb4fc703cfa919314bd350b7cacf9b48",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/appendix.html",
+      "actual_sha256": "e6b29b70ea1b28638e4ceeeed583fb03cb4fc703cfa919314bd350b7cacf9b48",
+      "units": [
+        {
+          "page": "appendix#16-1-interactive-mode",
+          "characters": 960,
+          "sha256": "c2a9c91dd33371bfdb07ac0e8db28a49b0b0dba7cb8d424fc3096fb750baf3ac",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "appendix#16-1-1-error-handling",
+          "characters": 915,
+          "sha256": "6ce5c55cf52fdddda60a6314fca8853665efdaf41d0670d2327e883dc54fbf7f",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "appendix#16-1-2-executable-python-scripts",
+          "characters": 960,
+          "sha256": "7eab7e5d1b3ad47f13eecbe52e3959ccab98fa06281b86e4bc6866e01edb021d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "appendix#16-1-3-the-interactive-startup-file",
+          "characters": 1293,
+          "sha256": "377eec9b42877d72330aa6ebff44867e97c613df4a2a42f45e1dd0ae0e250bac",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "appendix#16-1-4-the-customization-modules",
+          "characters": 841,
+          "sha256": "4cdc25df5cf687022a289804b7563717f441b82dd31bcaf0f765936cd2a68fb6",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-appetite",
+      "source_url": "https://docs.python.org/3.13/tutorial/appetite.html",
+      "local_file": "appetite.html",
+      "accessed_at": "2026-11-13T09:54:29.3422036+00:00",
+      "bytes": 18108,
+      "sha256": "c5a75a8718ffb2cf80f25a57d17d5de766c0a20dd3c5ce82918e2e1088f7841a",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/appetite.html",
+      "actual_sha256": "c5a75a8718ffb2cf80f25a57d17d5de766c0a20dd3c5ce82918e2e1088f7841a",
+      "units": [
+        {
+          "page": "appetite#1-whetting-your-appetite",
+          "characters": 4404,
+          "sha256": "771f77ec8d1b01b526b34718e5059caf97e45fbec74c0ab468cb44f7b2e27575",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-classes",
+      "source_url": "https://docs.python.org/3.13/tutorial/classes.html",
+      "local_file": "classes.html",
+      "accessed_at": "2026-11-13T09:54:29.8529910+00:00",
+      "bytes": 103842,
+      "sha256": "6adb5bbe14eb9e8ed843d0ba03a33dd392d8ff8e8a70c5e1673dc97497cb2311",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/classes.html",
+      "actual_sha256": "6adb5bbe14eb9e8ed843d0ba03a33dd392d8ff8e8a70c5e1673dc97497cb2311",
+      "units": [
+        {
+          "page": "classes#9-classes",
+          "characters": 2028,
+          "sha256": "49f74b054294bd1af1ea2c516395815981ed07ef1a82c9a24887d53fdc2bcb42",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-1-a-word-about-names-and-objects",
+          "characters": 842,
+          "sha256": "3f6874696daf2f921a6ec87b4373499229feedaf16b3026ff459a6c67dc3885a",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-2-python-scopes-and-namespaces",
+          "characters": 5662,
+          "sha256": "f622edd6f08bd50dac6a933ccef89987dd668b70af6d6f5312751574400f2a65",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-2-1-scopes-and-namespaces-example",
+          "characters": 1117,
+          "sha256": "6d909681a89ed6de3cc8e5fc5d35c87b68209263d05825e4a7b8f956bdf014da",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-3-a-first-look-at-classes",
+          "characters": 93,
+          "sha256": "3bf65c26d551003cfed13f59241224ffc830cb7f08d976bc530a12154bce477e",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-3-1-class-definition-syntax",
+          "characters": 1408,
+          "sha256": "a81512edcf5abc83979d4f7a5c0ea814b9447973fe0a1db14dbe9ea2c0776a7b",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-3-2-class-objects",
+          "characters": 2002,
+          "sha256": "c72ffc7f7de9bc8edced4b09c09f8bb2e1edc4576df1daa290e6c1bc7b4de38e",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-3-3-instance-objects",
+          "characters": 1169,
+          "sha256": "258355980ba85a02ba58be266110a9ee4e04ed76bd718161285ab630b79d76c4",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-3-4-method-objects",
+          "characters": 1694,
+          "sha256": "08aa9d2f299f52965f094ff37d93fed45ecfb68f172c2be9ac07bede7e5c405f",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-3-5-class-and-instance-variables",
+          "characters": 1760,
+          "sha256": "5b6d98716c628bb073d109013398698c1a57e68724de08f1e4b61b031b70f40f",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-4-random-remarks",
+          "characters": 3599,
+          "sha256": "da57de2116827266d8e1230a82f9972177e6f6fb0be0c497d87ef8d5653c7c0a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-5-inheritance",
+          "characters": 2499,
+          "sha256": "d252b36e8f59af35ed8f92f0d1c7c6ee13fd0446773d5db9b87f6fdee5500ba5",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-5-1-multiple-inheritance",
+          "characters": 1851,
+          "sha256": "1ce0030636da314e398f18d090f7872906d206cc182760112872d8c9c47a714c",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-6-private-variables",
+          "characters": 2555,
+          "sha256": "d05ac8a4f202171606e74020813b2b0956f8f9240ed1df1728fa59f9515face4",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-7-odds-and-ends",
+          "characters": 954,
+          "sha256": "755d9ec54e6814b93906f9728be3a2dd2f12ed6676c15253504c77e7f293e4ac",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-8-iterators",
+          "characters": 1908,
+          "sha256": "018f17abd577292a3ed1d6e656ac19dc6a96396a28d73da9a5ad92542ef7238f",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "classes#9-9-generators",
+          "characters": 1287,
+          "sha256": "fa4d335e875027c95f59b9933e56c866d282074cef29f86a76d336dad915e99d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "classes#9-10-generator-expressions",
+          "characters": 1246,
+          "sha256": "b325a1322f6c2cb533e744a7ba96fd0727975cb694434eba8758b06cf8f2a386",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-controlflow",
+      "source_url": "https://docs.python.org/3.13/tutorial/controlflow.html",
+      "local_file": "controlflow.html",
+      "accessed_at": "2026-11-13T09:54:30.3874391+00:00",
+      "bytes": 138437,
+      "sha256": "b985d14cc9c7b109996d54c17e32b3f214c5e4cd0e9020de060f12ed0413bd49",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/controlflow.html",
+      "actual_sha256": "b985d14cc9c7b109996d54c17e32b3f214c5e4cd0e9020de060f12ed0413bd49",
+      "units": [
+        {
+          "page": "controlflow#4-more-control-flow-tools",
+          "characters": 110,
+          "sha256": "012391fd614e87e24e2bb36a5b43e59045de6396ccc6b9b36a3aa5ef14f20059",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-1-if-statements",
+          "characters": 814,
+          "sha256": "3c90120026e6d89ddc62a4ca0cefb628f78393ed13de8666153c7cbe981ac1e4",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-2-for-statements",
+          "characters": 1207,
+          "sha256": "959c47bb6e48e95b75f107a6295a7ae1d156bfd3e43a644d3e1146219ad69616",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-3-the-range-function",
+          "characters": 1839,
+          "sha256": "63f329dfef815cedc1bdd835c076e42e8930fba9a4b6f24a237930398e5b7681",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-4-break-and-continue-statements",
+          "characters": 739,
+          "sha256": "4316e4d49649afe6a85ffe311340109da9674700df4add29352dcd5c251f867b",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-5-else-clauses-on-loops",
+          "characters": 1866,
+          "sha256": "7826d8fce80d6d368f91dbb9c48e53af38a6a55e7b5a029d98dcfc733c4f05c0",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-6-pass-statements",
+          "characters": 923,
+          "sha256": "e46d036e20d29f30b6b661e6dea464ef4f0738e5f141d345c2103934394c6481",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-7-match-statements",
+          "characters": 5836,
+          "sha256": "a2b4b21af50a8e708d2646d28a3ac25e7f74a41de00146762f76a8d34fa149f2",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-8-defining-functions",
+          "characters": 4533,
+          "sha256": "7d926bde62bace6b485a79e636e3b65c6d0b8feffa2ef0b411dc54a294e397af",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-9-more-on-defining-functions",
+          "characters": 122,
+          "sha256": "05f2a082785b89cff5e58c647847c684372089faa4bb733331649c0f47f4bd4a",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-1-default-argument-values",
+          "characters": 1774,
+          "sha256": "fe9e30088dd5d147ffc7c19dc209ea0b1715acf1d919dd8b3f8dc7c65155336b",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-9-2-keyword-arguments",
+          "characters": 3424,
+          "sha256": "4a75249d69b3e213da7c23e331e21959c9c6641624c79c182792f0e86c315d11",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-9-3-special-parameters",
+          "characters": 908,
+          "sha256": "85e1ba3d740ec1295897a801ca72900830953b1f80264a0c2a826063ff663dfd",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-3-1-positional-or-keyword-arguments",
+          "characters": 119,
+          "sha256": "e9fd0eeeba924a053ab304cb5c2189d7886b4800d975cf4b68e61fe6b27ba4a9",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-3-2-positional-only-parameters",
+          "characters": 527,
+          "sha256": "b54f15ddb0dc1cfef25efc952bbaf030c3d3f8afca69547b3396545a162496c9",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-3-3-keyword-only-arguments",
+          "characters": 177,
+          "sha256": "1b60a9dc043009209ed53c912175e62998c0151591e8d1fbc4be7576a15da3a0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-3-4-function-examples",
+          "characters": 2737,
+          "sha256": "a9922ef4f77466ed0bd77550e7ac3909c6002030a7e073c67c6c744c4c122366",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "controlflow#4-9-3-5-recap",
+          "characters": 776,
+          "sha256": "1b461344dd62918a51edd47f60a1db774534dd2d1db1004fdfba9837777b6a1d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-4-arbitrary-argument-lists",
+          "characters": 916,
+          "sha256": "61238bbdcf1fa2682b5a8434836ba68ba7f505e88578b10bf4a2368baf60176f",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-5-unpacking-argument-lists",
+          "characters": 1089,
+          "sha256": "e6c75fbc08da742857fca9f1f24c0400366c7ef9f337c1c6af93dc1b8317f84d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-6-lambda-expressions",
+          "characters": 965,
+          "sha256": "3e672cba5a33f23f46b726e9c7fcc6bce3d56e03342522d516913a206c3e083a",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-7-documentation-strings",
+          "characters": 1204,
+          "sha256": "f588be1f771699f1280d103e3d87e90eb22bb5b8eb7b56e2718f5890c1f20cce",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-9-8-function-annotations",
+          "characters": 1025,
+          "sha256": "eaaa12428b9a17d45b6b0c44d7ca2ea16143a96d4a2fbb9e8b55f8b5b1aba50d",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "controlflow#4-10-intermezzo-coding-style",
+          "characters": 2089,
+          "sha256": "862d0fe52f4ba8760c3196b8b075a58624d6d35bd00c0e5f223ed793fcb24136",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-datastructures",
+      "source_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+      "local_file": "datastructures.html",
+      "accessed_at": "2026-11-13T09:54:30.9488718+00:00",
+      "bytes": 99846,
+      "sha256": "14cbb79ca8991c75ff9a17db2057640e528bb43b00925e58dd57de2cde746e5b",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/datastructures.html",
+      "actual_sha256": "14cbb79ca8991c75ff9a17db2057640e528bb43b00925e58dd57de2cde746e5b",
+      "units": [
+        {
+          "page": "datastructures#5-data-structures",
+          "characters": 113,
+          "sha256": "331f48f5a6cec5f4dca500cb9dc0a2e0cd258603a3d01209db21779f81508e53",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "datastructures#5-1-more-on-lists",
+          "characters": 2746,
+          "sha256": "84ac0046dc4aae22678e103345cab3200124b34feaed447023ac843396023e07",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-1-1-using-lists-as-stacks",
+          "characters": 491,
+          "sha256": "6bfe0dfb6c198156d911a26bad0b5ad8edd3cc5ba6d4df46b3b3433ee0583bdb",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "datastructures#5-1-2-using-lists-as-queues",
+          "characters": 944,
+          "sha256": "b9edc1f0588d36cd24464c8d4ac8d6dffd330b926553a35d9fa50ed320caf30e",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "datastructures#5-1-3-list-comprehensions",
+          "characters": 2935,
+          "sha256": "6266bb3531f074ae89d9bfad376c31de7c4f2db14066c12f7b0287a5287de002",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-1-4-nested-list-comprehensions",
+          "characters": 1467,
+          "sha256": "1db52d833ba7016525c9314c33c9ad51dcd188887a208d48d5f7a10f09db49a0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "datastructures#5-2-the-del-statement",
+          "characters": 697,
+          "sha256": "d6a97c1be1bd9482f670307901e0d8ad872a4450fb4f08583006c8c9a83b81fe",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "datastructures#5-3-tuples-and-sequences",
+          "characters": 2790,
+          "sha256": "d65fcb381d1dad6d60ae5962b27b39e2dd1c60a09fb3ddc6d851e252f44dd20a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-4-sets",
+          "characters": 1709,
+          "sha256": "caa8f00ed054f189efa97f287b19c87c26eff83fdacd6e137831a420464ba03b",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-5-dictionaries",
+          "characters": 2966,
+          "sha256": "74364ec28c2c1a054649214284a8682564a13fcda3b9e15a7ebac7509cef4bc6",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-6-looping-techniques",
+          "characters": 2272,
+          "sha256": "d6b13bcc8953750257e3163de022a51c44ede7633833cefed2f1557d340713a0",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-7-more-on-conditions",
+          "characters": 1832,
+          "sha256": "44b962df5f291989f40655f775120d75af054c0d2150c2688daab2e0f2cb1dbf",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "datastructures#5-8-comparing-sequences-and-other-types",
+          "characters": 1581,
+          "sha256": "68f52b9bbe24b6f6c97ab76ce0e59454cfeb4105aa98d3e036e2c5f67aab4c9c",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-errors",
+      "source_url": "https://docs.python.org/3.13/tutorial/errors.html",
+      "local_file": "errors.html",
+      "accessed_at": "2026-11-13T09:54:31.4354920+00:00",
+      "bytes": 83267,
+      "sha256": "979a709f665207b9bfaddd3dd8ea2ff9632afa4f3a7986198730cac14e662683",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/errors.html",
+      "actual_sha256": "979a709f665207b9bfaddd3dd8ea2ff9632afa4f3a7986198730cac14e662683",
+      "units": [
+        {
+          "page": "errors#8-errors-and-exceptions",
+          "characters": 216,
+          "sha256": "a634edf5537bb8cc29c2f97d670c9d37b1038a62ff974c210b6b57ccf17f63bd",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "errors#8-1-syntax-errors",
+          "characters": 718,
+          "sha256": "8c84f35b56cb0293cd73e3b2900ada98b0c52f97b73c73ded0bf1c167ad423ec",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "errors#8-2-exceptions",
+          "characters": 1775,
+          "sha256": "6477d5b47d6158bbc867ef3611143daa63cfb40c55e79566e4072673b13a2975",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "errors#8-3-handling-exceptions",
+          "characters": 5685,
+          "sha256": "3bc5f4dee39b68167c1f3a7f02c09740be93ca212138d29c0caf732dfeb73cba",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "errors#8-4-raising-exceptions",
+          "characters": 1100,
+          "sha256": "b431546ab2a05598801ca9520352bdcf0df1c062385b21030bfbf43a2d8bff59",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "errors#8-5-exception-chaining",
+          "characters": 1938,
+          "sha256": "274b9a3739f7ad49c961273f41cdd8587ec13ff6180f72713ffbc52b4d74f537",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "errors#8-6-user-defined-exceptions",
+          "characters": 668,
+          "sha256": "5612192be1baf923271bf76bb49ab327ab7a6127fc2cb157f61073d456ab2199",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "errors#8-7-defining-clean-up-actions",
+          "characters": 2764,
+          "sha256": "ae3ff7940f656dd497de43e707b2bbd8cb8c95f9e5680775e271e4688344b5df",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "errors#8-8-predefined-clean-up-actions",
+          "characters": 1023,
+          "sha256": "fa5a8097d3c0d5588fb925f60f2859c16cc7cb5149aa331250473ddaaaa115d9",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "errors#8-9-raising-and-handling-multiple-unrelated-exceptions",
+          "characters": 3135,
+          "sha256": "8382d285e58db39bd0c1f09e04dcd287e42a6433b8ef4edea70f483cc3b66e2a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "errors#8-10-enriching-exceptions-with-notes",
+          "characters": 2510,
+          "sha256": "90dc25c0cb17761d2ff955d3dea8bf3af9c6887fe52904413778a986cbe90c33",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-floatingpoint",
+      "source_url": "https://docs.python.org/3.13/tutorial/floatingpoint.html",
+      "local_file": "floatingpoint.html",
+      "accessed_at": "2026-11-13T09:54:31.8830881+00:00",
+      "bytes": 43981,
+      "sha256": "626c51d2f8b7f485a59e97166154d13cbcf94767459c163b1bdeb7c648bdf738",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/floatingpoint.html",
+      "actual_sha256": "626c51d2f8b7f485a59e97166154d13cbcf94767459c163b1bdeb7c648bdf738",
+      "units": [
+        {
+          "page": "floatingpoint#15-floating-point-arithmetic-issues-and-limitations",
+          "characters": 8933,
+          "sha256": "c61af3189eca2dc14d8327f98de39ddf4c9ac6b336683e700db2264f997b7f36",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "floatingpoint#15-1-representation-error",
+          "characters": 3091,
+          "sha256": "26b0afabc0b978c701c1fbbde8c148f6bd0340557efaef6f9d198983856e19e0",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-inputoutput",
+      "source_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+      "local_file": "inputoutput.html",
+      "accessed_at": "2026-11-13T09:54:32.4276911+00:00",
+      "bytes": 75836,
+      "sha256": "be403cb24a4d23ddcde2f29ac20df4743e8216ac69d1244382c58dc2ae2a44f4",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/inputoutput.html",
+      "actual_sha256": "be403cb24a4d23ddcde2f29ac20df4743e8216ac69d1244382c58dc2ae2a44f4",
+      "units": [
+        {
+          "page": "inputoutput#7-input-and-output",
+          "characters": 194,
+          "sha256": "b3df29344738a55910ea7f70ca2285b7eae494f7a2c863183e439556725187d3",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "inputoutput#7-1-fancier-output-formatting",
+          "characters": 3387,
+          "sha256": "b7e6e31f55ac1c279b511460bb237a9cf442e5ccbf9f68e88f66e7cf9bb11a94",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "inputoutput#7-1-1-formatted-string-literals",
+          "characters": 1746,
+          "sha256": "9fc47e339ab7aa1a7828bf558697bfedeaa3021ff9aeb8b7f3a0b79f2f7c2bb4",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "inputoutput#7-1-2-the-string-format-method",
+          "characters": 2656,
+          "sha256": "4b802c47cfae1725fced3f79f2ca7134321e3f04c5c8db0067b117d1445474f8",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "inputoutput#7-1-3-manual-string-formatting",
+          "characters": 1298,
+          "sha256": "69d9fd2fafe45cc005f293c4ea38d21bf360dde286616c64ba06b2b6fbc6a917",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "inputoutput#7-1-4-old-string-formatting",
+          "characters": 481,
+          "sha256": "697521d21813cea5b6b5571c7b372002a2517cc75be09430d711388af411622f",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "inputoutput#7-2-reading-and-writing-files",
+          "characters": 2811,
+          "sha256": "c84f12634892cf918cc5d6b0abc046342e24a8760f8421537885264d061924ee",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "inputoutput#7-2-1-methods-of-file-objects",
+          "characters": 3380,
+          "sha256": "d0885752ea56c7f4797d9f73ef95e88a57f2e81c6379732625a9bf4ac68cc580",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "inputoutput#7-2-2-saving-structured-data-with-json",
+          "characters": 2509,
+          "sha256": "3c018c70bda21034713db30b9f6c80de87850998322b000777b7a00fcbb3898b",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-interactive",
+      "source_url": "https://docs.python.org/3.13/tutorial/interactive.html",
+      "local_file": "interactive.html",
+      "accessed_at": "2026-11-13T09:54:32.8693606+00:00",
+      "bytes": 18317,
+      "sha256": "8f75a693a348e561681f49888ffb85c33dd77a32105f0fd72de13fcd2f1f3339",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/interactive.html",
+      "actual_sha256": "8f75a693a348e561681f49888ffb85c33dd77a32105f0fd72de13fcd2f1f3339",
+      "units": [
+        {
+          "page": "interactive#14-interactive-input-editing-and-history-substitution",
+          "characters": 343,
+          "sha256": "afc09a0d3fd3d9e203b1c844d647c20a9b01719cfa08e1a3440ee7cc3f479558",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "interactive#14-1-tab-completion-and-history-editing",
+          "characters": 721,
+          "sha256": "993f114e350d60893c93ac228b0555bc379e2470dcc4e17dfa422b39fd7e5c39",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "interactive#14-2-alternatives-to-the-interactive-interpreter",
+          "characters": 747,
+          "sha256": "e14304bb2794de8875037cba4b7ecb45f8886edcadab190342e5cc63115d792b",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-interpreter",
+      "source_url": "https://docs.python.org/3.13/tutorial/interpreter.html",
+      "local_file": "interpreter.html",
+      "accessed_at": "2026-11-13T09:54:33.3499479+00:00",
+      "bytes": 28277,
+      "sha256": "6db9496a3ecd587591b5d6a7640d0f07036a4834c019f0de527b0ab64f90f0ea",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/interpreter.html",
+      "actual_sha256": "6db9496a3ecd587591b5d6a7640d0f07036a4834c019f0de527b0ab64f90f0ea",
+      "units": [
+        {
+          "page": "interpreter#2-1-invoking-the-interpreter",
+          "characters": 2696,
+          "sha256": "fa119f324edc0b920531582e4d246e1d404dea5106439de774edfde567f29d67",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "interpreter#2-1-1-argument-passing",
+          "characters": 737,
+          "sha256": "ae0131dc46275bfcf5ff9f3fecaad5852b3c2200cb0bba20b7ceb305b490a662",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "interpreter#2-1-2-interactive-mode",
+          "characters": 898,
+          "sha256": "61447b9c38c3c6d151602e49425c9ea63b2a893395c7a636266d98e03caa3c66",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "interpreter#2-2-1-source-code-encoding",
+          "characters": 1343,
+          "sha256": "7047e3f9d6ed18de78808fb9fcdc69a9c42342a1735fae1b3743f1eae82cceb1",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-introduction",
+      "source_url": "https://docs.python.org/3.13/tutorial/introduction.html",
+      "local_file": "introduction.html",
+      "accessed_at": "2026-11-13T09:54:33.8006363+00:00",
+      "bytes": 70461,
+      "sha256": "e247796cab129020c2362e5171b126cdf19feb69438291d9a13b73f467789500",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/introduction.html",
+      "actual_sha256": "e247796cab129020c2362e5171b126cdf19feb69438291d9a13b73f467789500",
+      "units": [
+        {
+          "page": "introduction#3-an-informal-introduction-to-python",
+          "characters": 1313,
+          "sha256": "19c20a5d9cf26b5bda1f996c3f944729a52e82301c1bc7b3eda085ed21021188",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "introduction#3-1-using-python-as-a-calculator",
+          "characters": 127,
+          "sha256": "98fd4971087ba8450b96a343988bb154960a83cb1b886ad88c4d5c9a7ee8856b",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "introduction#3-1-1-numbers",
+          "characters": 2557,
+          "sha256": "d3223a45b13b5e8a1225010294c659634a4e31ef96099f78cf0daa9b8049af7a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "introduction#3-1-2-text",
+          "characters": 7324,
+          "sha256": "067a32fda663cfd8338c97d5cd96cd1b20217d84fc1fb6c63f6df3db6927dc57",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "introduction#3-1-3-lists",
+          "characters": 2881,
+          "sha256": "23e2cf88439da2f1d15215c64ebbdb808d1f26203eea2952696eb28d5f209af2",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "introduction#3-2-first-steps-towards-programming",
+          "characters": 3018,
+          "sha256": "1822e7b62d7a77d9fab8b60f6bb3804cec4475d799212b4383c4c068708548f2",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-modules",
+      "source_url": "https://docs.python.org/3.13/tutorial/modules.html",
+      "local_file": "modules.html",
+      "accessed_at": "2026-11-13T09:54:34.2728169+00:00",
+      "bytes": 69527,
+      "sha256": "e331102d5eba9f1135e82bbec33defbceb638fe3b6d190694ba93b008e597bdc",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/modules.html",
+      "actual_sha256": "e331102d5eba9f1135e82bbec33defbceb638fe3b6d190694ba93b008e597bdc",
+      "units": [
+        {
+          "page": "modules#6-modules",
+          "characters": 2355,
+          "sha256": "4d08d3c4de039a443e86b13bd371b4a6048e3a5c1cf906d5744f0506a6f3dc71",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modules#6-1-more-on-modules",
+          "characters": 2823,
+          "sha256": "279d7ea33a79f04634071eed1721331e142272c8fb672080f30661c4e081287c",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modules#6-1-1-executing-modules-as-scripts",
+          "characters": 792,
+          "sha256": "8693f7a84b59b757efa77aecb641a95b7dc8fb18d48e775e68342b2e7fd642dc",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modules#6-1-2-the-module-search-path",
+          "characters": 1349,
+          "sha256": "9d6c19ef587d0789f92af8780119ee3de8219b7561830e0dcdb01edb1df7d3e0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modules#6-1-3-compiled-python-files",
+          "characters": 2024,
+          "sha256": "41d87a3e64a2dfd9b73268051936114663fb2f2e59e62bfe4a399c41a004374f",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modules#6-2-standard-modules",
+          "characters": 1310,
+          "sha256": "25b48816a0ebe7d447bf3e5283276823e946683d83c2a95398e435768805d333",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "modules#6-3-the-dir-function",
+          "characters": 4138,
+          "sha256": "b38d553a1caedae1ed49dd0fc91d765a9c15d7f8c976b9e498a5cfd82a77afc2",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modules#6-4-packages",
+          "characters": 4023,
+          "sha256": "1d2d5c0e33e669532026f7a3f15374f401a33d6ae79e046565fbbf1625afde47",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modules#6-4-1-importing-from-a-package",
+          "characters": 3116,
+          "sha256": "8393be69f9752d56b9cea4e751dcd1a656de1d7c462d93d8e3589787c03654b7",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "modules#6-4-2-intra-package-references",
+          "characters": 1085,
+          "sha256": "8275eabb64ef4faa2dc8581b1d55cb70cefd161506c65a418e977c85317ae92d",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-stdlib",
+      "source_url": "https://docs.python.org/3.13/tutorial/stdlib.html",
+      "local_file": "stdlib.html",
+      "accessed_at": "2026-11-13T09:54:34.6972350+00:00",
+      "bytes": 58399,
+      "sha256": "144e7801f9dcdef19a01f9bbdbe7ad7adf84faac97394c37d4470f24cdd04ff8",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/stdlib.html",
+      "actual_sha256": "144e7801f9dcdef19a01f9bbdbe7ad7adf84faac97394c37d4470f24cdd04ff8",
+      "units": [
+        {
+          "page": "stdlib#10-1-operating-system-interface",
+          "characters": 1052,
+          "sha256": "ca28729c3bb03220d5574c4ce9112a0b2e35c540279e86928a14dcb12f43fe50",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-2-file-wildcards",
+          "characters": 178,
+          "sha256": "151a23d3605adc88aee468b7d02f77e07fa03da50f5f3acb300c6d1849bf0233",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-3-command-line-arguments",
+          "characters": 1003,
+          "sha256": "0a9da79aa0098f14bbbdfc2d41777c12ba5c71e1938579c2f9a1e411b541f900",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-4-error-output-redirection-and-program-termination",
+          "characters": 385,
+          "sha256": "bb84da9192b1615b59b1196d1986557a60d8d125190be919c5351908d2210024",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-5-string-pattern-matching",
+          "characters": 545,
+          "sha256": "b691a69adbb0b98c29f3349ebfeea95ad9f1b297b7c9659311026f5ef4cb445c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-6-mathematics",
+          "characters": 1015,
+          "sha256": "576289ae77a7cf7e8bca641c17011e825fef80d60a08e2d24d85f816450d1a9a",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-7-internet-access",
+          "characters": 882,
+          "sha256": "adf489687a29fab1f42c129d5a8719a5b43af6ed86723efd92abac243b28244f",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-8-dates-and-times",
+          "characters": 711,
+          "sha256": "12f247efdd3c51b41169c6fbdf2a676c7bc4ef33a739a9ce557a1b98fe3d709e",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-9-data-compression",
+          "characters": 367,
+          "sha256": "9bd9ce7a5c91bb9c274b0dd7984690ccbf87b7c18c836dedd02317caf1eef0fe",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-10-performance-measurement",
+          "characters": 743,
+          "sha256": "07ae2fc7112c14f579b34d06e9d4671fb0ad0a4c602779cdd2e7ef80d4b24cc7",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-11-quality-control",
+          "characters": 1408,
+          "sha256": "417595e74f3ed1e9ad469549093d1c8c7298cbc1be7ee0827784c38dfbd6d29c",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib#10-12-batteries-included",
+          "characters": 1435,
+          "sha256": "76a6bd15469ff6073b6ca303ad954722220afa385c08a4c35bea49c99b430ed3",
+          "counted_for_minimum": false
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-stdlib2",
+      "source_url": "https://docs.python.org/3.13/tutorial/stdlib2.html",
+      "local_file": "stdlib2.html",
+      "accessed_at": "2026-11-13T09:54:35.1587263+00:00",
+      "bytes": 66399,
+      "sha256": "a578647c64631cb0a09412357bcefd28f75f99c264452108eddbeceeb36fbd9d",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/stdlib2.html",
+      "actual_sha256": "a578647c64631cb0a09412357bcefd28f75f99c264452108eddbeceeb36fbd9d",
+      "units": [
+        {
+          "page": "stdlib2#11-brief-tour-of-the-standard-library-part-ii",
+          "characters": 136,
+          "sha256": "2e976a81689088a05de25a2970e9dbe5b342abc84de92058260b6b71945fa5f4",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib2#11-1-output-formatting",
+          "characters": 1873,
+          "sha256": "24223d71d66e8f249db7c1b070e45e61e3f3532a0c4d800eb260987726d059b1",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "stdlib2#11-2-templating",
+          "characters": 2333,
+          "sha256": "6739202e2723675955810ae25c43cb4f2c252a608cc845513b5463f35fe9930c",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "stdlib2#11-3-working-with-binary-data-record-layouts",
+          "characters": 952,
+          "sha256": "26a2c627f3cfb8e741379c1f199141425a22a1e2a3b19e9b3a3f868bd003fdb3",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib2#11-4-multi-threading",
+          "characters": 1767,
+          "sha256": "7eaa9e829ea6045d1003e5351cf2a5f942b3c26900c4f18e670572f94ef6319a",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "stdlib2#11-5-logging",
+          "characters": 1066,
+          "sha256": "6b8eb69f9c9f7c867818e54e99a4e7378798b52c2d83b63960ddcfa0556eb3b4",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "stdlib2#11-6-weak-references",
+          "characters": 1581,
+          "sha256": "d8ec27035448010561ecaa6bd1b0fd29976f12eec223ed741579d6a2c51aff8d",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "stdlib2#11-7-tools-for-working-with-lists",
+          "characters": 2202,
+          "sha256": "dcadff49680823fecf6d1edf0616478cc28d55f6cbeb33db728ffb68746005d8",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "stdlib2#11-8-decimal-floating-point-arithmetic",
+          "characters": 1698,
+          "sha256": "34a65a56641f28d730055d79a55477a8547b70616aa956e4a4ed96a7731ff2e2",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-venv",
+      "source_url": "https://docs.python.org/3.13/tutorial/venv.html",
+      "local_file": "venv.html",
+      "accessed_at": "2026-11-13T09:54:35.5812002+00:00",
+      "bytes": 33547,
+      "sha256": "ac86c63d5eae2c83ab30b1f28267ad52fd21982cddb321c89abf63d563c02f9d",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/venv.html",
+      "actual_sha256": "ac86c63d5eae2c83ab30b1f28267ad52fd21982cddb321c89abf63d563c02f9d",
+      "units": [
+        {
+          "page": "venv#12-1-introduction",
+          "characters": 1260,
+          "sha256": "e54f3c97c3fa35b5d5d0e46eb7d6e5f789cbb34804f8f9fd956ac33750cb02e0",
+          "counted_for_minimum": false
+        },
+        {
+          "page": "venv#12-2-creating-virtual-environments",
+          "characters": 2222,
+          "sha256": "2e8ce54fb7bb5aea6e0054d98d785a946dfc7553091bb9a10d3bdcdc61684ec7",
+          "counted_for_minimum": true
+        },
+        {
+          "page": "venv#12-3-managing-packages-with-pip",
+          "characters": 3531,
+          "sha256": "153ce06fa7fe7aa4e695c767a5a57436d11c1975b8ea75cd6a66920820674d1e",
+          "counted_for_minimum": true
+        }
+      ]
+    },
+    {
+      "source_id": "python-3.13-tutorial-whatnow",
+      "source_url": "https://docs.python.org/3.13/tutorial/whatnow.html",
+      "local_file": "whatnow.html",
+      "accessed_at": "2026-11-13T09:54:36.0882855+00:00",
+      "bytes": 18646,
+      "sha256": "b3f3dea26392043824c6d1ff1f015b4dfb0129635b93f159a73fe11c72157b39",
+      "license": "PSF License Version 2",
+      "selected_path": "data/python-3.13-tutorial/whatnow.html",
+      "actual_sha256": "b3f3dea26392043824c6d1ff1f015b4dfb0129635b93f159a73fe11c72157b39",
+      "units": [
+        {
+          "page": "whatnow#13-what-now",
+          "characters": 3100,
+          "sha256": "0537e26bf8f60752ceb89f9ba587ec2947ae56887d5bd5eca26ecd32a232970a",
+          "counted_for_minimum": true
+        }
+      ]
+    }
+  ],
+  "counting_rule": "Conservative: independent heading sections with >=1500 normalized characters; smaller sections retained but not counted",
+  "qualifying_units": 105
+}

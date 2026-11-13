@@ -1,0 +1,6 @@
+{
+  "selected_strategy": "C",
+  "reason": "dev Evidence Hit@3, then Hit@1, then median query embedding + search latency; no test tuning",
+  "dev_only": true,
+  "created_at": "2026-11-13T12:37:33.504917+00:00"
+}

@@ -1,65 +1,57 @@
-# Starter · PostgreSQL + pgvector
+# PostgreSQL + pgvector pipeline
 
-Bộ khởi động **tùy chọn** cho lab cá nhân. Docker Compose tạo PostgreSQL + pgvector local; các file trong `src/` là **khung pseudocode có TODO**, chưa đọc tài liệu, tạo embedding, lưu vector hay chạy benchmark. Bạn cần tự hiện thực. Vẫn có thể chọn Qdrant, Chroma hoặc vector store tương đương theo [GUIDE.md](../GUIDE.md).
+Start database from starter/: `docker compose -p day6_student_starter up -d --wait`. Connection settings are loaded from starter/.env. Database initialization enables the vector extension on a new volume. Keep existing database volumes when troubleshooting.
 
-## Cấu trúc
+# Implemented pipeline
 
-```text
-starter/
-├── docker-compose.yml     # PostgreSQL 16 + pgvector, chỉ mở cổng local
-├── init.sql               # bật extension khi tạo database mới
-├── requirements.txt       # psycopg, pypdf và python-dotenv
-├── .env.example           # cấu hình mẫu; copy thành .env
-├── scripts/check_setup.py # kiểm tra kết nối và extension (đã chạy được)
-├── src/
-│   ├── models.py          # cấu trúc dữ liệu mẫu
-│   ├── ingestion.py       # TODO: đọc / chuẩn hóa tài liệu
-│   ├── chunking.py        # TODO: chia chunk
-│   ├── embeddings.py      # TODO: chọn model API hoặc local
-│   ├── store.py           # TODO: lưu vector, metadata và filter
-│   ├── evaluation.py      # TODO: chấm truy xuất, lưu trace
-│   └── run.py             # TODO: kết nối các bước thành pipeline
-├── data/                  # bạn tự chuẩn bị corpus được phép sử dụng
-└── results/               # lưu kết quả của bạn
-```
+No new functions or methods were added. Existing functions now implement reading/normalization, stable chunks, local multilingual embeddings, pgvector snapshots, exact cosine retrieval and conservative evidence evaluation.
 
-## 1. Cài và kiểm tra database
+Use Python 3.12 (the existing Python 3.15 installation may fail loading DLLs and embedding dependencies). Install requirements into your activated virtual environment. The embedding adapter supports local Sentence Transformers and OpenAI. Local default: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2. Local inference needs no API key; optionally pin EMBEDDING_REVISION. First local ingestion downloads the real model. Inputs exceeding the token limit fail explicitly rather than being silently truncated.
 
-Cần Docker Desktop hoặc Docker Engine + Compose, Python **3.11–3.14**, và mạng để tải image/dependencies lần đầu. Các lệnh sau chạy từ thư mục `starter/`:
+Run from starter/:
 
-```bash
-cd starter
-python3 -m venv .venv
-```
-
-Kích hoạt `.venv`: macOS/Linux dùng `source .venv/bin/activate`; Windows PowerShell dùng `.venv\Scripts\Activate.ps1`. Sau đó:
-
-```bash
+```powershell
 python -m pip install -r requirements.txt
-# macOS/Linux: cp .env.example .env
-# Windows PowerShell: Copy-Item .env.example .env
-docker compose -p day6_student_starter up -d --wait
-python scripts/check_setup.py
+python -m src.run --stage prepare
+python -m src.run --stage ingest --run-id baseline
+python -m src.run --stage dev --run-id baseline
 ```
 
-Kỳ vọng: hiện tên database, phiên bản PostgreSQL và pgvector, sau đó `Setup OK`. Đây **chỉ là kiểm tra hạ tầng**, không phải kết quả benchmark. Docker dùng cổng `127.0.0.1:55433` và mật khẩu cố định **chỉ dùng local cho lab**; nếu cổng bận, sửa đồng thời port trong `docker-compose.yml` và `DATABASE_URL` trong `.env`. `init.sql` chỉ chạy khi volume mới được tạo; nếu database sẵn có chưa bật extension, xem log Docker và kiểm tra cấu hình thay vì xóa volume chứa dữ liệu.
+Review dev traces and fill manual labels. Automatic selection is available through `python -m src.run --stage select --run-id baseline`: the rule is frozen before evaluation (dev Evidence Hit@3, then Hit@1, then median query embedding + search latency). Alternatively create selection.json with selected_strategy and an evidence-based reason. Then run:
 
-Dừng container nhưng giữ dữ liệu:
-
-```bash
-docker compose -p day6_student_starter stop
+```powershell
+python -m src.run --stage test --run-id baseline
 ```
 
-## 2. Chọn embedding model
+Default command without arguments only prepares data. Prepare does not load the model or access the database. Arguments: --fixed-size 500 --overlap 50 --paragraph-size 1000; use the same arguments at ingestion and evaluation. Change run-id for new experiments. A frozen experiment rejects corpus, benchmark, code, model or chunk-setting changes. Dependency versions and resolved model revision are checked at evaluation.
 
-Điền key tương ứng trong `.env` nếu dùng OpenRouter, OpenAI hoặc Gemini; **không commit `.env`**. Model local không cần API key. `requirements.txt` chỉ có dependencies cơ bản: tự cài SDK hoặc thư viện local phù hợp với model bạn chọn và ghi lại version/lệnh cài trong báo cáo. Ghi tên model và số chiều; dùng cùng model cho toàn bộ chiến lược và vector query tương thích vector document.
+Canonical input is Arduino official Markdown and Python main HTML content. Original Arduino website HTML and derived HTML are not ingested again. Benchmark page.text is never used as an ingestion source. Heading IDs match gold_page. The manifest records SHA-256, section IDs and character counts; only sections with >=1500 normalized characters count toward the minimum (smaller meaningful sections remain searchable). Raw sources are preserved.
 
-## 3. Hoàn thiện pipeline
+Each run writes corpus_manifest.json, pages.json, preparation.json, errors.log, frozen_config.json after successful ingestion, and dev/test traces and summaries after evaluation. Ingest validates persistence and repeats snapshot replacement to check no duplicates. upsert accepts a COMPLETE strategy snapshot, removes obsolete chunks within that namespace transactionally, and never deletes another run's strategy. Tables are separated by dimension (`ingestion_chunks_384`, `_1536`, `_3072`); each run/strategy has a separate namespace. Existing tables are never dropped automatically.
 
-1. Đặt corpus vào `data/` hoặc cung cấp manifest/hướng dẫn truy cập. Đọc [GUIDE.md](../GUIDE.md) về **30 trang nội dung**, quyền dữ liệu và metadata.
-2. Hoàn thiện từng hàm TODO trong `src/`. Lưu ID tài liệu, nguồn, trang/vị trí và ít nhất một trường filter có ích.
-3. Xây ít nhất ba cấu hình; ví dụ A fixed-size, B theo đoạn, C như B nhưng có filter. Cần cùng corpus, model và benchmark; nạp lại không nhân đôi và xử lý chunk cũ khi dữ liệu đổi.
-4. Tự viết ít nhất 20 câu hỏi kèm evidence, tách dev/test trước khi thử theo [BENCHMARK.md](../BENCHMARK.md). Lưu trace top-3 và báo cáo đủ năm tiêu chí.
-5. Sau khi hoàn thiện, chạy `python -m src.run` từ thư mục `starter/`. Trước khi làm TODO, lệnh này **chủ động báo `NotImplementedError`**.
+Results include actual tokenizer/API token counts, estimated API costs, character distributions, separate embedding/ingestion times, exact cosine search and full source metadata. B and C share document embeddings; A/B/C share each query embedding. Local hardware/electricity is excluded. Coherence and human grounding/metadata labels are intentionally blank; do not report them as completed manual evaluation. Exact-match evidence scores are conservative and may miss semantically equivalent evidence: review and document alternatives.
 
-Lưu code, cấu hình, kết quả và lệnh chạy để người chấm tái lập; không commit key, dữ liệu mật hoặc dữ liệu không có quyền chia sẻ.
+## Comparing embedding models and optional LLM answers
+
+Keep `.env` private; the OpenAI adapter reads `OPENAI_API_KEY` without printing or persisting it. Select another provider/model using CLI options rather than changing `.env` between experiments:
+
+```powershell
+python -m src.run --stage ingest --run-id openai_small --provider openai --model text-embedding-3-small --generate-answers
+python -m src.run --stage dev --run-id openai_small --provider openai --model text-embedding-3-small --generate-answers
+python -m src.run --stage select --run-id openai_small
+python -m src.run --stage test --run-id openai_small --provider openai --model text-embedding-3-small --generate-answers
+```
+
+Repeat with a new run-id and `text-embedding-3-large`, then compare:
+
+```powershell
+python -m src.run --stage compare --run-id openai_comparison --compare-runs openai_small openai_large
+```
+
+Or run `./scripts/compare_openai.ps1 -Python python -RunPrefix experiment2` to execute both full experiments in sequence. Use a fresh prefix after code/data/model changes. For local comparison use `--provider local --model sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` in a separate run; local model/dependencies must first be downloaded. `--dimensions` can shorten supported OpenAI embeddings, but use a new run-id and report the dimension as part of the experiment.
+
+`--generate-answers` uses the same LLM (`gpt-5.6-terra` by default; override `--llm-model`) and prompt for every strategy/model. LLM sees ONLY the question and retrieved chunks, never gold answer/evidence. Structured output contains Vietnamese answer, insufficient-evidence flag and exact-quote citations. Citation checks do not prove entailment or answer accuracy. Generated answers, latency, model, token usage and estimated costs are stored in traces. Test results are generated only after a dev selection file exists. No LLM judge or fabricated manual scores are used.
+
+Costs use official rates checked 2026-11-13: embedding small $0.02/M input tokens, large $0.13/M; GPT-5.6 Terra input $2/M, cached input $0.2/M, output $12/M. This is an estimate based on successful responses, not a billing export; probes/retries and failed calls are excluded. Pricing for another LLM remains unknown rather than guessed. Sources: [embedding small](https://developers.openai.com/api/docs/models/text-embedding-3-small), [embedding large](https://developers.openai.com/api/docs/models/text-embedding-3-large), [GPT-5.6 Terra](https://developers.openai.com/api/docs/models/gpt-5.6-terra).
+
+Run `python scripts/verify_pipeline.py --database` for invariants and an isolated synthetic pgvector integration test. Synthetic vectors are used only in this explicit unit test, never in real ingestion/evaluation.

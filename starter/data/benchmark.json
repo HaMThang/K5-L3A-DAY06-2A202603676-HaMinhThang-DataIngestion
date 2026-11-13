@@ -1,0 +1,431 @@
+[
+  {
+    "page": {
+      "document_id": "arduino-analog-input",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "page": "analog-input#a-d-converter",
+      "section": "A/D Converter",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\r\n\r\nConsequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO."
+    },
+    "question": {
+      "id": "q01",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "ADC có độ phân giải và miền giá trị nào?",
+      "gold_source_id": "arduino-analog-input",
+      "gold_page": "analog-input#a-d-converter",
+      "evidence_quote": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).",
+      "expected_answer": "10 bit, từ 0 đến 1023."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-input",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "page": "analog-input#a-d-converter",
+      "section": "A/D Converter",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The ATmega controllers used for the Arduino contain an onboard 6-channel (8 channels on the Mini and Nano, 16 on the Mega) analog-to-digital (A/D) converter. The converter has 10-bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0–13).\r\n\r\nConsequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO."
+    },
+    "question": {
+      "id": "q02",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Khi nào có thể dùng chân analog làm GPIO?",
+      "gold_source_id": "arduino-analog-input",
+      "gold_page": "analog-input#a-d-converter",
+      "evidence_quote": "Consequently, if a user needs more general purpose input/output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.",
+      "expected_answer": "Khi cần thêm GPIO và chân analog chưa được dùng."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-input",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "page": "analog-input#pin-mapping",
+      "section": "Pin Mapping",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The analog pins can be used identically to the digital pins, using the aliases `A0` (for analog input 0), `A1`, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it `HIGH`:\r\n\r\n```arduino\r\npinMode(A0, OUTPUT);\r\ndigitalWrite(A0, HIGH);\r\n```"
+    },
+    "question": {
+      "id": "q03",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Trong nhóm microcontrollers của Arduino: Bí danh cho chân analog đầu tiên là gì?",
+      "gold_source_id": "arduino-analog-input",
+      "gold_page": "analog-input#pin-mapping",
+      "evidence_quote": "The analog pins can be used identically to the digital pins, using the aliases `A0` (for analog input 0), `A1`, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it `HIGH`:",
+      "expected_answer": "A0.",
+      "filter": {
+        "category": "microcontrollers"
+      }
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-input",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "page": "analog-input#pull-up-resistors",
+      "section": "Pull-up Resistors",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The analog pins also have pull-up resistors, which work identically to pull-up resistors on the digital pins. They are enabled by issuing a command such as:\r\n\r\n```arduino\r\npinMode(A0, INPUT_PULLUP);  // Set pull-up on analog pin 0\r\n```\r\n\r\nBe aware however that turning on a pull-up will affect the values reported by `analogRead()`."
+    },
+    "question": {
+      "id": "q04",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Bật pull-up có ảnh hưởng analogRead không?",
+      "gold_source_id": "arduino-analog-input",
+      "gold_page": "analog-input#pull-up-resistors",
+      "evidence_quote": "Be aware however that turning on a pull-up will affect the values reported by `analogRead()`.",
+      "expected_answer": "Có, nó ảnh hưởng giá trị đọc."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-input",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "page": "analog-input#details-and-caveats",
+      "section": "Details and Caveats",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The `analogRead()` function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using `analogRead()`. Note that calling `pinMode(pin, INPUT)` will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use `pinMode(pin, INPUT_PULLUP)` instead.\r\n\r\nThe ATmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (`analogRead()`) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using `analogRead()` to read other analog pins."
+    },
+    "question": {
+      "id": "q05",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Nếu chân từng được đặt OUTPUT, cần làm gì trước analogRead?",
+      "gold_source_id": "arduino-analog-input",
+      "gold_page": "analog-input#details-and-caveats",
+      "evidence_quote": "The `analogRead()` function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using `analogRead()`. Note that calling `pinMode(pin, INPUT)` will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use `pinMode(pin, INPUT_PULLUP)` instead.",
+      "expected_answer": "Chuyển về INPUT."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-digital-pins",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "page": "digital-pins#properties-of-pins-configured-as-input",
+      "section": "Properties of Pins Configured as INPUT",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "Arduino (ATmega) pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()` when you're using them as inputs. Pins configured this way are said to be in a **high-impedance state**. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 MΩ in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing [a capacitive touch sensor](https://playground.arduino.cc/Code/CapacitiveSensor), reading an LED as a [photodiode](https://playground.arduino.cc/Learning/LEDSensor), or reading an analog sensor with a scheme such as [RCTime](/tutorials/generic/capacitance-meter).\r\n\r\nThis also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin."
+    },
+    "question": {
+      "id": "q06",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Chân ATmega mặc định ở chế độ gì?",
+      "gold_source_id": "arduino-digital-pins",
+      "gold_page": "digital-pins#properties-of-pins-configured-as-input",
+      "evidence_quote": "Arduino (ATmega) pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()` when you're using them as inputs. Pins configured this way are said to be in a **high-impedance state**. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 MΩ in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing [a capacitive touch sensor](https://playground.arduino.cc/Code/CapacitiveSensor), reading an LED as a [photodiode](https://playground.arduino.cc/Learning/LEDSensor), or reading an analog sensor with a scheme such as [RCTime](/tutorials/generic/capacitance-meter).",
+      "expected_answer": "INPUT."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-digital-pins",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "page": "digital-pins#properties-of-pins-configured-as-input",
+      "section": "Properties of Pins Configured as INPUT",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "Arduino (ATmega) pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()` when you're using them as inputs. Pins configured this way are said to be in a **high-impedance state**. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 MΩ in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing [a capacitive touch sensor](https://playground.arduino.cc/Code/CapacitiveSensor), reading an LED as a [photodiode](https://playground.arduino.cc/Learning/LEDSensor), or reading an analog sensor with a scheme such as [RCTime](/tutorials/generic/capacitance-meter).\r\n\r\nThis also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin."
+    },
+    "question": {
+      "id": "q07",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "Vì sao INPUT không nối mạch có thể đổi trạng thái ngẫu nhiên?",
+      "gold_source_id": "arduino-digital-pins",
+      "gold_page": "digital-pins#properties-of-pins-configured-as-input",
+      "evidence_quote": "This also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.",
+      "expected_answer": "Do nhiễu điện môi trường hoặc ghép điện dung từ chân gần đó."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-digital-pins",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+      "section": "Pull-up Resistors with Pins Configured as INPUT",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pull-up resistor (to +5 VDC), or a pull-down resistor (resistor to GND) on the input. A 10 kΩ resistor is a good value for a pull-up or pull-down resistor."
+    },
+    "question": {
+      "id": "q08",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Giá trị điện trở kéo lên hoặc kéo xuống ngoài được gợi ý là bao nhiêu?",
+      "gold_source_id": "arduino-digital-pins",
+      "gold_page": "digital-pins#pull-up-resistors-with-pins-configured-as-input",
+      "evidence_quote": "Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pull-up resistor (to +5 VDC), or a pull-down resistor (resistor to GND) on the input. A 10 kΩ resistor is a good value for a pull-up or pull-down resistor.",
+      "expected_answer": "10 kΩ."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-digital-pins",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+      "section": "Properties of Pins Configured as INPUT_PULLUP",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\r\n\r\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\r\n\r\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.\r\n\r\nThe pull-up resistors provide enough current to dimly light an LED connected to a pin that has been configured as an input. If LEDs in a project seem to be working, but very dimly, this is likely what is going on."
+    },
+    "question": {
+      "id": "q09",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Với công tắc nối đất ở INPUT_PULLUP, mở và nhấn cho kết quả gì?",
+      "gold_source_id": "arduino-digital-pins",
+      "gold_page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+      "evidence_quote": "When connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.",
+      "expected_answer": "Mở HIGH, nhấn LOW."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-digital-pins",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+      "section": "Properties of Pins Configured as INPUT_PULLUP",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "There are 20 kΩ pull-up resistors built into the ATmega chip that can be accessed from software. These built-in pull-up resistors are accessed by setting `pinMode()` to `INPUT_PULLUP`. This effectively inverts the behavior of the `INPUT` mode, where `HIGH` means the sensor is off, and `LOW` means the sensor is on.\r\n\r\nThe value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.\r\n\r\nWhen connecting a sensor to a pin configured with `INPUT_PULLUP`, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read `HIGH` when the switch is open, and `LOW` when the switch is pressed.\r\n\r\nThe pull-up resistors provide enough current to dimly light an LED connected to a pin that has been configured as an input. If LEDs in a project seem to be working, but very dimly, this is likely what is going on."
+    },
+    "question": {
+      "id": "q10",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Pull-up nội trên Due nằm trong khoảng nào?",
+      "gold_source_id": "arduino-digital-pins",
+      "gold_page": "digital-pins#properties-of-pins-configured-as-input-pullup",
+      "evidence_quote": "The value of this pull-up depends on the microcontroller used. On most AVR-based boards, the value is guaranteed to be between 20 kΩ and 50 kΩ. On the Arduino Due, it is between 50 kΩ and 150 kΩ. For the exact value, consult the datasheet of the microcontroller on your board.",
+      "expected_answer": "50–150 kΩ."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-digital-pins",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/digital-pins/",
+      "page": "digital-pins#properties-of-pins-configured-as-output",
+      "section": "Properties of Pins Configured as OUTPUT",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "Pins configured as `OUTPUT` with `pinMode()` are said to be in a **low-impedance state**. This means that they can provide a substantial amount of current to other circuits. ATmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED (don't forget the series resistor), or run many sensors, for example, but not enough current to run most relays, solenoids, or motors.\r\n\r\nShort circuits on Arduino pins, or attempting to run high current devices from them, can damage or destroy the output transistors in the pin, or damage the entire ATmega chip. Often this will result in a \"dead\" pin in the microcontroller but the remaining chip will still function adequately. For this reason it is a good idea to connect `OUTPUT` pins to other devices with 470 Ω or 1 kΩ resistors, unless maximum current draw from the pins is required for a particular application."
+    },
+    "question": {
+      "id": "q11",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "Chân OUTPUT có trở kháng như thế nào?",
+      "gold_source_id": "arduino-digital-pins",
+      "gold_page": "digital-pins#properties-of-pins-configured-as-output",
+      "evidence_quote": "Pins configured as `OUTPUT` with `pinMode()` are said to be in a **low-impedance state**. This means that they can provide a substantial amount of current to other circuits. ATmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED (don't forget the series resistor), or run many sensors, for example, but not enough current to run most relays, solenoids, or motors.",
+      "expected_answer": "Trở kháng thấp."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-output",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-output/",
+      "page": "analog-output#body",
+      "section": "body",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The Fading example demonstrates the use of analog output (PWM) to fade an LED. It is available in the File->Sketchbook->Examples->Analog menu of the Arduino software.\n\nPulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between the full Vcc of the board (e.g., 5 V on UNO, 3.3 V on a MKR board) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of \"on time\" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and Vcc controlling the brightness of the LED.\n\nIn the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to [analogWrite](https://arduino.cc/en/Reference/AnalogWrite)() is on a scale of 0 - 255, such that `analogWrite(255)` requests a 100% duty cycle (always on), and `analogWrite(127)` is a 50% duty cycle (on half the time) for example.\n\n![](./pwm.gif)\n\nOn some microcontrollers PWM is only available on selected pins. Please consider the pinout diagram of your board to find out which ones you can use for PWM. They are denoted with a tilde sign (~).\n\nOnce you get this example running, grab your Arduino and shake it back and forth. What you are doing here is essentially mapping time across the space. To our eyes, the movement blurs each LED blink into a line. As the LED fades in and out, those little lines will grow and shrink in length. Now you are seeing the pulse width.\n\n*Written by Timothy Hirzel*"
+    },
+    "question": {
+      "id": "q12",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "PWM tạo kết quả analog từ điều khiển số như thế nào?",
+      "gold_source_id": "arduino-analog-output",
+      "gold_page": "analog-output#body",
+      "evidence_quote": "Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between the full Vcc of the board (e.g., 5 V on UNO, 3.3 V on a MKR board) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of \"on time\" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and Vcc controlling the brightness of the LED.",
+      "expected_answer": "Thay đổi thời gian bật của sóng vuông bật/tắt."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-output",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-output/",
+      "page": "analog-output#body",
+      "section": "body",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The Fading example demonstrates the use of analog output (PWM) to fade an LED. It is available in the File->Sketchbook->Examples->Analog menu of the Arduino software.\n\nPulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between the full Vcc of the board (e.g., 5 V on UNO, 3.3 V on a MKR board) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of \"on time\" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and Vcc controlling the brightness of the LED.\n\nIn the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to [analogWrite](https://arduino.cc/en/Reference/AnalogWrite)() is on a scale of 0 - 255, such that `analogWrite(255)` requests a 100% duty cycle (always on), and `analogWrite(127)` is a 50% duty cycle (on half the time) for example.\n\n![](./pwm.gif)\n\nOn some microcontrollers PWM is only available on selected pins. Please consider the pinout diagram of your board to find out which ones you can use for PWM. They are denoted with a tilde sign (~).\n\nOnce you get this example running, grab your Arduino and shake it back and forth. What you are doing here is essentially mapping time across the space. To our eyes, the movement blurs each LED blink into a line. As the LED fades in and out, those little lines will grow and shrink in length. Now you are seeing the pulse width.\n\n*Written by Timothy Hirzel*"
+    },
+    "question": {
+      "id": "q13",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "analogWrite(255) và analogWrite(127) tương ứng duty cycle nào?",
+      "gold_source_id": "arduino-analog-output",
+      "gold_page": "analog-output#body",
+      "evidence_quote": "In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to [analogWrite](https://arduino.cc/en/Reference/AnalogWrite)() is on a scale of 0 - 255, such that `analogWrite(255)` requests a 100% duty cycle (always on), and `analogWrite(127)` is a 50% duty cycle (on half the time) for example.",
+      "expected_answer": "100% và khoảng 50%."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-output",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-output/",
+      "page": "analog-output#body",
+      "section": "body",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The Fading example demonstrates the use of analog output (PWM) to fade an LED. It is available in the File->Sketchbook->Examples->Analog menu of the Arduino software.\n\nPulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between the full Vcc of the board (e.g., 5 V on UNO, 3.3 V on a MKR board) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of \"on time\" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and Vcc controlling the brightness of the LED.\n\nIn the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to [analogWrite](https://arduino.cc/en/Reference/AnalogWrite)() is on a scale of 0 - 255, such that `analogWrite(255)` requests a 100% duty cycle (always on), and `analogWrite(127)` is a 50% duty cycle (on half the time) for example.\n\n![](./pwm.gif)\n\nOn some microcontrollers PWM is only available on selected pins. Please consider the pinout diagram of your board to find out which ones you can use for PWM. They are denoted with a tilde sign (~).\n\nOnce you get this example running, grab your Arduino and shake it back and forth. What you are doing here is essentially mapping time across the space. To our eyes, the movement blurs each LED blink into a line. As the LED fades in and out, those little lines will grow and shrink in length. Now you are seeing the pulse width.\n\n*Written by Timothy Hirzel*"
+    },
+    "question": {
+      "id": "q14",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Trong nhóm microcontrollers của Arduino: Mọi chân đều hỗ trợ PWM không và xem ký hiệu nào?",
+      "gold_source_id": "arduino-analog-output",
+      "gold_page": "analog-output#body",
+      "evidence_quote": "On some microcontrollers PWM is only available on selected pins. Please consider the pinout diagram of your board to find out which ones you can use for PWM. They are denoted with a tilde sign (~).",
+      "expected_answer": "Không; xem pinout và ký hiệu ~.",
+      "filter": {
+        "category": "microcontrollers"
+      }
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-analog-input",
+      "source": "https://docs.arduino.cc/learn/microcontrollers/analog-input/",
+      "page": "analog-input#details-and-caveats",
+      "section": "Details and Caveats",
+      "category": "microcontrollers",
+      "language": "en",
+      "text": "The `analogRead()` function will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using `analogRead()`. Note that calling `pinMode(pin, INPUT)` will disable the internal pull-up resistor, regardless of the pin's previous state. If you need the pull-up resistor enabled while reading analog values, use `pinMode(pin, INPUT_PULLUP)` instead.\r\n\r\nThe ATmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (`analogRead()`) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using `analogRead()` to read other analog pins."
+    },
+    "question": {
+      "id": "q15",
+      "type": "dieu_kien",
+      "split": "dev",
+      "question": "Vì sao nên đợi ngắn sau khi dùng chân analog ở chế độ số rồi đọc chân analog khác?",
+      "gold_source_id": "arduino-analog-input",
+      "gold_page": "analog-input#details-and-caveats",
+      "evidence_quote": "The ATmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (`analogRead()`) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using `analogRead()` to read other analog pins.",
+      "expected_answer": "Tránh nhiễu điện và jitter khi chuyển chân sát thời điểm đọc ADC."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-servo-motors",
+      "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+      "page": "servo-motors#circuit",
+      "section": "Circuit",
+      "category": "electronics",
+      "language": "en",
+      "text": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.\n\nThe signal pin is typically yellow or orange and should be connected to PWM pin on the board. In these examples, it is pin number 9."
+    },
+    "question": {
+      "id": "q16",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Trong nhóm electronics của Arduino: Servo có ba dây chức năng gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#circuit",
+      "evidence_quote": "Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to positive pole (+) of your power source. The ground wire is typically black or brown and should be connected to the negative pole (-) of your power source.",
+      "expected_answer": "Nguồn, đất và tín hiệu.",
+      "filter": {
+        "category": "electronics"
+      }
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-servo-motors",
+      "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+      "page": "servo-motors#powering-servo-motors",
+      "section": "Powering Servo Motors",
+      "category": "electronics",
+      "language": "en",
+      "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source. \n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.\n\nThis high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires to the servo using e.g. a breadboard.\n\n**_Note that USB wall chargers are limited to 500 mA (USB 2.0) or 900 mA (USB 3.0)._**\n\nIf your project needs to move around freely without being attached to a power outlet you can also choose batteries to power the servo. If you need 5 V exactly you can use two 18650 Li-Ion batteries together with a step-down converter.\n\nA step-down converter is needed because 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.\n\nWhen using a [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) we recommend using a **100 µF** capacitor.\n\n![Capacitor](./assets/capacitor.png)\n\n**_Because some capacitors are polarised (meaning that they have a direction), you may need to be careful with how you connect them to your circuit. Make sure to connect them correctly by checking for markings such as a white stripe, a '+' symbol, or a longer lead. If your capacitor has these, match the indicators of the capacitor with your circuit (pay attention to the + and - signs), and be careful not to exceed the voltage limits. This precaution helps prevent issues like leaks or damage that could harm your circuit._**\n\nYou can read more about capacitors [here](https://learn.sparkfun.com/tutorials/capacitors/all)."
+    },
+    "question": {
+      "id": "q17",
+      "type": "dien_dat_lai",
+      "split": "test",
+      "question": "Tụ điện giúp ích gì khi cấp nguồn servo?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.",
+      "expected_answer": "Ổn định nguồn, giảm sụt áp và nhiễu điện."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-servo-motors",
+      "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+      "page": "servo-motors#knob-circuit",
+      "section": "Knob Circuit",
+      "category": "electronics",
+      "language": "en",
+      "text": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.\n\n![The Knob Circuit.](./assets/servo_circuit_knob-pot.png)"
+    },
+    "question": {
+      "id": "q18",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Chân giữa biến trở trong ví dụ Knob nối đâu?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#knob-circuit",
+      "evidence_quote": "For the **Knob** example, wire the potentiometer so that its two outer pins are connected to power (+5V) and ground, and its middle pin is connected to `A0` on the board. Then, connect the servo motor as shown in the circuit below.",
+      "expected_answer": "A0."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-servo-motors",
+      "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+      "page": "servo-motors#sweep",
+      "section": "Sweep",
+      "category": "electronics",
+      "language": "en",
+      "text": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.\n\n```arduino\n#include <Servo.h>\n\nServo myservo;  // create servo object to control a servo\n// twelve servo objects can be created on most boards\n\nint pos = 0;    // variable to store the servo position\n\nvoid setup() {\n  myservo.attach(9);  // attaches the servo on pin 9 to the servo object\n}\n\nvoid loop() {\n  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees\n    // in steps of 1 degree\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees\n    myservo.write(pos);              // tell servo to go to position in variable 'pos'\n    delay(15);                       // waits 15ms for the servo to reach the position\n  }\n}\n```"
+    },
+    "question": {
+      "id": "q19",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Ví dụ Sweep quét trục servo trong khoảng bao nhiêu độ?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#sweep",
+      "evidence_quote": "Sweeps the shaft of a RC servo motor back and forth across 180 degrees.",
+      "expected_answer": "180 độ qua lại."
+    }
+  },
+  {
+    "page": {
+      "document_id": "arduino-servo-motors",
+      "source": "https://docs.arduino.cc/learn/electronics/servo-motors/",
+      "page": "servo-motors#powering-servo-motors",
+      "section": "Powering Servo Motors",
+      "category": "electronics",
+      "language": "en",
+      "text": "Servo motors have different power requirements depending on their size and the workload they are experiencing. A common servo motor such as the [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) requires between 4.8 - 6 V at 5 – 6 mA when idle. It doesn't take very much energy to stand still.\n\nBut as soon as the motor starts moving, it starts using more energy, and it gets that energy by pulling more current from the power source. \n\nIf it experiences heavier loads such as added weight or an object blocking its movement , it naturally needs to use even more energy to move the obstacle, and as a result the current consumption increases. The current consumption of the motor linked above can reach up to 800 mA.\n\nThis high current-draw is generally not safe to draw from an Arduino board. To avoid damaging our board we need to power the servo motor through an external power supply. Choosing the correct power supply depends on the servo motor you are using, so always check the specifications. Pay especially close attention to the:\n\n- **operating voltage range**\n- **idle current** - consumption when **not** moving\n- **running current** - consumption when moving freely\n- **stall current** - consumption under max load or when blocked\n\nTo power a 4.8 - 6 V servo you could use a **5 V 1 A** AC Adapter, cut the cable, and connect the wires to the servo using e.g. a breadboard.\n\n**_Note that USB wall chargers are limited to 500 mA (USB 2.0) or 900 mA (USB 3.0)._**\n\nIf your project needs to move around freely without being attached to a power outlet you can also choose batteries to power the servo. If you need 5 V exactly you can use two 18650 Li-Ion batteries together with a step-down converter.\n\nA step-down converter is needed because 18650 Li-Ion batteries will give you around 7.4 V. The max current depends on the specific battery but most of them are designed to output above 1A which is enough to power our small servo.\n\n**_If you are using bigger or more servos make sure to check your power requirements accordingly._**\n\n**Capacitors** are recommended for powering servo motors. They help stabilize the power supply, minimize voltage drops, and reduce electrical noise. The specific capacitor values may vary based on the servo motor's requirements, but including them is good practice for better performance and reliability.\n\nWhen using a [Feetech Mini Servo Motor](https://store.arduino.cc/products/feetech-mini-servo-motor-120-degrees-9g) we recommend using a **100 µF** capacitor.\n\n![Capacitor](./assets/capacitor.png)\n\n**_Because some capacitors are polarised (meaning that they have a direction), you may need to be careful with how you connect them to your circuit. Make sure to connect them correctly by checking for markings such as a white stripe, a '+' symbol, or a longer lead. If your capacitor has these, match the indicators of the capacitor with your circuit (pay attention to the + and - signs), and be careful not to exceed the voltage limits. This precaution helps prevent issues like leaks or damage that could harm your circuit._**\n\nYou can read more about capacitors [here](https://learn.sparkfun.com/tutorials/capacitors/all)."
+    },
+    "question": {
+      "id": "q20",
+      "type": "dieu_kien",
+      "split": "test",
+      "question": "Khi dùng servo lớn hơn hoặc nhiều servo cần kiểm tra gì?",
+      "gold_source_id": "arduino-servo-motors",
+      "gold_page": "servo-motors#powering-servo-motors",
+      "evidence_quote": "**_If you are using bigger or more servos make sure to check your power requirements accordingly._**",
+      "expected_answer": "Kiểm tra lại yêu cầu nguồn tương ứng."
+    }
+  }
+]

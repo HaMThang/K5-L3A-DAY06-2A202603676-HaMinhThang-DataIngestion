@@ -1,0 +1,74 @@
+{
+  "retrieval": {
+    "A/test": {
+      "count": 5,
+      "hit_at_1_count": 1,
+      "evidence_hit_at_3_count": 3,
+      "filtered_count": 0,
+      "filter_compliant_count": 0,
+      "hit_at_1": 0.2,
+      "evidence_hit_at_3": 0.6,
+      "filter_compliance": null
+    },
+    "B/test": {
+      "count": 5,
+      "hit_at_1_count": 1,
+      "evidence_hit_at_3_count": 4,
+      "filtered_count": 0,
+      "filter_compliant_count": 0,
+      "hit_at_1": 0.2,
+      "evidence_hit_at_3": 0.8,
+      "filter_compliance": null
+    },
+    "C/test": {
+      "count": 5,
+      "hit_at_1_count": 1,
+      "evidence_hit_at_3_count": 4,
+      "filtered_count": 1,
+      "filter_compliant_count": 1,
+      "hit_at_1": 0.2,
+      "evidence_hit_at_3": 0.8,
+      "filter_compliance": 1.0
+    }
+  },
+  "performance": {
+    "A": {
+      "count": 5,
+      "median_query_embedding_ms": 761.9814000008773,
+      "median_search_ms": 23.969100000613253,
+      "median_llm_ms": 3749.330499998905,
+      "valid_citations_count": 1,
+      "llm_completed_count": 5,
+      "llm_input_tokens": 3461,
+      "llm_output_tokens": 688,
+      "estimated_llm_cost_usd": 0.015177999999999999
+    },
+    "B": {
+      "count": 5,
+      "median_query_embedding_ms": 761.9814000008773,
+      "median_search_ms": 14.215799999874434,
+      "median_llm_ms": 2595.377200001167,
+      "valid_citations_count": 2,
+      "llm_completed_count": 5,
+      "llm_input_tokens": 4431,
+      "llm_output_tokens": 842,
+      "estimated_llm_cost_usd": 0.018966
+    },
+    "C": {
+      "count": 5,
+      "median_query_embedding_ms": 761.9814000008773,
+      "median_search_ms": 15.381499999421067,
+      "median_llm_ms": 4060.046799999327,
+      "valid_citations_count": 2,
+      "llm_completed_count": 5,
+      "llm_input_tokens": 4431,
+      "llm_output_tokens": 814,
+      "estimated_llm_cost_usd": 0.01863
+    }
+  },
+  "query_embedding_tokens_deduplicated": 113,
+  "estimated_query_embedding_cost_usd": 2.2600000000000004e-06,
+  "cost_note": "Token-based estimate; query embeddings shared by A/B/C. API retries/probes, hardware/electricity excluded.",
+  "human_answer_accuracy": null,
+  "human_grounding": null
+}
